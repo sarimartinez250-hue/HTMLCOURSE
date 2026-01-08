@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Img tag</title>
+</head>
+<body>
+    <h1>IMAGE TAG</h1>
+    <h2>Image tag</h2>
+    <p>Representa una imagen en el documento. Es una etiqueta autocontenida, es decir tiene etiqueta de apertura pero no tiene porque
+    tener una etiqueta de cierre, incluye los atributos globales y sus propios, los cuales describiremos:</p>
+    <!--ALIGNH: -->
+    <h3>ALIGN</h3>
+    <p>El atributo de align que era permitido hasta HTML4 pero en webs modernas ya es obsoleto porque ahora es mas profesional hacerlo con CSS.
+        Este atributo era una indicacion de hacia donde se debia alinear la imagen respecto al texto del que estuviera acompañado, contaba con 
+        5 valores: left, right, top, middle y bottom, ahora cada uno tiene su equivalente en CSS.</p>
+
+    <!--LEFT: Envia la imagen a la izquierda del navegador y el texto fluye a la derecha-->
+    <h4>LEFT</h4>
+    <h4>Para alinear a la izquierda:</h4>
+
+    <h5>CON HTML</h5>
+    <div>
+        <!--Usando align que ahora sale en color rojo por ser un atributo obsoleto, pero para visualizar-->
+        <img src="IMG/monkey1.jpeg" align="left" width="200px"/>
+
+        <!--El texto se coloca debajo de la imagen para indicar que es lo que rodeara a la imagen, si va antes de ella, el navegador no le aplicara
+        la alineación y si va fuera del div tambien sera algo que no tiene que ver con ello y no fluira con la imagen.-->
+        <h5>Monos:</h5>
+        <p>Los simios o monos son primates de la infraorden de los haplorrinos. En castellano se suele usar la misma palabra para referirse de igual
+             modo a los monos y a los simios en lenguaje común, incluso para aquellos simios que carecen de cola. Su tamaño es muy variable, tienen los
+             ojos situados en la parte frontal de la cara y pulgares oponibles en las manos que les permiten trepar con facilidad a los árboles. Gracias a 
+             la constitución de sus manos también son capaces de usar ciertas herramientas para llevar a cabo algunas actividades de su vida diaria.  
+             Se conocen unas 260 especies diferentes: el babuino es el mano de mayor tamaño y el tití pigmeo el más pequeño. Son animales mamíferos, de 
+             comportamiento sociable que en ocasiones puede convertirse en violento si se sienten intimidados. </p>
+    </div>
+    <div style="clear: both;"></div> 
+    <!--Aca es necesario usar div, div es una etiqueta sin significado semantico, usado unicamente para dividir secciones de contenido y aplicar
+    un estilo diferente, pero en este caso es necesario usarlo porque al usar la variable float esto provoca que el texto se quiera subir a la parte
+    superior desordenando todo, en cambio div lo fuerza a no hacerlo mediante la variable clear que sirve para decir: "que nada se coloque a la izquierda
+    o derecha de este elemento y bajalo debajo del contenido flotante" y su valor BOTH que hace que el contenido baje debajo de cualquier float.-->
+
+    <h5>CON CSS</h5>
+    <div>
+          <!--Con CSS: como lo hacen las webs modernas, estas ya no usan align si no float tanto para left y right, porque lo que float hace es que el texto
+          rodee a la imagen, hace que el elemento se salga del flujo normal del documento.-->
+        <img src="IMG/monkey1.jpeg" style="float:left" width="200px"/>
+        <h5>Monos:</h5>
+        <p>Los simios o monos son primates de la infraorden de los haplorrinos. En castellano se suele usar la misma palabra para referirse de igual
+             modo a los monos y a los simios en lenguaje común, incluso para aquellos simios que carecen de cola. Su tamaño es muy variable, tienen los
+             ojos situados en la parte frontal de la cara y pulgares oponibles en las manos que les permiten trepar con facilidad a los árboles. Gracias a 
+             la constitución de sus manos también son capaces de usar ciertas herramientas para llevar a cabo algunas actividades de su vida diaria.  
+             Se conocen unas 260 especies diferentes: el babuino es el mano de mayor tamaño y el tití pigmeo el más pequeño. Son animales mamíferos, de 
+             comportamiento sociable que en ocasiones puede convertirse en violento si se sienten intimidados. </p>
+    </div>
+    <div style="clear: both;"></div> 
+
+    <!--RIGHT:Pega la imagen al lado derecho del navegador y el texto se mueve o mantiene a la izquierda-->
+    <h4>RIGHT</h4>
+    <h4>Para alinear a la derecha:</h4>
+   
+    <h5>CON HTML:</h5>
+    <div>
+        <!--Con HTML-->
+        <img src="IMG/monkey2.jpeg" align="right" width="200px"/>
+        <h5>Primates:</h5>
+        <p>Se han descrito unas 150 especies de primates diferentes, una orden de los mamíferos a la que pertenecemos los humanos. Tienen un cráneo de 
+            tamaño grande y los ojos situados en la parte frontal, algo que les permite tener una buena visión capaz de calcular de forma exacta las 
+            dimensiones de la realidad. Se cree que su origen se encuentra unos 65 millones de años atrás. La mayoría cuentan con el pulgar oponible que 
+            les permite usar herramientas y agarrarse de forma adecuada a las ramas para poder trepar a los árboles. Son animales omnívoros y habitan en 
+            algunas zonas de Sudamérica y Centroamérica, y las especies más grandes en África y Madagascar, siempre en las zonas tropicales y subtropicales. </p>
+    </div>
+    <div style="clear: both;"></div>
+
+    <!--Con CSS-->
+    <h5>CON CSS:</h5>
+    <div>
+        <img src="IMG/monkey2.jpeg" style="float:right" width="200px"/>
+        <h5>Primates:</h5>
+         <p>Se han descrito unas 150 especies de primates diferentes, una orden de los mamíferos a la que pertenecemos los humanos. Tienen un cráneo de 
+            tamaño grande y los ojos situados en la parte frontal, algo que les permite tener una buena visión capaz de calcular de forma exacta las 
+            dimensiones de la realidad. Se cree que su origen se encuentra unos 65 millones de años atrás. La mayoría cuentan con el pulgar oponible que 
+            les permite usar herramientas y agarrarse de forma adecuada a las ramas para poder trepar a los árboles. Son animales omnívoros y habitan en 
+            algunas zonas de Sudamérica y Centroamérica, y las especies más grandes en África y Madagascar, siempre en las zonas tropicales y subtropicales. </p>
+    </div>
+    <div style="clear: right;"></div>
+
+    <p>Los otros 3 valores: <b>Top, Middle y Bottom</b> suelen confundir a muchos programadores, ya que son mayormente usados para iconos pequeños al tamaño del renglón donde
+        va el texto, manejando tamaños entre 25 px y 40 px como maximo para que no se vea raro, ya que al hacerlo con imagenes de tamaño mayor el texto o parrafo se veria 
+        desordenado o habria grandes espacios, por esto, estos valores son comunemnte usados para iconos, como por ejemplo de descarga, para redes sociales de la pagina web 
+        que diseñemos o aplicacion, emojis en linea, indicadores, flechas, etcera, elementos que sea INLINE, o sea vayan dentro de una linea de texto</p>
+
+    <!--NOTA!!!-->
+    <!--Con CSS. Aqui ya no se usa float, si no un nuevo valor llamado VERTICAL-ALIGN, que solo funciona con elemento inline o inline-block, la etiqueta img
+     es inline por defecto, o sea ocupa sus propias lineas, por eso en los usos anteriores de left y right era necesario usar float porque como mencionamos obligaba
+     al elemento, en ese caso el texto a que se salga del flujo normal del documento haciendo que el texto la rodeara, pero aqui no queremos que el texto rodee la imagen,
+     solo alinearla respecto al texto que aparecera y tiene tres valores: TOP, MIDDLE Y BOTTOM.-->
+
+
+    <!--TOP: Alinea la parte superior de la imagen con la parte superior de la linea de texto mas alta de su contexto, el texto parece que queda "mas abajo" porque la imagen se pega arriba-->
+   <h4>TOP</h4>
+    <h4>Para alinear la imagen al top del texto</h4>
+    
+    <!--Con HTML-->
+    <h5>CON HTML</h5>
+     <div>
+        <h5>Serpientes</h5>
+        <img src="IMG/snake.jpeg" style="float: left;" width="175px"/>
+        <p>Las serpientes son un tipo de reptiles que se caracterizan principalmente por la carencia de patas. Su anatomía, caracterizada por un cuerpo alargado, 
+            está preparada para permitir un desplazamiento sin necesidad de extremidades: pueden moverse cómodamente tanto por tierra como por agua.
+            Tienen la piel recubierta de escamas, un esqueleto que les proporciona mucha flexibilidad y una lengua bífida. Algunas especies matan a sus presas por constricción 
+            por ejemplo las boas, pero otras lo hacen mediante el veneno que inoculan con los dientes cuando muerden a sus víctimas. Todos los miembros de esta especie 
+            son animales carnívoros.
+            <br>
+            Para leer mas sobre serpientes: 
+            <a href="https://www.nationalgeographic.com.es/animales/serpientes" target="_blank" rel="noopener noreferrer">
+                <img src="IMG/arrow.jpg" align="top" width="10px"/></a>
+                Y compartenos en tus redes sociales.
+        </p>
+     </div>
+     <div style="clear:both;"></div>
+
+     <!--Con CSS-->
+     <h5>CON CSS:</h5>
+     <div>
+        <h5>Serpientes:</h5>
+        <img src="IMG/snake.jpeg" width="175px" style="float: right;"/>
+        <p>Las serpientes son un tipo de reptiles que se caracterizan principalmente por la carencia de patas. Su anatomía, caracterizada por un cuerpo alargado, 
+            está preparada para permitir un desplazamiento sin necesidad de extremidades: pueden moverse cómodamente tanto por tierra como por agua. 
+            Tienen la piel recubierta de escamas, un esqueleto que les proporciona mucha flexibilidad y una lengua bífida. Algunas especies matan a sus presas por constricción 
+            por ejemplo las boas, pero otras lo hacen mediante el veneno que inoculan con los dientes cuando muerden a sus víctimas. Todos los miembros de esta especie 
+            son animales carnívoros.
+            <br>
+            Si quieres leer mas articulos sobre serpientes:
+        <a href="https://www.nationalgeographic.com.es/animales/serpientes" target="_blank" rel="noopener noreferrer">
+            <img src="IMG/arrow.jpg" width="10px" style="vertical-align: top;"/>
+        </a>
+        Y compartenos en tus redes sociales.
+        </p>
+     </div>
+     <div style="clear: both;"></div>
+
+     <!--MIDDLE:La funcion de middle es hacer que la imagen se alinee con la linea base del texto. Es lo mas natural. O sea, hace que el texto y la imagen queden bien centrados 
+     verticalmente entre si, es lo mas equilibrado y siempre para imagenes o elementos inline. -->
+     <h4>MIDDLE</h4>
+     <h5>Para alinear la mitad de la imagen con la linea base del texto</h5>
+
+     <!--Con HTML-->
+     <h5>CON HTML</h5>
+     <div>
+        <h5>Ranas:</h5>
+        <img src="IMG/frog.jpeg" width="175px" align="right"/>
+        <p>Son un tipo de anfibios caracterizados principalmente por su gran capacidad de salto gracias a la morfología de sus extremidades posteriores, potentes y muy 
+            desarrolladas. Los ejemplares más pequeños miden aproximadamente 8 centímetros, mientras que los más grandes pueden alcanzar los 30 centímetros. 
+            Se han descrito unas 6.600 especies, la mayoría de las cuales reparte su vida entre el medio acuático y el terrestre. Se reproducen mediante huevos y se alimentan 
+            de pequeños invertebrados. Su hábitat se distribuye sobretodo en los bosques de las regiones tropicales, pero se pueden encontrar algunas hasta en las regiones 
+            subárticas. Las ranas se distinguen de los sapos básicamente por su piel, que en el caso de los sapos presenta algunas verrugas. 
+            <br><br>
+            Sigue nuestras redes sociales: 
+            <ul>
+                <li>
+                    Facebook 
+                    <a href="https://www.facebook.com/natgeo/?locale=es_LA" target="_self" rel="noopener noreferrer">
+                        <img src="IMG/fb.jpg" width="25px" align="middle"/>
+                    </a>
+                </li>
+
+                <li>
+                Instagram
+                <a href="https://www.instagram.com/natgeo?igsh=MWNiNmxlejJoM283" target="_self" rel="noopener noreferrer">
+                <img src="IMG/ig.jpg" width="25px" align="middle"/>
+                </a>
+                </li>
+            </ul>
+        </p>
+     </div>
+     <div style="clear: both;"></div>
+
+     <!--Con CSS siempre usando VERTICAL-ALIGN-->
+     <h5>CON CSS:</h5>
+     <div>
+        <h5>Ranas:</h5>
+        <img src="IMG/frog.jpeg" style="float: left;" width="175px"/>
+         <p>Son un tipo de anfibios caracterizados principalmente por su gran capacidad de salto gracias a la morfología de sus extremidades posteriores, potentes y muy 
+            desarrolladas. Los ejemplares más pequeños miden aproximadamente 8 centímetros, mientras que los más grandes pueden alcanzar los 30 centímetros.
+            Se han descrito unas 6.600 especies, la mayoría de las cuales reparte su vida entre el medio acuático y el terrestre. Se reproducen mediante huevos y se alimentan 
+            de pequeños invertebrados. Su hábitat se distribuye sobretodo en los bosques de las regiones tropicales, pero se pueden encontrar algunas hasta en las regiones subárticas. 
+            Las ranas se distinguen de los sapos básicamente por su piel, que en el caso de los sapos presenta algunas verrugas. 
+        <br>
+        Siguenos en nuestras redes sociales para no perderte nuestros articulos semanales:
+        <ul>
+            <li>
+                Facebook
+                <a href="https://www.facebook.com/natgeo/?locale=es_LA" taget="_blank" rel="noopener noreferrer">
+                    <img src="IMG/fb.jpg" width="20px" style="vertical-align: middle;"/>
+                </a>
+            </li>
+
+            <li>
+                Instagram
+                <a href="https://www.instagram.com/natgeo?igsh=MWNiNmxlejJoM283" target="_blank" rel="noopener noreferrer">
+                    <img src="IMG/ig.jpg" width="20px" style="vertical-align: middle;"/>
+                </a>
+            </li>
+            <li>
+                WhatsApp
+                <a href="https://wa.me/50370122091?text=Hola!%20Gracias%20por%20comunicarte%20conmigo.%20¿Qué%20servicio%20de%20programación%20te%20interesa?" target="_blank" rel="noopener noreferrer">
+                    <img src="IMG/whatsapp.jpg" style="vertical-align: middle;" width="20px" alt="Logo de whatsapp"/>
+                </a>
+            </li>
+        </ul>
+        </p>
+     </div>
+     <div style="clear: both;"></div>
+
+     <!--BOTTOM: Este es el valor por defecto, en el cual su funcion es alinear la parte inferior de la imagen con la linea base del texto.
+     Es decir la parte inferior de la imagen se pega a la linea base donde va el texto, como si fuera un renglon de cuaderno y pareciera que el texto
+     sube o baja dependiendo porque es la imagen y su tamaño quienes controlan a la linea del texto.-->
+     <h4>BOTTOM</h4>
+     <h5>Para alinear la parte inferior de la imagen con la linea base del texto</h5>
+
+     <h5>CON HTML</h5>
+     <div>
+        <h5>Mariposas</h5>
+        <img src="IMG/butterfly.jpg" width="150px" height="200px" style="float: right;"/>
+        <p>Los lepidópteros, mas conocidos comúnmente como mariposas, son unos insectos pertenecientes al orden de los homometábolos, un grupo de insectos superiores, los cuales, 
+            a lo largo de su vida sufren una serie de transformaciones complejas conocida como metamorfosis, y en la que se suceden las fases de embrión, larva, pupa e imago.Las 
+            mariposas son un tipo de insecto muy popular por los llamativos colores que tiñen sus alas y por su vuelo vacilante cuando se acerca el buen tiempo. Se han descrito unas 
+            24.000 especies diferentes. Como todos los insectos cuentan con seis patas, dos alas y un cuerpo dividido en tres partes: cabeza, tórax y abdomen.Su boca tiene forma de 
+            tubo pues es la herramienta con la que succionan los nutrientes de las plantas para alimentarse a través de una larga lengua enrollada sobre si misma que recibe el nombre 
+            de espiritrompa.  El único lugar en el mundo donde no se encuentran mariposas es en la Antártida.
+            Conoce mas historias sobre mariposas: 
+        <a href="https://www.nationalgeographic.com.es/animales/mariposas" target="_blank" rel="noopener noreferrer" title="Butterflys">
+            <img src="IMG/arow.jpg" width="10px" align="bottom"/>
+        </a>
+        </p>
+     </div>
+     <div style="clear: both;"></div>
+
+     <!--CON CSS: Con CSS igual que los dos valores anteriores, usamos vertical-align, ya que no queremos forzar algun flujo, solo ordenar.-->
+     <h5>CON CSS</h5>
+     <div>
+        <h5>Mariposas</h5>
+        <img src="IMG/butterfly.jpg" width="150px" height="200px" style="float:left;">
+        <p>Los lepidópteros, mas conocidos comúnmente como mariposas, son unos insectos pertenecientes al orden de los homometábolos, un grupo de insectos superiores, los cuales, 
+            a lo largo de su vida sufren una serie de transformaciones complejas conocida como metamorfosis, y en la que se suceden las fases de embrión, larva, pupa e imago.Las 
+            mariposas son un tipo de insecto muy popular por los llamativos colores que tiñen sus alas y por su vuelo vacilante cuando se acerca el buen tiempo. Se han descrito unas 
+            24.000 especies diferentes. Como todos los insectos cuentan con seis patas, dos alas y un cuerpo dividido en tres partes: cabeza, tórax y abdomen.Su boca tiene forma de 
+            tubo pues es la herramienta con la que succionan los nutrientes de las plantas para alimentarse a través de una larga lengua enrollada sobre si misma que recibe el nombre 
+            de espiritrompa.  El único lugar en el mundo donde no se encuentran mariposas es en la Antártida.
+            <br>
+            Lee mas historias sobre mariposas: 
+            <a href="https://www.nationalgeographic.com.es/animales/mariposas" target="_blank" rel="noopener noreferrer">
+                <img src="IMG/arow.jpg" width="10px" style="vertical-align: bottom;"/>
+                <!--Como dijimos al principio BOTTOM es el valor por defecto, aunque no coloquemos el style="vertical-align: bottom;"
+                y ningun otro valor, el navegador lo asignara por defecto y lo veremos alineado con la parte superior de la linea base del texto.-->
+            </a>
+        </p>
+     </div>
+     <div style="clear: both;"></div>
+
+     <p>
+        Si tienes dudas sobre el atributo align y sus equivalentes en CSS, puedes contactarme por medio de correo:
+     <a href="mailto:sarimartinez250@gmail.com" rel="noopener noreferrer">
+        <img src="IMG/gmail.jpg" width="25px" style="vertical-align: bottom;" title="sarimartinez250@gmail.com"/>
+     </a>
+     </p>
+
+     <!--ALT-->
+     <h3>ALTERNATIVE TEXT (Texto Alternativo)</h3>
+     <p>Es el texto que acompaña a la imagen describiendo su contenido para que en caso de que la URL de la imagen sea incorrecta, la imagen no se haya descargado aun o tiene un 
+        formato no soportado el usuario vea esa descripcion y pueda hacerse una imagen mental sin necesidad de ver la imagen, tambien sirve para accesibilidad, para hacer nuestras 
+        paginas inclusivas en caso de personas ciegas que usen screenreader y para SEO (accesibilidad de Google) ya que alt, Google no sabe que hay ahi, es un atributo obligatorio despues 
+        de src, pero alt se coloca vacio o podemos no colocarlo cuando la imagen es meramente decorativa y su contenido no brinda mayr utilidad al codigo.
+        Las descripciones deben ser muy especificas de acuerdo a la imagen, sin extendernos en descripcion cosas sencillas pero que describan a la perfeccion.</p>
+
+        <h5>SIN COLOCAR NOMBRE DE LA IMAGEN</h5>
+        <div>
+            <h5>Leones</h5>
+            <img src="IMG" width="200px" height="200px" alt="León rugiendo en la pradera" style="float: right;"/>
+            <!--Aca solo hemos colocado la ruta de la imagen pero no el nombre de la imagen, por lo tanto cuando el usuario vera la descripcion que hemos colocado en el atributo de alt-->
+            <p>Los leones son los únicos felinos que viven en manada. Las unidades familiares pueden incluir hasta tres machos, una docena de hembras y sus crías. Todas las leonas de una manada 
+                están emparentadas y usualmente los pequeñas hembras en su seno se quedan con el grupo a medida que envejecen. Los varones jóvenes, sin embargo, tarde o temprano abandonan el grupo 
+                o son expulsados y establecen su propia manada.Una abundante y frondosa melena rodea su cara y se extiende por el cuello del rey de la selva –solo los machos la poseen: este es su rasgo 
+                más característico y único en la familia de los félidos.  Habitan en las sabanas africanas y en una zona reducida del noreste de la India, pero son una especie muy vulnerable pues antiguamente 
+                habitaban en otras partes del mundo de las que han ido desapareciendo. Las leonas son las encargadas de salir a cazar mientras que los machos deben defender el territorio de la manada y a sus hembras. 
+                Suelen comer grandes mamíferos como ñus, cebras, búfalos o facóceros entre otros, y pueden llegar a vivir aproximadamente unos 15 años. Estos animales han sido venerados a lo largo de la historia por su 
+                valor y su fuerza. Una vez pudieron encontrarse en la mayor parte de África y algunas partes de Asia y Europa. Hoy en día sólo se encuentran en ciertos lugares al sur del desierto del Sáhara, a excepción de 
+                una población muy pequeña de leones asiáticos que sobrevive en el bosque Gir de la India.</p>
+
+        </div>
+        <div style="clear: both;"></div>
+
+        <h5>COLOCANDO NOMBRE DE LA IMAGEN</h5>
+        <div>
+            <h5>Leones</h5>
+            <img src="IMG/lion.jpg" style="box-shadow: 10px 10px 5px rgba(200, 100, 0, 0.5);" width="200px" height="200px" alt="León rugiendo en la pradera" style="float: left;"/>
+            <!--Aca solo hemos colocado la ruta de la imagen pero no el nombre de la imagen, por lo tanto cuando el usuario vera la descripcion que hemos colocado en el atributo de alt-->
+            <p>Los leones son los únicos felinos que viven en manada. Las unidades familiares pueden incluir hasta tres machos, una docena de hembras y sus crías. Todas las leonas de una manada 
+                están emparentadas y usualmente los pequeñas hembras en su seno se quedan con el grupo a medida que envejecen. Los varones jóvenes, sin embargo, tarde o temprano abandonan el grupo 
+                o son expulsados y establecen su propia manada.Una abundante y frondosa melena rodea su cara y se extiende por el cuello del rey de la selva –solo los machos la poseen: este es su rasgo 
+                más característico y único en la familia de los félidos.  Habitan en las sabanas africanas y en una zona reducida del noreste de la India, pero son una especie muy vulnerable pues antiguamente 
+                habitaban en otras partes del mundo de las que han ido desapareciendo. Las leonas son las encargadas de salir a cazar mientras que los machos deben defender el territorio de la manada y a sus hembras. 
+                Suelen comer grandes mamíferos como ñus, cebras, búfalos o facóceros entre otros, y pueden llegar a vivir aproximadamente unos 15 años. Estos animales han sido venerados a lo largo de la historia por su 
+                valor y su fuerza. Una vez pudieron encontrarse en la mayor parte de África y algunas partes de Asia y Europa. Hoy en día sólo se encuentran en ciertos lugares al sur del desierto del Sáhara, a excepción de 
+                una población muy pequeña de leones asiáticos que sobrevive en el bosque Gir de la India.</p>
+
+        </div>
+        <div style="clear: both;"></div>
+
+        <!--BORDER-->
+        <h3>BORDER</h3>
+        <p>Al igual que align es un atributo obsoleto en HTML moderno. Su funcion era colocar bordes a las imagenes, pero en HTML antiguo solo permitia bordes en color negro y sin alguna forma en particular.
+            En HTML moderno, se puede realizar de dos maneras: Estilo directo (CSS inline), dentro del mismo HTML dando sus valores y como segunda forma en una clase externa en CSS que es lo mas profesional, donde si se
+            permite cualquier color, estilo y otros detalles como sombras y esquinas redondas, no da errores y es super profesional. Esta formado por 3 partes: grosor, estilo y color. Colocados en ese orden ya sea inline o
+            externamente.</p>
+
+            <!--CON HTML: Aqui veremos que al ser un atributo obsoleto aparece en letras rojas en nuestro editor de texto-->
+            <h5>CON HTML</h5>
+            <div>
+                <h5>Guepardos</h5> 
+                <img src="IMG/cheeta.jpg" width="150px" alt="Guepardo corriendo velozmente" border="5px"/>
+                <p>También conocido como chita del inglés cheetah, el guepardo es un felino considerado el animal terrestre más rápido del mundo, llegando a desplazarse a más de 100km/h en carreras largas, una velocidad 
+                    que puede alcanzar en tan solo 3 segundos. Es uno de los cazadores más eficientes gracias a un excelente sentido de la vista y su gran agilidad mediante la cual pueden hacer rápidos y repentinos giros 
+                    en la persecución de su presa. Se alimenta de ñus, cebras, antílopes y sus favoritas, las gacelas.Este felino es un gran depredador diurno que se vale del movimiento furtivo y sigiloso que le caracteriza 
+                    y de una distintivo patrón de manchas en su piel que le permite camuflarse fácilmente entre las hierbas altas y secas donde aguarda agazapado el momento en el que lanzarse sobre su víctima. Se pueden 
+                    distinguir fácilmente de los leopardos por las líneas negras que salen de sus ojos –como lágrimas– y descienden hacia a bajo enmarcando el hocico. 
+                    Las hembras suelen dar a luz a camadas de tres cachorros y generalmente viven con ellos durante periodos que transcurren entre el año medio y los dos años. Los cachorros jóvenes pasan su primer año 
+                    aprendiendo de su madre y practicando técnicas de caza a través de juegos- Los machos suelen ser solitarios o vivir en grupos pequeños, a menudo con sus compañeros de camada.
+                    La mayor parte de los guepardos que quedan en la actualidad viven en el este y sudoeste de África, donde habitan los 12.000 ejemplares que se calcula que quedan. Viven aproximadamente 12 años, algunos 
+                    pueden llegar a pesar 60 kilos y miden entre 1,10 y 1,40 metros, mientras que la cola tiene una longitud de casi 80 centímetros y constituye una herramienta clave para su equilibrio y agilidad.</p>
+            </div>
+            <div style="clear: both;"></div>
+
+            <!--CON CSS: En este caso lo realizaremos de manera inline, sin CSS externo, dando sus valores aca mismo-->
+            <h5>CON CSS</h5>
+            <p>Con CSS tenemos total libertad en cuanto a colores del borde, estilo, sombras, cosa que en HTML antiguo no se podia, conocermos unos cuantos valores de estilos y bordes.</p>
+
+            <h5>SOLID:</h5>
+            <p>El estilo "solid" de border indica que a la imagen la rodeara un borde solido sin mayor efecto del color especificado.</p>
+            <div>
+                <img src="IMG/cheeta.jpg" style="border: 5px solid lightgreen" width="200" alt="Guepardo corriendo a gran velocidad"/>
+            </div>
+
+            <h5>DASHED</h5>
+            <p>Un borde formado por guiones del tamaño y color especificado por el programador.</p>
+
+            <div>
+                <img src="IMG/cheeta.jpg" style="border: 2px dashed brown" width="225" alt="Guepardo corriendo a gran velocidad"/>
+            </div>
+
+            <h5>DOTTED</h5>
+            <p>Para un borde punteado.</p>
+
+            <div>
+                <img src="IMG/cheeta.jpg" style="border: 3px dotted orange" width="225px" alt="Guepardo corriendo a gran velocidad"/>
+            </div>
+
+            <h5>DOUBLE</h5>
+            <p>Un borde de doble linea.</p>
+
+            <div>
+                <img src="IMG/cheeta.jpg" style="border: 4px double blueviolet" width="225px" alt="Guepardo corriendo a gran velocidad"/>
+            </div>
+
+            <h5>GROOVE/RIDGE</h5>
+            <p>Estos valores dan un efecto 3D dependiendo del color</p>
+
+            <div>
+                <h5>Con GROOVE:</h5>
+                <img src="IMG/cheeta.jpg" style="border: 5px groove gray" width="225px" alt="Guepardo corriendo a gran velocidad"/>
+
+                <h5>CON RIDGE</h5>
+                <img src="IMG/cheeta.jpg" style="border: 6px ridge black" width="225px" alt="Guepardo corriendo a gran velocidad"/>
+            </div>
+
+            <h5>INSET/OUTSET</h5>
+            <p>Inset para dar un efecto de border "salidos" y outset da un efecto de bordes "hundidos"</p>
+
+            <div>
+                <h5>INSET</h5>
+                <img src="IMG/cheeta.jpg" style="border: 6px inset darkred" width="225px" alt="Guepardo corriendo a gran velocidad"/>
+
+                <h5>OUTSET</h5>
+                <img src="IMG/cheeta.jpg" style="border: 7px outset darkgreen" width="225px" alt="Guepardo corriendo a gran velocidad"/>
+            </div>
+
+            <h5>BORDES REDONDEADOS</h5>
+            <p></p>
+
+            <div>
+                <p>Para que las imagenes se vean profesionales, con border-radius: _;</p>
+                <!--Usando px u otra medida, lo que hace es redondear las esquinas de la imagen-->
+                <img src="IMG/cheeta.jpg" style="border-radius: 15px;" width="225px" alt="Guepardo corriendo a gran velocidad"/>
+
+                <p>Para un circulo perfecto, el mismo atributo: style="border-radius: _;" pero en lugar de px usamos % para el tamaño del radio</p>
+                <!--Usando porcentaje la imagen pasa de ser un cuadrado o rectangulo a ser un circulo perfecto con el tamaño del radio especificado con el porcentaje-->
+                <img src="IMG/cheeta.jpg" style="border-radius: 60%" width="225px" height="250px" alt="Guepardo corriendo a gran velocidad"/>
+            </div>
+
+            <h5>SOMBRAS (box-shadow)</h5>
+            <p>Para darle un efecto de sombra a nuestra imagen tenemos que darle diferente cantidad de valores, normalmente son 4 valores, pero usando la cantidad de valores que usemos, los primeros dos valores son
+                OBLIGATORIOS, y los demas son opcionales pero profesionalmente se usan 4: style="box-shadow: offset-x offset-y blur color(_,_,_,_)"
+                Donde:
+                <ul style="list-style-type:circle;">
+                    <li>offset-x: significa desplazamiento horizontal, indica si la sombra se mueve a la izquierda (-) o a la derecha (+) del elemento</li>
+                    <li>offset-y: desplazamiento vertical, que indica si la sombra alrededor del elemento se mueve hacia arriba (-) o hacia abajo (+)</li>
+                    <li>blur:para la difuminacion de la sombra, este mas alto sea el valor, mas desvanecido se ve el color de la sombra, si se pone un valor de 0px, la sombra se ve solida.</li>
+                    <li>color de la sombra: aca se pueden usar RGB, RGBA Y HEX:
+                </ul>
+                <ul style="list-style-type: disc">
+                    <li><b>RGB:</b>rgb trabaja con 3 valores que significan: r = red; g = green y b = blue donde cada uno de estos 3 valores van desde 0 a 255.
+                        Donde 0 indica la ausencia de ese color y 255 la maxima intensidad de ese color. En otras palabras es como combinar pinturas pero con luz.</li>
+                    <li><b>RGBA:</b>Usa 4 valores, los mismos 3 de rgb (red, green y blue) y un cuarto valor a = alpha que controla la transparencia de la sombra, haciendo que la sombra
+                        se vuelva mas realista que con rgb, y alpha tiene valores de 0 a 1, donde 0 indica que es totalmente visible y 1 totalmente transparente, como si no hubiera sombra, aqui se juega con
+                        decimales, por ejemplo si colocamos un valor de alpha de 0.25 indica que la sombra tiene un 25% de opacidad.</li>
+                    <li><b>HEX:</b>este es un color escrito en codigo, que representa el mismo color que si se usara rgb pero en base 16 (hexadecimal). Un valor hex siempre inicia con # y tiene 6 valores.
+                        Donde los primeros dos 00 son para red, 00 para green y 00 para blue. Y como los codigos hexadecimales trabajan con los numeros del 0 al 9 y las letras de a a f, la f equivale a 255 en rgb.</li>    
+                </ul>
+                Entonces el color a usar depende de lo que estemos haciendo, para unos hex es mas corto y se usa mas en diseño y rgb/rgba para cuando se quiere manipular valores con calculo o solo cuando se necesite trasnparencia
+            </p>
+
+            <div>
+                <h5>USANDO RGB:</h5>
+                <img src="IMG/cheeta.jpg" style="box-shadow: -11px 11px 10px rgb(255, 255, 0)" width="225px" alt="Guepardo corriendo a gran velocidad"/>
+
+                <h5>USANDO RGBA:</h5>
+                <img src="IMG/cheeta.jpg" style="box-shadow: 10px -10px 20px rgba(0, 200, 0, 0.3)" width="225px" alt="Guepardo corriendo a gran velocidad"/>
+
+                <h5>USANDO HEX:</h5>
+                <!--HEX no va envuelto en parentesis ya que no es una funcion como rgb y rgba, por lo tanto no lleva comillas, parentesis ni palabras es simplemente como escribir un numero.-->
+                <img src="IMG/cheeta.jpg" style="box-shadow: 10px 10px 20px #aa0101" width="225px" alt="Guepardo corriendo a gran velocidad"/>
+                <!--HEX tambien tiene version con transparencia la cual no es obligatoria pero existe, quedando como #RRGGBBAA pero no se usa tanto ya que si se trabaja con transparencia, RGBA es mejor!-->
+            </div>
+
+            <p>Otros valores importantes de BOX-SHADOW:
+                <ul style="list-style-type: circle;">
+                    <li><b>Spread:</b>El cual hace que la sombra se vea mas grande o mas "alta", como si la sombra se expandiera.
+                    <div>
+                        <img src="IMG/panter.jpg" style="float: right; box-shadow: -12px -12px 30px 3px #437837;" width="220px" alt="Pantera negra descansando en una rama"/>
+                    </div>
+                    <div style="clear: both;"></div>
+                    </li>
+                    <li><b>Inset:</b>Hace que la sombra pase de ser externa a interna (como si estuviera dentro de la imagen). Se coloca normalmente 
+                    antes de los demas valores:
+
+                    <!--Aca podemos ver que sera un poco "dificil" notar el cambio que produce la sombra interna, debido a que la etiqueta de imagen es un contenido reemplazado que ocupa todo el espacio y no tiene sobre que 
+                    proyectar la sombra y por lo tanto esta se mezcla con el color de la imagen haciendo que pase desapercibida aunque esta sea la sintaxis correcta para escribirla en otros elementos.-->
+                    <h5>SIN APLICAR PADDING NI DISPLAY:</h5>
+                    <p>Aca si tenemos un box-shadow escrito correctamente y ahi esta, no se logra apreciar debido a que el contenido ocupa todo el espacio del contenedor y la sombra interna queda escondida
+                        detras del contenido y pasa desapercibida.
+                    </p>
+                    <div>
+                        <img src="IMG/turtle.jpg" style="box-shadow: inset 11px 11px 15px rgba(0, 0, 0, 0.4);" width="200px" alt="Osezno de un ooso pardo"/>
+                    </div>
+                    <div style="clear: both;"></div>
+                    </li>
+
+
+                    <!--Ahora si queremos proyectar una sombra interna en una imagen si o si, podemos hacerlo creando un padding en el contenedor de la magen con ayuda de display-block en la etiqueta de imagen, que es como si forzara
+                    a la imagen la cual es un contenido inline a que pase a ser un contenido de bloque y que HTML tenga control sobre ella.
+                    ¿Qué es un padding y display-block? Ambos vienen siendo parte del modelo de caja.-->
+                    <!--PADDING:Es el relleno interno. Es el espacio entre el borde de la caja o sea el contenedor y el contenido dentro de ella, ya sea imagen, texto u otro tipo de etiqueta.
+                    En otras palabras padding es una especie de "marco" que separa el contenido del contenedor para dejar un espacio indicado en el cual si haya lugar a que difrentes efectos se muestren, en este caso una sombra interna, veremos que con
+                    un padding habra un espacio entre el contenedor y la imagen permitiendo aplicar la sombra interna.-->
+                    <!--DISPLAY-BLOCK:Display significa "mostrar", o sea señala la forma en la que el contenido seleccionado se mostrara en pantalla y block quiere decir que ese elemento ocupara toda la linea, no pueden haber mas bloques a su lado y siempre inicia en una 
+                    linea nueva. Y aca si acepta width, height, margin y otros atributos y un box-shadow se notaria facilmente porque hay un espacio con padding para mostrarlo, pero no quiere decir que siempre que vayamos a usar padding haya que usar un display ya que hay 
+                    elementos que no son inline por defecto.-->
+                    <h5>APLICANDO UN PADDING Y DISPLAY:</h5>
+                    <p>Por defecto, la etiqueta img es un elemento inline que no acepta width, height, padding u otros atributos, entonces aplicando un display en este caso BLOCK, el elemento deja de ser inline y se comporta como un bloque completo
+                        que ocupa toda la linea y si hubiera algo a su lado obligaria a que se vaya hacia abajo y ya nos permite agregar un padding con ancho y alto para que el box-shadow se note.</p>
+                    <div style="width: 220px; padding: 10px; box-shadow: inset 11px 11px 15px rgba(0, 0, 0, 0.4);">
+                        <img src="IMG/turtle.jpg" style="display: block;" width="225px" alt="Tortuga marina"/>
+                    </div>
+                    <div style="clear: both;"></div>
+                    </li>
+                </ul>
+            </p>
+
+            <!--DIFERENCIAS ENTRE BLOCK E INLINE-BLOCK:-->
+
+            <!--Un elemento inline-block sigue siendo inline en cuanto a que esta en la linea pero ya acepta modificaciones de width, height padding, etc. Y un box-shadow 
+            se lograra apreciar facilmente porque hay un espacio que separa al contenido de la cajita donde esta. Y lo que controlamos con width, height es el espacio entre lineas de texto, no el tamaño ni ancho, la linea sigue teniendo 
+            el tamaño por defecto a menos que la modifiquemos con size-line y el texto igual se modifica con size-height, entonces lo que se modifica es la separacion del texto respecto a la linea donde esta y todo lo que esta alrededor de 
+            nuestro bloque seleccionado no se ve afectado por esos cambios de altura ni ancho.-->
+            <h5>Inline-block:</h5>
+            <div>
+                <p>The UK government wants new small nuclear reactors on Anglesey. Workers start the job next year. The plan is to make power for three million homes in the 2030s.
+                    <span style="display: inline-block; padding: 30px 30px; box-shadow: inset -10px -11px 15px rgba(100, 100, 100, 0.6);">
+                        <a href="https://www.newsinlevels.com/products/uks-first-small-nuclear-plant-level-1/" target="_blank" rel="noopener noreferrer">Leer el articulo completo</a>
+                    </span>
+                    The reactors are small, fast to build, and not as expensive as big nuclear stations. People on the island hope for new jobs. Now, many young people leave the island for work. Officials say that the reactors can help families stay. 
+                    The plan also brings money and new chances for the community.
+                </p>
+            </div>
+
+            <!--Un block ya como mencionamos antes viene siendo un bloque completo que ocupa toda esa linea y obliga a lo demas a moverse hacia abajo ya que ese bloque no permite ningun otro bloque.-->
+            <h5>Block:</h5>
+            <div>
+                <p>The UK government wants new small nuclear reactors on Anglesey. Workers start the job next year. The plan is to make power for three million homes in the 2030s.
+                    <span style="display: block; padding: 30px 20px; box-shadow: inset -10px -11px 15px rgba(100, 100, 100, 0.6);">
+                        <a href="https://www.newsinlevels.com/products/uks-first-small-nuclear-plant-level-1/" target="_blank" rel="noopener noreferrer">Leer artículo completo</a>
+                    </span>
+                    The reactors are small, fast to build, and not as expensive as big nuclear stations. People on the island hope for new jobs. Now, many young people leave the island for work. Officials say that the reactors can help families stay. 
+                    The plan also brings money and new chances for the community.
+                </p>
+            </div>
+
+            <div>
+                <h5>Perros:</h5>
+                <img src="IMG/dog.jpg" style="float: right; box-shadow: 10px 10px 20px rgba(202, 128, 123, 0.9)" width="150px" alt="Un perro sentado usando un abrigo color rojo"/>
+                <p>
+                    Ya desde la prehistoria se han documentado casos de asociación entre estos mamíferos descendientes del lobo y el ser humano. Cuando el hombre se dio cuenta de que podía ser un compañero de caza muy eficaz se creó una relación que
+                    ha evolucionado hasta la actualidad. Se cree que esta domesticación se produjo en Europa hace entre 20.000 y 40.000 años, a finales del Neolítico, dando lugar a la especie que hoy conocemos como Canis Lupus familiaris. 
+                    Pese a que todos los perros actuales tienen un antepasado común, hoy en día se conocen alrededor de 800 razas distintas con tamaños y fisonomías muy diferentes y originadas a partir de la selección artificial por parte de los seres 
+                    humanos. A pesar de que no cuentan con un gran sentido de la vista, tienen muy buen oído y el sentido del olfato muy desarrollado, siendo esta la herramienta que define sus mejores cualidades como cazador o rastreador, pero también 
+                    su capacidad de socialización reconociendo olores familiares.   Las hembras pasan el celo dos veces al año, su periodo de gestación dura un poco más de dos meses y suelen tener camadas de entre 8 y 12 crías. A pesar de que su esperanza 
+                    de vida está entre los 12 y los 15 años, hay algunos que pueden alcanzar los 20 años.
+                    <span style="display: inline-block; padding: 25px 25px; box-shadow: inset 5px 6px 10px rgb(200, 200, 200);">
+                        Conozca mas sobre perros: <a href="https://www.nationalgeographic.com.es/animales/perros" target="miiframe3" rel="noopener noreferrer">
+                            <img src="IMG/patita.jpg" style="vertical-align: middle;" width="20px" alt="huellita de la patita de un perro"/>
+                        </a>
+                    </span>
+                </p>
+            </div>
+            <div style="clear:both"></div>
+
+        <!--SIGUIENDO CON LOS DEMAS ATRIBUTOS DE IMG-->
+
+        <!--CROSSORIGIN-->
+        <h3>CROSSORIGIN</h3>
+        <p>Este atributo que no solo se usa en img, tiene la funcion de indicar si la busqueda del elemento en este caso la imagen debe hacerse por CORS (Cross-Origin Resourse Sharing) o no.
+            En otras palabras, le dice al navegador si puede utilizar ese recurso externo sin generar problemas de seguridad o restricciones cuando el usuario interactue con él,
+            especialmente cuando se usa la etiqueta de canvas (que se vera mas adelante) para editarlo, dibujar sobre él o descargarlo. Tiene dos valores principales:
+            <ul>
+                <li>
+                    <b>"anonymus":</b>Indica que el recurso puede cargarse sin enviar credenciales del usuario (como cookies, tokens o sesiones). Esto es lo mas seguro y lo mas usado.
+                Permite que la imagen siga siendo válida para manipularla en un elemento canvas sin contaminarlo.
+                Si la imagen externa permite CORS ya que es necesario aclarar que no todos los sitios lo permiten, pero si lo hace el navegador la cargara correctamente y el canvas funcionara sin
+                restricciones.</li>
+                <li>
+                    <b>"use-credentials":</b>Esta propiedad envia credenciales del usuario al servidor externo. Esto casi nunca se usa para las imagenes porque implicaria compartir cookies o sesiones
+                    con otro dominio, lo cual puede ser inseguro.
+                    Solo se usa cuando el servidor externo lo necesita especificamente lo cual es raro en recursos publicos..</li>
+            </ul>
+            Si no se pone crossorigin y mas que todo con "anonymus" como propiedad nos exponemos o como programadores, exponemos al usuario a dos situaciones:
+            <ul>
+                <li>Situacion 1: Aca la imagen se muestra normalmente, pero no se puede usar en canvas ya que el canvas queda contaminado (tainted) y expone a situaciones de seguridad si se usa aun asi.</li>
+                <li>SItuacion 2: En este caso el navegador puede bloquear el recurso si el servidor tiene restricciones. Entonces el archivo no se muestra.</li>
+            </ul>
+            Y como aclaramos, cross-origin no brinda los permisos, quien los brinda es el servidor externo de donde proviene el recurso que estamos manipulando, entonces en casos que esos servidores no lo admitan
+            aunque tengamos cross-origin no vamos a poder manipular el elemento en un canvas.
+        </p>
+
+        <!--HEIGHT-->
+        <h3>HEIGHT</h3>
+        <p>Es la altura de la imagen en pixeles con la que se mostrara en la pagina web, este atributo le indica al navegador con que altura exacta debe mostrarla. En HTML5 es un valor que unicamente se expresa con
+            numeros, el navegador interpreta que son pixeles, no se puede poner height=50%, es incorrecto. 
+            En HTML4 height si aceptaba otro valor que era porcentaje, donde este valor era decirle al navegador el tamaño que usaria respecto al contenedor donde esta se encontrara, por ejemplo si se colocaba un valor de 
+            height de 25%, el navegador mostraria la imagen con un tamaño de la cuarta parte del valor total de la altura del contenedor. 
+            Hoy en dia, lo profesional es hacerlo mediante CSS, directamente en HTML con un style o mediante una clase desde CSS. 
+            <span style="padding: 10px 10px; 
+            box-shadow: 13px 13px 5px rgba(100, 100, 100, 0.6); 
+            border-radius: 20px; 
+            background-color: blanchedalmond;
+            display:block">
+            <img src="IMG/sign.jpeg" style="height: 12px; 
+            vertical-align: bottom;"/> 
+            Si solo se coloca height sin modificar width (ancho), el navegador lo mantiene proporcional, pero si manipulamos ambos de una forma 
+            desproporcional, la imagen podria quedar deformada, alargada o aplastada.
+            </span> 
+            <div>
+                EJEMPLO:
+                <ol>
+                    <li>
+                        La imagen tiene una altura (height) de 100px y un ancho (width) de 225px, lo que es desproporcional y hace que se vea aplastada y no se aprecie la imagen.
+                <img src="IMG/panter2.jpeg"
+                style="display:block;
+                height: 100px;
+                width: 225px;"
+                alt="Pantera negra rugiendo bajo un sol con un fondo de oleaje de colores morados y amarillos."/>
+                    </li>
+                    <li>
+                        Aca solo hemos manipulado la altura dejandola con 200px, el navegador mantiene la imagen proporcional y se aprecia muy bien.
+                <img src="IMG/panter2.jpeg"
+                style="display:block;
+                height: 200px;"
+                alt="Pantera negra rugiendo bajo un sol con un fondo de oleaje de colores morados y amarillos."/>
+                    </li>
+                    <li>
+                        Si no se especifica el atributo height, la imagen se muestra con su propia altura:
+                        <img src="IMG/panter2.jpeg"
+                        style="display: block;"
+                        alt="Pantera negra rugiendo bajo un sol con un fondo de oleaje de colores morados y amarillos."/>
+                    </li>
+                    <li>
+                        Si se manipula solo el ancho, la altura se adapta de una forma proporcional automaticamente para no deformarse:
+                        <img src="IMG/panter2.jpeg"
+                        style="display: block;
+                        width: 200px"
+                        alt="Pantera negra rugiendo bajo un sol con un fondo de oleaje de colores morados y amarillos."/>
+                    </li>
+                    <li>
+                        Para usar porcentaje, mediante un contenedor para indicar el tamaño al que se debe ajustar a traves de CSS inline.
+                        El contenedor tiene 200px de alto y 200px de ancho y le indicamos a la imagen que use el 50% de alto y ancho de ese contenedor donde se encuentra, donde la imagen ocupara 100px de alto y 100px de ancho:
+                      <div style="height: 200px;
+                      width: 200px;
+                      padding: 10px;
+                      border: 3px solid black">
+                      <img src="IMG/panter2.jpeg"
+                      style="height: 50%;
+                      width:50%"
+                      alt="Pantera negra rugiendo bajo un sol con un fondo de oleaje de colores morados y amarillos."/>
+                      </div>
+                    </li>
+                </ol>
+            </div>
+        </p>
+
+
+        <!--HSPACE-->
+        <h3>HSPACE</h3>
+        <p>
+            <img src="IMG/trash.jpeg"
+            style="vertical-align: middle;
+            height: 17px;"
+            title="Obsoleto. Ya no es usado en webs modernas"/>
+            Este atributo indicaba en pixeles el numero de espaciado de la imagen a la derecha e izquierda. Se usaba en HTML3 y principios de HTML4 pero quedo obsoleto porque mezclar contenido mas presentacion en una etiqueta lo hacia limitado.
+            Ahora su equivalente en webs modernas es MARGIN, mediante un CSS inline con style o por medio de una clase externa. Donde solo declarar margin con una cantidad le indica al navegador que sera la misma cantidad de espacio a la izquierda 
+            y derecha y tambien tiene propiedades para izquierda y derecha:
+            <ul>
+                <li>Margin-left: para el espaciado unicamente a la izquierda.</li>
+                <li>Margin-right: para el espaciado a la derecha.</li>
+            </ul>
+            Si vamos a dejar el mismo espacio a la izquierda y derecha es mas practico hacerlo mediante un margin general, pero si solo se quiere dejar espacio a un lado usamos right o left y ambos si a cada lado sera diferente cantidad de espaciado.
+        </p>
+
+        <h5>MARGIN</h5>
+        <p>Para un espaciado de la misma cantidad de pixeles a ambos lados:
+            Quedando con 20px a la izquierda del contenedor y 20px a la derecha del texto.
+        </p>
+        <div>
+            <h5>Mercurio:</h5>
+            <img src="IMG/mercury.jpeg"
+            style="float: left;
+            height: 200px;
+            margin: 20px"
+            alt="Mercurio. El planeta mas cercano al sol."/>
+            <p>
+                Mercurio es un planeta extraño y por su cercanía con el Sol, uno de los menos estudiados del sistema solar. Sin embargo, se trata de uno de los mundos cercanos que más fascinan a los astrónomos.
+                Con un tamaño tan solo un poco mayor al de nuestra luna, Mercurio es el más pequeño de los planetas del sistema solar y el más cercano al Sol. A pesar de su pequeño tamaño este planeta ya era conocido al menos desde la época de los Sumerios, 
+                hace 5.000 años. Posteriormente los griegos lo bautizaron como Hermes, en honor al mensajero de los dioses del olimpo, el cual más tarde fue conocido por los romanos como Mercurio, nombre con el que ha llegado hasta nuestros días.
+                El nombre de este planeta no es casualidad pues, al igual que Mercurio era el más veloz de los dioses del Olimpo, con una velocidad de 170.5030 kilómetros por hora, el planeta Mercurio es el que viaja más rápido a través del espacio en nuestro sistema 
+                solar. Además, la órbita de Mercurio es la más excéntrica entre todos los planetas que orbitan el Sol, al que tarda 88 días en dar una vuelta completa.
+                Por su proximidad a nuestra estrella, desde la superficie de Mercurio nuestro Sol se vería 3 veces más grande que desde la Tierra, y su brillo sería hasta 7 veces superior. Del mismo modo, cabría esperar que, por su cercanía al Sol, Mercurio fuera el planeta
+                más caliente del sistema solar, sin embargo, contradiciendo la intuición, este honor es para el Venus, pues es en Venus que, debido a su densa atmósfera, se registran las temperaturas más altas de todo el sistema solar. También cabe decir que eje de rotación de 
+                Mercurio está inclinado apenas 2 grados con respecto al plano de su órbita alrededor del Sol. Eso significa que gira casi perfectamente en posición vertical y, por lo tanto, no experimenta estaciones.
+            </p>
+        </div>
+        <div style="clear: both"></div>
+
+        <h5>MARGIN-LEFT</h5>
+        <p>Para un espaciado a la izquierda.
+            Con 20px de espaciado a la izquierda del contenedor y a la derecha el texto queda junto a la imagen ya que no tiene espaciado a ese lado.
+        </p>
+        <div>
+            <img src="IMG/mercury.jpeg"
+            style="float: left;
+            height: 200px;
+            margin-left: 20px"
+            alt="Mercurio. El planeta mas cercano al sol."/>
+            <p>
+                Mercurio es un planeta extraño y por su cercanía con el Sol, uno de los menos estudiados del sistema solar. Sin embargo, se trata de uno de los mundos cercanos que más fascinan a los astrónomos.
+                Con un tamaño tan solo un poco mayor al de nuestra luna, Mercurio es el más pequeño de los planetas del sistema solar y el más cercano al Sol. A pesar de su pequeño tamaño este planeta ya era conocido al menos desde la época de los Sumerios, 
+                hace 5.000 años. Posteriormente los griegos lo bautizaron como Hermes, en honor al mensajero de los dioses del olimpo, el cual más tarde fue conocido por los romanos como Mercurio, nombre con el que ha llegado hasta nuestros días.
+                El nombre de este planeta no es casualidad pues, al igual que Mercurio era el más veloz de los dioses del Olimpo, con una velocidad de 170.5030 kilómetros por hora, el planeta Mercurio es el que viaja más rápido a través del espacio en nuestro sistema 
+                solar. Además, la órbita de Mercurio es la más excéntrica entre todos los planetas que orbitan el Sol, al que tarda 88 días en dar una vuelta completa.
+                Por su proximidad a nuestra estrella, desde la superficie de Mercurio nuestro Sol se vería 3 veces más grande que desde la Tierra, y su brillo sería hasta 7 veces superior. Del mismo modo, cabría esperar que, por su cercanía al Sol, Mercurio fuera el planeta
+                más caliente del sistema solar, sin embargo, contradiciendo la intuición, este honor es para el Venus, pues es en Venus que, debido a su densa atmósfera, se registran las temperaturas más altas de todo el sistema solar. También cabe decir que eje de rotación de 
+                Mercurio está inclinado apenas 2 grados con respecto al plano de su órbita alrededor del Sol. Eso significa que gira casi perfectamente en posición vertical y, por lo tanto, no experimenta estaciones.
+            </p>
+        </div>
+        <div style="clear: both"></div>
+
+        <h5>MARGIN-RIGHT</h5>
+        <p>Para dar un espaciado a la derecha de la imagen, haciendo que lo que esta del lado izquierdo quede junto a el, si tiene texto a la izquierda o si esta del lado del contenedor quedara junto a él.
+            20px de espacio a la derecha del texto.
+        </p>
+        <div>
+            <img src="IMG/mercury.jpeg"
+            style="float: left;
+            height: 200px;
+            margin-right: 20px"
+            alt="Mercurio. El planeta mas cercano al sol."/>
+            <p>
+                Mercurio es un planeta extraño y por su cercanía con el Sol, uno de los menos estudiados del sistema solar. Sin embargo, se trata de uno de los mundos cercanos que más fascinan a los astrónomos.
+                Con un tamaño tan solo un poco mayor al de nuestra luna, Mercurio es el más pequeño de los planetas del sistema solar y el más cercano al Sol. A pesar de su pequeño tamaño este planeta ya era conocido al menos desde la época de los Sumerios, 
+                hace 5.000 años. Posteriormente los griegos lo bautizaron como Hermes, en honor al mensajero de los dioses del olimpo, el cual más tarde fue conocido por los romanos como Mercurio, nombre con el que ha llegado hasta nuestros días.
+                El nombre de este planeta no es casualidad pues, al igual que Mercurio era el más veloz de los dioses del Olimpo, con una velocidad de 170.5030 kilómetros por hora, el planeta Mercurio es el que viaja más rápido a través del espacio en nuestro sistema 
+                solar. Además, la órbita de Mercurio es la más excéntrica entre todos los planetas que orbitan el Sol, al que tarda 88 días en dar una vuelta completa.
+                Por su proximidad a nuestra estrella, desde la superficie de Mercurio nuestro Sol se vería 3 veces más grande que desde la Tierra, y su brillo sería hasta 7 veces superior. Del mismo modo, cabría esperar que, por su cercanía al Sol, Mercurio fuera el planeta
+                más caliente del sistema solar, sin embargo, contradiciendo la intuición, este honor es para el Venus, pues es en Venus que, debido a su densa atmósfera, se registran las temperaturas más altas de todo el sistema solar. También cabe decir que eje de rotación de 
+                Mercurio está inclinado apenas 2 grados con respecto al plano de su órbita alrededor del Sol. Eso significa que gira casi perfectamente en posición vertical y, por lo tanto, no experimenta estaciones.
+            </p>
+        </div>
+        <div style="clear: both"></div>
+
+        <h5>MARGIN-LEFT Y MARGIN-RIGHT</h5>
+        <p>Si queremos dar una cantidad distinta de espaciado a cada lado usamos margin-left y margin-right en el mismo style.
+            Con 10px de espaciado a la izquierda del contenedor y 25px a la derecha del texto.
+        </p>
+        <div>
+            <img src="IMG/mercury.jpeg"
+            style="float: left;
+            margin-left: 10px;
+            margin-right: 25px;
+            height: 200px;"
+            alt="Mercurio. El planeta mas cercano al sol."/>
+            <p>
+                Mercurio es un planeta extraño y por su cercanía con el Sol, uno de los menos estudiados del sistema solar. Sin embargo, se trata de uno de los mundos cercanos que más fascinan a los astrónomos.
+                Con un tamaño tan solo un poco mayor al de nuestra luna, Mercurio es el más pequeño de los planetas del sistema solar y el más cercano al Sol. A pesar de su pequeño tamaño este planeta ya era conocido al menos desde la época de los Sumerios, 
+                hace 5.000 años. Posteriormente los griegos lo bautizaron como Hermes, en honor al mensajero de los dioses del olimpo, el cual más tarde fue conocido por los romanos como Mercurio, nombre con el que ha llegado hasta nuestros días.
+                El nombre de este planeta no es casualidad pues, al igual que Mercurio era el más veloz de los dioses del Olimpo, con una velocidad de 170.5030 kilómetros por hora, el planeta Mercurio es el que viaja más rápido a través del espacio en nuestro sistema 
+                solar. Además, la órbita de Mercurio es la más excéntrica entre todos los planetas que orbitan el Sol, al que tarda 88 días en dar una vuelta completa.
+                Por su proximidad a nuestra estrella, desde la superficie de Mercurio nuestro Sol se vería 3 veces más grande que desde la Tierra, y su brillo sería hasta 7 veces superior. Del mismo modo, cabría esperar que, por su cercanía al Sol, Mercurio fuera el planeta
+                más caliente del sistema solar, sin embargo, contradiciendo la intuición, este honor es para el Venus, pues es en Venus que, debido a su densa atmósfera, se registran las temperaturas más altas de todo el sistema solar. También cabe decir que eje de rotación de 
+                Mercurio está inclinado apenas 2 grados con respecto al plano de su órbita alrededor del Sol. Eso significa que gira casi perfectamente en posición vertical y, por lo tanto, no experimenta estaciones.
+            </p>
+        </div>
+        <div style="clear: both"></div>
+
+        <!--ISMAP-->
+        <h3>ISMAP</h3>
+        <p>Aunque "ismap" no es un atibuto obsoleto, ya no es tan usado debido a su poca funcionalidad. Este atributo indica del lado del servidor no del usuario que la imagen pertenece a un mapa, teniendo esta imagen areas clicables definidad pero no visibles para el usuario del
+            otro lado, solo el servidor recibia una indicacion de las coordenadas donde se habia hecho clic y segun estas, el servidor decidia a donde lo redirigiria en caso de que esas coordenadas tuvieran algun contenido.
+            Pero esto era un poco ciego para el usuario ya que tenia que estar "adivinando" cuales si eran las areas clicables que podrian tener contenido y cuales no, entonces se creo el atributo usemap y la etiqueta map donde el mapa ahora esta del lado del usuario ya no del servidor,
+            entonces el servidor unicamente sigue la instruccion de a donde debe llevar al usuario y no define por él mismo.
+        </p>
+
+        <!--EJEMPLO USANDO ISMAP-->
+        <div>
+            <h5>ISMAP</h5>
+            <p>Para usar el atributo ismap en una etiqueta de image, solo se puede hacer si este se encuentra dentro de una etiqueta ancla con una hypertext reference valido.
+                Pero para usar ismap es necesario conocer un lector de codigo que se ejecute dentro del servidor con los datos enviados desde el navegador ya que HTML no es capaz de procesar datos solo muestra contenido,
+                por lo tanto haremos una minima introduccion a uno de estos lenguajes. 
+                <b>PHP (Hypertext Preprocessor)</b> es un lenguaje muy util y usado muchisimo, este lenguaje a diferencia de otros como HTML o JavaScript no se ejecuta en el servidor del usuario si no en el servidor web, permite recibir datos enviados por el navegador, tomar decisiones,
+                generar archivos HTML, redirigir a la pagina que deseemos, interactuar con bases de datos y mucho mas.
+                Pero para este ejemplo necesitamos lo basico que es saber como iniciar y cerrar un codigo php ya que lo que este fuera de estas etiquetas es HTML.
+    
+            <!--Con MARGIN: 0 AUTO centramos nuestro contenedor.-->
+            <div style="padding: 10px;
+            margin: 0 auto;
+            height: 100px;
+            width: 400px;
+            border: 2px solid lavenderblush">
+            <span style="display: block;
+            font-style: oblique;
+            margin-bottom: 5px;">
+                <img src="IMG/iniciophp.jpg" style="vertical-align: middle;
+                height: 30px;"
+                alt="etqueta de inicio para codigo php">
+                Etiqueta de inicio para escribir codigo PHP
+                </span>
+
+                <span style="display: block;
+                font-style: oblique;
+                margin-bottom: 5px;">
+                        <img src="IMG/mediophp.jpg" style="vertical-align: middle;
+                        height: 30px;"
+                        alt="espacio para escribir codigo PHP"/>
+                        En medio escribimos el codigo PHP
+                </span>
+
+                <span style="display: block;
+                font-style: oblique;
+                margin-bottom: 5px;">
+                        <img src="IMG/cierrephp.jpg" style="vertical-align: middle;
+                        height: 30px;"
+                        alt="Etiqueta de cierre para codigo PHP"/>
+                        Etiqueta que indica el cierre del codigo PHP
+                </span>
+            </div>
+
+
+            <h5 id="mapabrasil">EJEMPLO USANDO ISMAP</h5>
+            <a href="procesar_region.php">
+                <img src="IMG/brazil.jpeg" 
+                ismap 
+                alt="Mapa elevado de Brasil"
+                style="height: 736px;
+                width: 735px;"/>
+            </a>
+        </div>
+    </p>
+    <p>Para una explicación más detallada del atributo ISMAP y los pasos para usarlo, puede profundizar en este documento:
+        <a href="documents/coords-ismap doc tecnico.pdf">
+            <img src="IMG/logopdf.jfif" style="vertical-align: middle;
+                    height: 30px;"/>
+        </a>
+    </p>
+
+        <div>
+            <h5>EJEMPLO USANDO USEMAP Y MAP</h5>
+            <p>
+            Con el atributo usemap y la etiqueta map que son las que hoy en dia se usan en web mordernas, no necesitamos utlizar ismap, solo declaramos el atributo usemap con un nombre para el mapa,
+            abrimos las etiquetas de mapa, colocamos el name del mapa en la etiqueta de inicio de map, que es el mismo usado en usemap, luego iniciamos declarando la forma de la figura (circle, rect, coords, default), las coordenadas,
+            un href, alt y un target.</p>
+
+            <img 
+            src="IMG/brazil.jpeg" usemap="#brazil"
+            id="MapaBrasil"
+            style="width: 735;
+            height: 736;"
+            alt="Mapa de relieves de Brasil"/>
+
+            <map name="brazil">
+                <area shape="poly" 
+                coords="415,38,393,72,378,72,371,76,356,70,343,70,341,78,321,76,311,83,302,84,286,91,277,72,275,51,281,45,277,36,269,33,275,25,263,22,260,33,251,39,236,42,226,48,220,45,208,45,197,40,207,54,208,61,209,68,219,68,210,77,202,86,187,94,181,98,180,91,172,98,162,90,156,80,154,73,147,75,139,80,114,80,112,89,121,91,123,97,110,100,108,112,120,126,111,181,98,178,81,182,65,194,59,208,59,217,51,220,49,229,51,239,56,250,63,256,59,262,69,263,74,271,89,272,99,266,99,281,104,291,110,288,133,290,147,283,157,277,165,271,185,267,186,278,188,291,188,297,196,307,209,314,221,317,236,324,252,311,272,297,266,283,267,267,244,269,240,240,287,240,293,216,312,245,410,235,407,247,407,275,433,290,445,278,462,279,497,262,485,241,493,230,469,224,471,195,461,189,478,179,490,161,497,124,483,118,469,124,463,124,465,111,451,114,444,108,436,103,440,92,440,79,429,78" 
+                href="norte.html" 
+                target="_blank"
+                alt="Zona Norte de Brasil">
+
+                <area shape="poly" 
+                coords="241,326,254,313,276,297,277,288,270,283,273,269,245,265,241,241,289,244,294,223,309,246,405,238,405,274,418,289,433,289,445,280,462,283,472,274,502,267,517,276,515,289,504,298,510,317,508,361,505,369,498,368,491,375,489,385,479,388,477,393,457,392,447,397,437,415,426,429,425,437,415,448,405,469,386,489,369,511,362,509,353,511,349,497,346,485,338,481,328,483,309,477,312,459,307,448,311,442,305,439,313,424,315,412,312,398,302,395,302,382,304,374,297,378,274,378,268,360,274,356,271,348,270,337,247,331" 
+                href="centro-oeste.html" 
+                target="_blank"
+                alt="Zona centro-oeste de Brasil">
+
+                <area shape="poly" 
+                coords="499,125,494,148,488,167,474,182,464,186,469,191,472,218,491,228,494,238,487,240,499,263,515,271,519,279,506,298,511,317,510,333,508,361,530,351,533,365,540,370,552,369,567,366,578,375,588,366,597,367,594,379,595,391,610,405,617,402,621,370,617,351,620,334,618,327,628,323,653,284,662,278,668,269,685,248,689,225,685,213,679,194,659,192,647,187,637,179,602,153,578,156,566,152,547,147,538,154,529,153,532,144,522,127,517,134" 
+                href="nordeste.html" 
+                target="_blank"
+                alt="Zona Nordeste de Brasil">
+
+                <area shape="poly" 
+                coords="608,411,593,401,592,384,592,370,580,380,566,371,560,375,549,374,540,374,530,367,527,356,520,360,513,365,506,372,499,372,492,381,480,389,477,396,457,394,447,398,439,413,429,426,427,437,418,447,412,459,405,470,388,487,409,487,419,489,440,497,442,516,455,519,458,529,467,538,489,520,500,513,513,511,522,501,535,498,570,494,575,482,586,478,585,466,590,459,595,455,607,430" 
+                href="sudeste.html" 
+                target="_blank" 
+                alt="Zona Sudeste de Brasil">
+
+                <area shape="poly" 
+                coords="371,513,386,491,413,491,439,499,439,518,452,520,464,537,462,551,460,563,465,574,458,598,443,611,436,625,425,645,404,660,398,675,385,695,380,682,389,678,380,670,378,662,368,658,363,650,353,646,344,639,327,625,316,628,321,621,332,608,342,595,358,581,377,569,379,542,365,542" 
+                href="sur.html" 
+                target="_blank" 
+                alt="Zona sul de Brasil">
+
+                <area shape="rect" 
+                coords="10, 438, 229, 345" 
+                href="brazil.html" 
+                target="_blank" 
+                alt="Informacion general de Brasil">
+
+                <area shape="default" 
+                coords="1, 1, 734, 706" 
+                href="sin_informacion.html" 
+                target="_self" 
+                alt="Zona fuera del mapa sin informacion">
+            </map>
+        </div>
+        
+        <p>En conclusion, <b>ISMAP</b>es un atributo de HTML, antiguo, pero no obsoleto que era usado para indicar que la imagen pertenecia a un mapa de imagen, que solo funcionaba si este pertenecia a una etiqueta ancla con un href valido, donde este href comunmente era un archivo 
+           de un lenguaje que el servidor ejecuta ya que no era el navegador quien decidia el destino si no este lenguaje que podia ser cualquiera, en este caso usamos PHP, para que el mediante una declaracion recuperara las coordenadas enviadas por el navegador, ejecute las condiciones 
+           dentro de los rangos dados por nosotros para decidir a donde enviar al usuario por medio de las coordenadas clicladas, aplicamos logica de excepciones por la solapacion de regiones y entendiendo que PHP trabaja con rectangulos, no entiende de figuras como poligonos a menos que
+           usemos point-in-poly que sera mas adelante, entonces por eso puede que al clicar un punto sea uno que esta dntro de ese rectangulo invisible en el que la region esta aunque no esta exacto dentro del mapa y contrastamos con usemap y map para notar la diferencia, facilidad y funcionalidad
+           de este atributo y etiqueta que hace que ismap sea menos usado.
+        </p>
+
+        <!--LONGDESC-->
+        <h3>LONGDESC</h3>
+        <p>El atributo longdesc (long description) es el complemento del atributo alt, longdesc es una descripcion mas detallada de la imagen, no es algo que se muestra, no muestra un enlace visible y los navegadores modernos lo ignoran.
+            Este atributo es principlamente para lectores de pantalla, para personas con discapacidad visual que no pueden ver la imagen y necesita saber su contenido exacto y para contextos educativos o tecnicos. Longdesc es un archivo HTML normal, con etiquetas y atributos como si fuera otra pagina web
+            solo que sin ser visible al usuario, aunque oficialmente no esta obsoleto, ya dejo de ser una practica profesional y ha sido reemplazado por alternativas modernas.
+            Actualmente su soporte es inconsistente y no se recomienda para nuevos desarrollos.
+        </p>
+        <div>
+            <p>Ejemplo del uso de longdesc:
+                No se muestra ningun link ni enlace visible para el usuario ni navegador, ambos lo ignoran, al usar un lector de pantalla, este si lo detecta y lo lee.
+            </p>
+                <img src="IMG/brazil.jpeg" 
+                style="width: 300px;
+                height: 300px;"
+                alt="Mapa de relieves de Brasil"
+                longdesc="brasil_description.html"/>
+        </div>
+
+        <h5>Con un enlace visible:</h5>
+        <p>Es la forma más simple y aceptada, que se usa si el contenido de la descripción de la imagen tiene relevancia o pertenece a un contexto educativo que es también util para usuarios visuales tanto como para no visuales.</p></p>
+        <div>
+        <img src="IMG/brazil.jpeg" style="width:300px;
+        height: 300px;"
+        alt="Mapa de relieves de Brasil"/>
+        <p>Enlace a descripción del mapa de Brasil:
+            <a href="longdesc_brasil_description.html">Click aquí.</a>
+        </p>
+        </div>
+        
+        <h5>figure + figcaption:</h5>
+        <p>Esta alternativa no solo reemplaza a longdesc por mucho si no que también la supera, es la semántica más correcta para practicas profesionales, donde al igual que mediante un enlace visible se usa si la descripción de la imagen es relevante para todos los tipos de usuarios.</p>
+        <div>
+            <figure>
+                <img src="IMG/brazil.jpeg"
+                style="width: 300px;
+                height: 300px;"
+                alt="Mapa de relieves de Brasil"/>
+                <figcaption>
+                    Descripción del mapa de Brasil dividido en regiones
+                    <a href="longdesc_brasil_description.html">Leer descripción del mapa</a>
+                </figcaption>
+            </figure>
+        </div>
+
+        <h5>Usando ARIA:</h5>
+        <p> Aria es un recurso de HTML que únicamente se usa cuando HTML no puede hacer todo por si solo y necesita ayuda, aria tiene varias funciones, entre ella describir imagenes, sustituyendo asi el uso del atributo longdesc, esta forma es más usada cuando el contenido descriptivo de la imagen no es relevante para usuarios visuales,
+            su uso no genera alteraciones en el contenido, únicamente es detectada por lectores de pantalla.</p>
+            <div>
+                <img src="IMG/brazil.jpeg"
+                style="width: 300px;
+                height: 300px;"
+                alt="Mapa de relieves de Brasil"
+                aria-describedby="desc-brasil"/>
+                <div id="desc-brasil" hidden>
+                    <p><strong>Descripción detallada del mapa de Brasil</strong>
+                    <p>La imagen muestra el mapa de relieves de Brasil, cubierto por sus zonas boscosas, montañosas y llenas de vegetación.
+                         Con el lema "MAPA DE ELEVACAO DO BRASIL".
+                         Esta dividido en coordenadas en sus cincos regiones: Norte, Centro-Oeste, Nordeste, Sudeste y Sur.
+                         El mapa de Brasil forma un triángulo del lado sur del Continente Sudaméricano.
+                    </p>
+
+                    <p><strong>Región Norte:</strong>
+                    Ubicada en la parte superior izquierda del mapa, es la región más grande de Brasil en cuanto a área, ocupando un 45% de todo el territorio Brasileño,
+                        cuenta con grandes depresiones naturales, incluye la Amazonía y el famoso río Amazonas, que no es un en si un río si no una red de agua donde cientos de caminos
+                        de agua desembocan en él.
+                    </p>
+
+                    <p><strong>Región Centro-Oeste:</strong>
+                    <p>Esta región esta ubicada en la parte baja del mapa, justamente bajo la región norte, esta región alberga a la capital de Brasil, Brasilia la cual es actualmente la tercera
+                        ciudad más grande del país.
+                    </p>
+
+                    <p><strong>Región Nordeste:</strong>
+                    <p>Esta región se ubica en la parte superior derecha del mapa, por su ubicación en el mapa, posee un clima semiárido haciendo que sea la región pase hasta casi 6 meses sin lluvias
+                        lo que provoca que los rios se sequen, aún así posee una vegetación muy variada.
+                    </p>
+
+                    <p><strong>Región Sudeste:</strong>
+                    <p>Es la región más poblada del país, ya que alberga la megalópolis más grande del país, donde están ubicados los estados de Río de Janeiro y São Paulo.
+                        Está ubicada al lado derecho de la región Centro-Oeste y bajo la región Nordeste, no parece una región grande a simple vista en el mapa pero es la región más poblada del país,
+                        albergando al 42% de la población total del país.
+                    </p>
+
+                    <p><strong>Region Sur:</strong>
+                    <p>Es la región ubicada en la "colita" del país y por esta ubicación es la única región del país donde nieva, haciendo que en el invierno reciba a miles de visitantes turistas por sus
+                        festivales y además alberga el parque de diversiones más grande de América Latina.
+                    </p>
+                </div>
+            </div>
+
+            <!--NAME-->
+            <h3>NAME</h3>
+            <p>
+                <img src="IMG/trash.jpeg" 
+                style="vertical-align: middle;
+                width: 20px;
+                height: 20px;"
+                title="Deprecated. Not for use in new websites"/>
+                El atributo name en la etiqueta de image se utilizaba para nombrar al elemento principalmente para poder ser referenciado por una etiqueta ancla en versiones antiguas de HTML. En la actualidad, este uso se considera obsoleto y ha siendo
+                reemplazado por el atributo <strong>id</strong>, que permite una identificación más clara, accesible y compatible con CSS y JavaScript.
+            </p>
+
+            <h5>EJEMPLO CON ID:</h5>
+            <div>
+                 <a href="#MapaBrasil">Ir a la imagen del mapa de Brasil</a>
+            </div>
+
+            <!--REFERRERPOLICY-->
+            <h3>REFERRERPOLICY</h3>
+            <p>
+                <img src="IMG/erlenmeyer.jpg"
+                style="vertical-align: middle;
+                height: 27x;
+                width: 15px;"
+                title="Experimental. Espere que el comportamiento cambie en el futuro"/>
+                <strong>Política de referencia</strong> o <strong>referrerpolicy</strong> es una cadena que indica que información mostrar al servidor externo donde se encuentra alojada la imagen que está siendo solicitada,
+                el navegador envia un mensaje llamado <strong>referer</strong> el cual al ser abierto por el servidor puede encontrar información del origen desde esta siendo solicitando dicha imagen. Un origen se compone de 3 elementos: <strong>protoloco o esquema</strong>, <strong>dominio o anfitrión (host)</strong> y <strong>puerto</strong>
+                y la URL completa esta formada por esos 3 elementos y la ruta (route) o camino (path).
+                <span style="display: block;
+                padding: 15px 15px;
+                background-color:beige">
+                Un <strong>downgrade</strong> ocurre cuando un recurso es solicitado desde un esquema HTTPS a un HTTP, ya que es un esquema HTTP no cifra su información y un intercambio entre protocolos HTTPS -> HTTP es como gritar la información a todo el mundo.
+                Un localhost es tratado por los navegadores como un entorno de desarrollo confiable. Al solicitar un recurso HTTPS desde un local host, no se considera downgrade, por lo que el servidor puede recibir el origen según la politica aplicada.
+                </span>
+               <div style="display: block;
+               padding: 20px 20px;
+               background-color:aliceblue">
+                 <code>
+                    Referer
+                </code>
+               </div>
+               Al ser abierto por el servidor recibe algo como:
+               <div style="display: block;
+               padding: 20px 20px;
+               background-color:aliceblue">
+                <code>
+                    https + midominio.com + 443
+                </code>
+               </div>
+               Los valores del atributo referrerpolicy son:
+                <ul>
+                    <li>
+                        <p><strong>"no-referrer":</strong> En este caso el servidor recibe un referer que se encuentra vacío, no se le envía ningún tipo de información.</p>
+                       Ejemplo:
+                       <div>
+                        <pre>
+                            <code>
+                                &lt;img src="https://www.google.com/babobab.jpeg"
+                                referrerpolicy="no-referrer"
+                                alt="Árbol de Baobab"&gt;
+                            </code>
+                        </pre>
+                        El servidor no recibe ninguna información.
+                       </div>
+                    </li>
+                    <li>
+                        <p><strong>"no-referrer-when-downgrade":</strong> Fue el comportamiento por defecto por muchos años.
+                        Se envía el origen (protocolo, dominio y, puerto) siempre y cuando no haya downgrade, si es de https a http no se envía nada.</p>
+                        Ejemplo:
+                        <div>
+                            <pre>
+                                <code>
+                                    &lt;img src="http://google.com/baobab.jpeg"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    alt="Árbol de Baobab"&gt;
+                                </code>
+                            </pre>
+                            Como el origen desde donde se esta solicitando es un https pero donde se encuentra la imagen tiene un esquema http, el servidor no recibe ninguna información.
+                        </div>
+                    </li>
+                    <li>
+                        <p><strong>"origin":</strong> Se envía el origen pero no la ruta.</p>
+                        Ejemplo:
+                        <div>
+                            <pre>
+                                <code>
+                                    &lt;img src="https://google.com/baobab.jpeg"
+                                    referrerpolicy="origin"
+                                    alt="Árbol de Baobab"&gt;
+                                </code>
+                            </pre>
+                            El servidor recibe un referer que contiene el origen pero nunca la ruta.
+                        </div>
+                    </li>
+                    <li>
+                        <p><strong>"origin-when-cross-origin":</strong>Si es el mismo origen se envia la URL completa (protocolo+dominio+puerto+ruta), si es un origen distinto solo envía el origen.</p>
+                        Ejemplo:
+                        <div>
+                            <pre>
+                                <code>
+                                    &lt;img src="https://google.com/baobab.jpeg"
+                                    referrerpolicy="origin-when-cross-origin"
+                                    alt="Árbol de Baobab"&gt;
+                                </code>
+                            </pre>
+                            Como la imagen esta siendo solicitada desde un localhost hacia un https, el servidor envia un referer que contiene unicamente el origen pero no la ruta.
+                        </div>
+                    </li>
+                    <li>
+                        <p><strong>"strict-origin":</strong> Envía solo el origen siempre y cuando no haya downgrade. Pero la ruta nunca es enviada asi pertenezcan al mismo origen.</p>
+                        Ejemplo:
+                        <div>
+                            <pre>
+                                <code>
+                                    &lt;img src="https://google.com/baobab.jpeg"
+                                    referrerpolicy="strict-origin"
+                                    alt="Árbol de Baobab"&gt;
+                                </code>
+                            </pre>
+                            No hay downgrade por lo tanto <code>google.com</code> puede recibir el origen sin problemas.
+                        </div>
+                    </li>
+                    <li>
+                        <p><strong>"strict-origin-when-cross-origin":</strong>Si la solicitud va al mismo origen se envia la URL completa, si es hacia otro origen solo se envia el origen.</p>
+                        Ejemplo:
+                        <div>
+                            <pre>
+                                <code>
+                                    &lt;img src="google.com/babobab.jpeg"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    alt="Árbol de Baobab"&gt;
+                                </code>
+                            </pre>
+                            Aquí solo se envía el origen.
+                        </div>
+                    </li>
+                    <li>
+                        <p><strong>"unsafe-url":</strong> Esta es una práctica muy riesgosa e insegura ya que el referer envía la URL completa al servidor habiendo o no downgrade lo cual puede generar una fuga de los origenes del recurso protegido por TLS hacia origenes inseguros.</p>
+                        Ejemplo:
+                        <div>
+                            <pre>
+                                <code>
+                                    &lt;img src="https://google.com/baobab.jpeg"
+                                    referrerpolicy="unsafe-url"
+                                    alt="Árbol de Baobab"&gt;
+                                </code>
+                            </pre>
+                            La practica más insegura, aunque no hay downgrade en este caso, siempre es enviada la URL completa del navegador hacia el servidor.
+                            Incluso aunque el recurso este protegido por HTTPS, la URL completa puede filtrarse a servidores inseguros.
+                        </div>
+                    </li>
+                </ul>
+                <span>
+                    <img src="IMG/checkmark.jpg"
+                alt="Check-mark icon"
+                style="vertical-align: middle;
+                height: 25px;
+                width: 25px;"
+                sizes=""
+                srcset=""/>
+                    <b>NOTA:</b> Actualmente, el valor por defecto en la mayoría de navegadores modernos es <code>strict-origin-when-cross-origin</code>
+                </span>
+                En conclusión, referrerpolicy es un atributo que ayuda a mantener la seguridad cuando un recurso externo es solicitado, evita la filtración de información sensible sobre el origen desde donde se solicitan los recursos.
+            </p>
+
+        <!--SIZES-->
+            <h3>SIZES</h3>
+            <p>El atributo <strong>sizes</strong> es una lista de una o más cadenas separadas por coma, que le indica al navegador cuánto espacio ocupará la imagen en el diseño, dependiendo el ancho del viewport. Cada tamaño de la fuente consiste en:
+                <ol>
+                    <li>Condición de medios. Se omite en el ultimo item (es decir, no se agrega una condición para el último medio).
+                    </li>
+                    <li>Valor del tamaño. Especifica el tamaño y el <strong>ancho CSS</strong> que ocupará la imagen en el layout (px, vw, em, etc.)
+                    </li>
+                </ol>
+            </p>
+
+            <p>Este atributo se utiliza juntamente con el siguiente atributo llamado <strong>srcset</strong>.</p>
+            <p>El atributo sizes solo tiene efecto cuando el atributo srcset utiliza descriptores de ancho (w). Sin srcset, sizes es ignorado por el navegador. Cuando se usa descriptores de densidad (x), sizes no participa en la selección.</p>
+            <p>Este atributo funciona con dos tipos de condiciones: max-width y min-width.
+                <ol>
+                    <li><strong>max-width (Mobile First):</strong> Significa del más pequeño hacia el más grande, dándole prioridad a los dispositivos móviles.
+                    Es el más usado, porque coincide con diseño responsivo moderno, es más fácil de razonar y se alinea con CSS mobile-first.</li>
+                    <li><strong>min-width (Desktop First):</strong> Escritorio primero. Del más grande al más pequeño, es menos común porque al priorizar primero el escritorio requiere más cuidado para evitar errores de diseño en pantallas pequeñas.</li>
+                </ol>
+                <div>
+                    Sintaxis básica:
+                    <pre>
+                        <code>
+                            sizes="
+                            (max-width: 600px) 100vw,
+                            (max-width: 900px) 50vw,
+                            33vw"
+                        </code>
+                    </pre>
+                    Se lee:
+                    <ol style="list-style-type: circle;">
+                        <li>En viewports menores o iguales a 600px la imagen ocupara el 100% del ancho visible.</li>
+                        <li>Si el viewport mide hasta 900px, la imagen ocupará el 50% del ancho visible.</li>
+                        <li>En pantallas más grandes que no se adaptan a las dos condiciones anteriores ocupará el 33% del ancho visible (una tercera parte)</li>
+                    </ol>
+                    <span>
+                        <img src="IMG/notes.jpeg"
+                        style="vertical-align: middle;
+                        width: 25px;
+                        height: 25px;"/>
+                        <strong>vw</strong> significa viewport width (ancho de la pantalla visible).
+                    </span>
+                </div>
+            </p>
+        
+        <!--SRCSET-->
+        <h3>SRCSET</h3>
+        <p>El atributo <strong>srcset</strong> es una lista de una o más cadenas separadas por coma indicando las posibles fuentes para usar. Cada cadena esta compuesta por:
+        <ol>
+            <li>URL de la imagen.</li>
+            <li>Opcionalmente, espacios en blanco seguidos de:
+                <ul>
+                    <li>Un ancho, que es un entero positivo seguido directamente por <strong>"w"</strong>.</li>
+                    <li>Densidad del pixel, un positivo decimal seguido directamente de <strong>"x"</strong>.</li>
+                </ul>
+            </li>
+        </ol>
+        </p>
+        <p>Si no especificamos descriptores, la fuente es asignada por defecto a densidad de 1x.</p>
+        <p>No se deben mezclar descriptores de ancho con descriptores de densidad, porque son dos modelos totalmente distintos que no se complementan.
+            Cuando srcset utiliza descriptores de ancho (w), el atributo src actúa como fallback para navegadores que no soportan srcset.
+            Y cuando utiliza un descriptor de densidad, src actúa como un recurso 1x real.</p>
+        <p>Los espacios entre los caracteres de la cadena son opcionales ya que son omitidos por el navegador tanto los del inicio como del final, pero considerando el ejemplo de que en la primera cadena de caracteres no haya espacios ni descriptores y si se tiene una segunda cadena, esta segunda cadena debe iniciar uno 
+            o más espacios después de la coma si no la coma se toma como parte de la cadena.
+        </p>
+        <p>Los agentes del usuario aplican algoritmos internos que consideran DPR (Device Pixel Ratio), ancho de renderizado, preferencias del usuario y condiciones de red al momento de elegir la imagen.
+            Esto quiere decir que no se basan solo en la obtención de la resolución si no también en:
+            <ul>
+                <li>Preferencias del usuario:
+                    <ul>
+                        <li>Ahorro de datos activo o no.</li>
+                        <li>Modo de bajo consumo.</li>
+                        <li>Uso de accesibilidad o zoom.</li>
+                    </ul>
+                </li>
+                <li>Condiciones de red:
+                    El navegador puede evaluar:
+                    <ul>
+                        <li>Red lenta (2G/3G), red media (4G) o red rápida (5G).</li>
+                        <li>Alta latencia.</li>
+                        <li>Conexión inestable.</li>
+                    </ul>
+                </li>
+                <li>Ahorro de ancho de banda:
+                    El navegador prefiere una imagen "suficientemente buena" antes que una perfecta pero pesada.
+                </li>
+                <li>Heurísticas internas (decisión inteligente):
+                    O sea no siempre eligen la imagen "ideal", eligen la mejor decisión contextual para el dispositivo.
+                </li>
+            </ul>
+        </p>
+        <div>
+            Sintáxis básica:
+            <pre>
+                <code>
+                    &lt;img 
+                    src="easterbunny.png"
+                    alt="Conejo de pascua"
+                    srcset="
+                    easterbunny-400.png 400w,
+                    easterbunny-800.png 800w,
+                    easterbunny-1200.png 1200w
+                    "&gt;
+                </code>
+            </pre>
+            <ul>
+                <li>Debe existir cada imagen fisicamente con ese tamaño de ancho.</li>
+                <li>Los valores 400w, 800w y 1200w indican el ancho real de la imagen, no el tamaño con el que se mostrará.</li>
+                <li>El navegador no descarga todas las imágenes, solo la que considere más adecuada.</li>
+            </ul>
+        </div>
+
+        <h4>¿Cómo se complementan <strong>sizes</strong> y <strong>srcset</strong>?</h4>
+        <p>Estos atributos juntos permiten al navegador elegir automáticamente la imagen más adecuada según el tamaño del dispositivo, la resolución de pantalla y el espacio real que ocupará la imagen en el diseño.</p>
+        <p>Su objetivo principal es mejorar el rendimiento, ahorrar ancho de banda y mantener una buena calidad visual en distintos dispositivos (móviles, tabletas, computadoras, pantallas de alta densidad, etc.)</p>
+        <p>Sintáxis que el navegador sigue al trabajar con estos atributos en conjunto:
+            <ol>
+                <li>El navegador evalúa las condiciones declaradas en <strong>sizes</strong>.</li>
+                <li>Calcula el espacio real que la imagen ocupará en pantalla.</li>
+                <li>Considera la densidad de píxeles del dispositivo (DPR).</li>
+                <li>Elige del <strong>srcset</strong> la imagen que mejor se adapte a ese espacio.</li>
+                <li>Descarga solo esa imagen.</li>
+            </ol>
+            Todo este proceso es realizado automáticamente por el navegador en milisegundos.
+        </p>
+        <p>
+            <img src="IMG/light.jpg"
+            style="vertical-align: middle;
+            height: 29px;
+            width: 29px"/>
+            <b>NOTA:</b> los descriptores no controlan el tamaño CSS con el que la imagen se muestra, sino la resolución de la imagen.</p>
+        <div>
+            <b>Ejemplo usando sizes y srcset:</b>
+            <pre>
+                <code>
+                    &lt;img 
+                    src="easterbunny.png"
+                    alt="Conejo de pascua"
+
+                    srcset="
+                    easterbunny-400.png 400w,
+                    easterbunny-800.png 800w,
+                    easterbunny-1200.png 1200w"
+
+                    sizes="
+                    (max-width: 600px) 100vw,
+                    (max-width: 900px) 50vw,
+                    33vw"
+                </code>
+            </pre>
+            Se lee como:
+            <ul>
+                <li>Móvil: Mide 360px.
+                    <ol>
+                        <li>El navegador evalúa las condiciones.</li>
+                        <li>Primera condición: Si la pantalla mide 600px o menos, la imagen se mostrará en el 100 del viewport. Esta primera condición cumple para el móvil.</li>
+                        <li>Ahora el navegador considera la densidad de pixeles del dispositivo, por ejemplo si la densidad es de 2x, el navegador multiplica el tamaño de la pantalla (360px) por el DPR (2x).
+                            360 * 2 = 720.
+                        </li>
+                        <li>El navegador se va a srcset y elige la imagen que mejor se adapte.
+                            <ul>
+                                <li>400w → Muy pequeña, se verá borrosa.</li>
+                                <li>800w → Perfecta para una densidad de 720px. ✓</li>
+                                <li>1200w → Demasiado alta, descarga innecesaria de recursos. ✗</li>
+                            </ul>
+                        </li>
+                        <li>Descarga la imagen <code>easterbunny-800.png</code> para mostrarla en pantalla.</li>
+                    </ol>
+                </li>
+                <li>Tableta: Mide 800px.
+                    El navegador sigue la misma sintáxis anterior:
+                    <ol>
+                        <li>Evalúa las condiciones.</li>
+                        <li>Primera condición no se cumple.</li>
+                        <li>Pasa a la segunda.</li>
+                        <li>Evalúa.</li>
+                        <li>Segunda condición: Si la pantalla mide hasta 900px, la imagen usará el 50% del viewport. 800 &le; 900. Cumple ✓</li>
+                        <li>La evaluación se detiene ahí.</li>
+                        <li>La imagen usará el 50vw, o sea 400px en pantalla.</li>
+                        <li>Considera la densidad de pixeles del dispostivo, por ejemplo 2x, el navegador multiplica 400 * 2 = 800.</li>
+                        <li>El navegador se va a srcset a elegir la imagen:
+                            <ul>
+                                <li>400w → Muy pequeña, la imagen se verá borrosa.</li>
+                                <li>800w → Perfecta ✓. No hay más ni menos.</li>
+                                <li>1200w → Demasiado alta. ✗</li>
+                            </ul>
+                        </li>
+                        <li>El navegador descarga <code>easterbunny-800.png</code> para mostrarla.</li>
+                    </ol>
+                </li>
+                <li>Escritorio: Mide 1200px.
+                    Misma serie de pasos.
+                    <ol>
+                        <li>El navegador se va a sizes a evaluar condiciones.</li>
+                        <li>Primera condición no cumple.</li>
+                        <li>Se va a la segunda.</li>
+                        <li>Segunda condición no cumple.</li>
+                        <li>Se va a la ultima cadena sin condición.</li>
+                        <li>Navegador interpreta como: Si 1200 no entra en 600px o menos ni 900px o menos, usaremos el 33% del tamaño del viewport. ✓</li>
+                        <li>Se queda con esta condición.</li>
+                        <li>La imagen ocupara la tercera parte del tamaño de la pantalla ≈ 396px.</li>
+                        <li>Considera la densidad de pixeles del escritorio 1x, realiza la multiplicación: 396 * 1 = 396 ≈ 400. </li>
+                        <li>Se va a srcset a elegir la mejor opción:
+                            <ul>
+                                <li>400w → Perfecta. ✓</li>
+                                <li>800w → Podría se considerada por el navegador pero innecesaria.</li>
+                                <li>1200w → Demasiado, totalmente inútil. ✗</li>
+                            </ul>
+                        </li>
+                        <li>El navegador descargará la imagen <code>easterbunny-400.png</code> para mostrar en la pantalla del escritorio.</li>
+                    </ol>
+                </li>
+            </ul>
+            <p>De esta forma es como <strong>sizes</strong> y <strong>srcset</strong> trabajan de la mano, no pueden ir la una sin la otra.</p>
+            <p>
+                <img src="IMG/notes.jpeg"
+                style="vertical-align: middle;
+                width: 25px;
+                height: 25px;"
+                alt="Notas"/>
+                Aclarando que todos esos pasos no son trabajo de nosotros como programadores, es parte del trabajo que realiza en milisegundos el navegador. Se muestran como un extra para comprender a fondo de una mejor manera al servidor.
+            </p>
+            <p>
+                <img src="IMG/sirena.jpg"
+                style="vertical-align: middle;
+                width: 25px;
+                height: 25px;"
+                alt="Sirena de alerta"/>
+                El uso de srcset o de sizes no omiten el uso de CSS para aplicar alto o ancho a la imagen, la imagen siempre los necesita!
+            </p>
+        </div>
+        <div>
+            <h5>Ejemplo usando SIZES y SRCSET:</h5>
+            <img src="IMG2/spider.jpg"
+            style="position:-webkit-sticky;
+            width: 709px;
+            margin-left: 0 auto;"
+            alt="Araña de Cruz Gris en un su telaraña"
+
+            srcset="
+            IMG2/spider-400w.jpg 400w,
+            IMG2/spider-600w.jpg 600w,
+            IMG2/spider-800w.jpg 800w,
+            IMG2/spider-1000w.jpg 1000w"
+
+            sizes="
+            (max-width: 600px) 100vw,
+            (max-width: 1000px) 50vw,
+            33vw"
+            />
+            <h5>Arañas:</h5>
+            <p>Las arañas son un conjunto de animales artrópodos muy abundante en todo el mundo y del que se conocen aproximadamente unas
+                45.000 especies diferentes. Son el orden más numeroso de la clase Arachnida y están lejanamente emparentadas con otros grupos 
+                de artrópodos, como los insectos. Se trata además de uno de los grupos más diversos, colocándose en cuanto al resto de organismos 
+                en el séptimo lugar respecto a su diversidad.</p>
+            <p>Las arañas tienen el cuerpo dividido en dos partes denominadas tagmas, y cuentan con cuatro pares de patas. Se sabe que durante 
+                la prehistoria existieron algunas arañas que podían llegar a medir 50 centímetros, pero actualmente la más grande que existe tiene 
+                un tamaño de 30 centímetros. Por regla general son animales solitarios y depredadores de pequeños insectos a los cuales pueden dar 
+                caza a través de técnicas muy variadas. Algunas, de hecho, poseen potentes venenos los cuales un pequeña cantidad, puede acabar con 
+                la vida de un ser humano.</p>
+            <p>Son capaces de producir seda que usan para tejer sofisticadas telarañas principalmente con el objetivo de cazar, aunque tienen múltiples 
+                utilidades. A pesar de que algunas de ellas tienen cuatro pares de ojos, la mayoría no gozan de un gran sentido de la vista. Viven 
+                aproximadamente durante un año y se encuentran en prácticamente todas las partes del mundo exceptuando la Antártida.</p>
+        </div>
+        <div style="clear: both;"></div>
+
+        <iframe 
+        name="miiframe3"
+        width="300"
+        height="300"
+        style="box-shadow: inset -10px -10px 10px 0 #fe55fe;">
+        </iframe>
+</body>
+</html>

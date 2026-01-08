@@ -1,0 +1,181 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anchor tag</title>
+</head>
+<body>
+    <h1 id="tag1">ANCHOR TAG</h1>
+    <iframe
+    name="Miiframe"
+    width="600"
+    height="600">
+  </iframe>
+  <br><br>
+  <h3 id="tag1">ANCHOR TAG</h3>
+  <p>Anchor tag o etiqueta de ancla representada por una letra a, para enlaces URL, que pueden estar contenidos dentro de nuestro archivo o en URL externas. Y sus atributos.</p>
+  <h4>DOWNLOAD</h4>
+  <p>Indica que el enlace se descargara en un archivo, en lugar de abrirlo, en algunos casos si lo abre si el navegador considera seguro abrirlo para una vista previa.
+    Funciona cuando href hace referencia a un archivo que puede ser PDF, WORD, PGN, JPEG, ZIP, entre otros. Se puede forzar su descarga con el nombre original o cambiarlo 
+    agregando un valor al atributo.</p>
+  <h5>Para descargar el documento con el nombre original:</h5>
+  <a href="documents/El_juego_de_la_vida_y_como_jugarlo-Florence_Scovel_Shinn.pdf" download>Download PDF</a>
+  <br><br>
+  <h5>Para descargarlo con el nombre que el usuario desee:</h5>
+  <a href="documents/El_juego_de_la_vida_y_como_jugarlo-Florence_Scovel_Shinn.pdf" download="MiArchivo.pdf">Download PDF</a>
+  <br><br>
+  <h5>Para descargar una imagen con el nombre original:</h5>
+  <a href="IMG/Breath.png" download>Download image</a>
+  <br><br>
+  <h5>Para descargar una imagen con el nombre que el usuario desee:</h5>
+  <a href="IMG/Breath.png" download="Algo grande sucedera!">Download image</a>
+  <br><br>
+  <!--HREF-->
+  <h4>HREF</h4>
+  <p>Del ingles hypertext reference, signfica referencia de hipertexo, le indica al navegador donde abrir el enlace creado con la etiqueta a. Si no se coloca href
+    el enlace no funciona, solo tendra apariencia de enlace pero no llevara a ningun lado.</p>
+  <!--Le indica al navegador que el sitio que debe abrir es Facebook-->
+  <a href="https://www.facebook.com/?locale=es_LA">Go to Facebook</a>
+  <br><br>
+  <!--Abre un archivo contenido dentro de la misma carpeta raiz(principal=PORTAFOLIOJESS)-->
+  <a href="servicios.html">Services</a>
+  <br><br>
+  <!--Este tipo de enlace abre un archivo hijo que esta contenido en una carpeta hermana de la raiz-->
+  <a href="IMG/monkey.jpg">Open image</a>
+  <br><br>
+  <!--Este enlace tambien abre un archivo hijo que esta contenido en una carpeta hermana de la raiz-->
+  <a href="IMG/Breath.png">Open image 2</a>
+  <br><br>
+  <!--HREFLANG-->
+  <!--Esta propiedad sirve para indicarle al navegador en que idioma esta el contenido al que apunta el enlace-->
+  <a href="sugerencias.html" hreflang="en">Suggestions</a>
+  <br><br>
+  <!--TARGET: Indica al navegador en que contexto abrir la URL citada en el documento-->
+  <!--_self: valor por defecto, aunque no se espeifique, el navegador lo hace en el mismo, abre el enlace en el mismo contexto de navegacion ya sea misma pestaña o ventana-->
+  <a href="https://www.pinterest.com/" target="_self">Go to Pinterest (open URL here)</a>
+  <br><br>
+  <!--_blank: este valor abre la URL en una nueva pestaña o ventana incluso de donde esta citada la URL-->
+   <!--Para abrir una URL de un dominio externo o de dominio interno en un targert=_BLANK !SIEMPRE! se usa el atributo rel con las propiedades noopener noreferrer para evitar con noopener 
+   que la pagina abierta pueda acceder a nuestro pagina a traves de windowopener y con noreferrer que hace lo mismo que noopener pero ademas evita que se envie el referrer, o sea la URL de 
+   donde venimos referidos, donde estaba el link que nos trajo a esta nueva pagina-->
+  <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">Go to Pinterest (open URL in a new tab)</a>
+  <br><br>
+  <!--_parent: Carga la URL en el contexto de navegacion padre (parent) del actual, en palabras menos tecnicas es un cuadrito del tamaño que nosotros especifiquemos dentro
+  dentro de esa misma pestaña y en ese cuadro se cargara el contenido de las paginas que indiquemos, para eso debemos darle un nombre a nuestro iframe que es el sustito
+  de parent en el atributo target-->
+  <a href="eventos.html" target="Miiframe">Go to Events</a>
+  <br><br>
+  <!--_top: Carga la URL en el contexto mas alto de navegacion (el cual es un ancestro del actual, y no tiene padre(parent)). Es decir, si tengo un enlace dentro de un contenido html del cual 
+  dicho contenido se despeglegara en el iframe llamado "miiframe", y quiero que el o unos de los enlaces no se muestre en ese mismo iframe (miiframe) o en un segundo
+  iframe en el caso de tener un segundo iframe dentro del primer iframe, por ejemplo (miiframe2) lo que hago es que al enlace URL del contenido que quiero desplegar le agreg la propiedad _top
+  al atributo target y asi el enlace transciende el o los iframes, es decir no se abre en el iframe actual si no que en el contecxto mas alto, una pagina limpia digamos asi.-->
+  <!--Entonces en el contenido que se muestra en el iframe 1 (Miiframe) hay un segundo iframe (Miiframe2), ANIDACION DE IFRAMES, enonces al abrir el enlace en mi iframe 1 se abre un segundo iframe 
+  (Miiframe2), en el iframe 1 hay un enlace para que abra contenido en el iframe 2 y al clickar se abre una pagina en el iframe 2, en este caso una imagen con un link que dice volver al inicio, al darle 
+  en este enlace que tiene la propiedad _top lo que hara es que en lugar de mostrar el contenido en el iframe 2 o en el iframe1 lo hara en el contexto mas alto, o sea una pagina limpia.-->
+  <!--type: Otro atributo de la etiqueta anchor es el atributo type, que indica el tipo de medio (media type) al que apunta la URL que hemos definido, esta propiedad no tiene funcionalidad alguna mas que 
+  para indicarle ya sea a un screen reader o a motores de busqueda a saber a que tipo de medio apunta, por si en algun caso el servidor no envia el tipo correcto, el archivo no tiene extension u otros
+  motivos, no es tan usado hoy en dia pero no esta mal usarlo tambien, siempre previniendo, los mas usados son para pdf, imagenes jpg y pgn, audios, archivos zip y otros-->
+  <a href="documents/HABITOS-ATOMICOS-JAMES-CLEAR.pdf" type="application/pdf">Read PDF</a> <!--Este media type es para un PDF, solo para indicar que tipo de archivo es, sin otra funcionalidad-->
+  <br><br>
+  <a href="IMG/not.jpg" type="image/jpeg">See Image</a> <!--Media type, una imagen con formato jpg-->
+  <br><br>
+  <a href="documents/VPProjects.zip" type="application/zip">Open ZIP</a> <!--Este media type es para un archivo ZIP, en el caso de los archivos ZIP, estos no se pueden ver en linea, siempre
+  se descargan automaticamente, por motivos de compatibilidad y seguridad del navegador, es como si por defecto trajera el tributo de download consigo, en este caso el atributo de download lo podemos
+  utilizar para que el navegador pueda cambiar el nombre del archivo si lo desea.-->
+  <br><br>
+  <p>Enviar correo al creador:</p>
+   <!--Para poder contactar al creador, es comun hacerlo por medio de correos, para esto usamos un enlace mailto: seguido del correo al que se enviaran los mensajes-->
+  <a href="mailto:sarimartinez250@gmail.com">Enviame correo</a>
+  <br><br>
+  <p>Llamar al creador:</p>
+  <!--Tambien es comun hacerlo por medio del telefono, en el caso de que se este navegando desde el celular nos lleva directo a hacer a la app de llamadas con el numero que hemos
+  colocado en el enlace tel: el cual debe ir seguido con el codigo del pais del numero telefonico-->
+  <a href="tel:+50361842579">LLamame</a>
+  <br><br>
+  <p>Enviar mensaje de whatsapp al creador:</p>
+  <!--Para agregar un enlace para enviar un mensaje de WhatsApp se hace mediante la API oficial de whatsapp, o sea: "https://wa.me/numerodetel", el codigo de pais va sin
+  signo + ya que WhatsApp asi lo pide y se puede hacer de dos formas;
+  normal sin un mensaje predeterminado y para tener un mensaje predeterminado que le aparezca al usuario-->
+  <p>Sin mensaje:</p> <a href="https://wa.me/50370122091" rel="noopener noreferrer">Enviar mensaje</a>
+  <br>
+  <!--Para hacerlo con un mensaje predeterminado, casi similar con el enlace "https://wa.me/503numero?" ese signo de interrogacion es importante para que whatsapp pueda entender
+  la indicacion o saber que lo que viene es una indicacion, luego sigue el parametro tex= y para escribir el mensaje, la separacion entre palabras es por medio de %20, SIEMPRE, SIEMPRE,
+  eso indica que se deben dejar espacios, luego si se quiere agregar otro parametro se agrega el signo &.-->
+  <p>Con mensaje predeterminado:</p> <a href="https://wa.me/78672345?text=Me%20podrias%20dar%20mas%20informacion%20de%20como%20contratar%20tus%20servicios" rel="noopener noreferrer">Enviar mensaje</a>
+  <br><br>
+  <h2>Atributos obsoletos de anchor tag (descartados, ya no se usan en HTML5)</h2>
+  <br>
+  <h4>Charset</h4>
+  <!--Este atributo obsoleto antes era usado para indicarle al navegador como debia abrir la URL de destino, antes cada region, pais o continenete tenia su propio 
+  codigo que incluia letras, numeros y simbolos propios de cada uno y era un caos para los navegadores esto, entonces en HTML5 se estandarizo un solo charset que es UTF-8, el cual, o debemos colocar
+  nosotros como autores ya que esto viene espeficicado en el head de HTML5 por estandar y siempre debe ir ya que aunque nuestro editor guarde todos nuestros documentos con UTF-8, el navegador al no tener
+  especificado como abrirlo, lo hace adivinando mediante ISO 8859-1 y casi siempre lo hace mal por eso aparecen simbolos raros en lugar de letras como la ñ, las comillas
+  u otros, por eso no lo debemos quitar para evitarnos esos errores en nuestros codigos-->
+  <br>
+  <h4>Coords</h4>
+<!--Este atributo en la tiqueta ancla ya no se usa, es obsoleto, porque solo funcionaba antes para un mapa de imagen, y funciona inseparablemnte junto con el atributo shape, hoy en dia SI SE USA el atributo 
+coords pero solo dentro de la etiqueta area para mapas de imagenes y dicha etiqueta tiene sus propios atributos que se veran mas adelante.-->
+<br>
+<h4>Name</h4>
+<!--Este atributo es obsoleto en HTML5, antiguamente su funcion era crear "anclas" o marcadores dentro de una misma pagina, para poder saltar de una parte de la pagina a otra
+especifica, pero hoy en dia ya no se usa, fue reemplazada por el atributo id que se coloca dentro de un heading o cualquier elemento como un p, img, a quien deseemos para nombrarlo con id y generar un enlace 
+con una etiqueta de ancla que puede estar en cualquier parte de la pagina, comunmente en el inicio o final.-->
+<a href="#tag1">Ir a etiqueta Anchor</a> <!--donde id="#tag1", tag1 es el id que hemos designado para el heading de la etiqueta anchor, o sea a donde queremos que
+este enlace nos lleve, ponemos una descripcion y al clicar sube desde aca hasta el inicio de la etiqueta.-->
+<br> 
+<!--Otro ejemplo, para ir desde aca pero hasta el inicio de la pagina, lo mismo, definimos un id para el heading del titulo principal y lo colocamos en un href con un #-->
+<a href="#Title">Ir a inicio de pagina</a>
+<!--Podemos tener todos los ids que deseemos, pero con el cuidado de que ningun id se repita, no pueden haber dos ids con el mismo nombre para que el navegador no tenga problemas con saber a cual ir, no rompa 
+estilos en CSS, no afecte funcionalidad de JavaScript y no afecte la accesibilidad.-->
+<br>
+<h4>Rev</h4>
+<!--Este atributo es completamente obsoleto, desechado por la confusion que generaba o mas bien dicho redudancia, era la relacion inversa del atributo rel(relationship), o sea
+rel se usa para decir "la pagina de destino tiene ESTA relacion conmigo" en palabras informales "esta pagina a la que apunto es mi papá", rev es lo inverso "yo tengo ESTA relacion con la pagina a la que apunto"
+o sea "yo soy el hijo de esta pagina", era redundante y hasta confuso asi que mejor se elimino y solo se usa rel.-->
+<br>
+<h4>Shape</h4>
+<!--Este atributo se usa juntamente con coords para mapas de imagenes, en la etiqueta <area>, shape se usa para definir una region donde esta el enlace a una siguiente pagina,
+o sea define la forma del area clicable, la cual puede ser de cuatro formas:
+-Circle: Ideal cuando el espacio donde queremos definir el area ciclabe tiene forma circular, usado para monedas, caras, soles y cualquier objeto redondo en general, los valores
+que usa con el atributo coords son los valores x,y,r; donde x y y son las coordenadas en pixel para el centro del circulo y r es el radio del circulo: coords="x_centro, y_centro, r"
+-Rect: Se usa para areas que tienen forma de rectangulo, cuadrado, como cajas, carteles, casas o regiones que se pueden encerrar en un rectangulo. Los valores para coords de rect son 4:
+x1, y1, 2, y2, donde x1, y1 son los valores de la esquina superior izquierda y x2, y2 los valores de la esquina inferior derecha.
+-Poly: Usados cuando la figura no tiene forma de circulo ni rectangulo, tiene una forma extraña que puede contener varios puntos, como animales, siluetas, caminos, etc. Requiere los
+valores x1, y1, x2, y2, x3, y3, ...; dependiendo cuantos pares de puntos pueda tener, donde el ultimo par de puntos se une con el primero para formar la figura.
+-Default: un ultimo valor pero no tan comun es default, que se usa por defecto si ningun shape coincide, requiere que el area encerrada tipicamente una imagen sea utilizada, este no usa 
+coords porque cubre todo lo que queda libre y solo puede haber un shape con valor default por cada mapa de imagen.
+TIP: Para hacer mas facil el calculo de coordenadas sin hacerlo manualmente, podemos usar una pagina para hacerlo mas facil y pro: https://www.image-map.net/-->
+<br><br>
+<img src="IMG/mimapa.jpeg" usemap="#tesoro"/>
+<map name="tesoro">
+  <!--Inicio (sin forma, un puntito imaginario), usamos el shape="circle y con la pagina calculamos las cooords las cuales colocamos, con href el vinculo para marcar 
+  la pagina de destino a la que nos llevara, un alt(alternative text para accesibilidad si la imagen no carga por algun motivo) y un title para cuando el cursor pase
+  por encima de esa parte definida el usuario pueda ver por medio de un rectangulo a la pagina donde lo llevara, una pequeña descripcion."-->
+  <area shape="circle"
+  coords="121, 511, 28" 
+  href="start.html"
+  target="_blank"
+  rel="noopener noreferrer"
+  alt="Inicio de camino al tesoro"
+  title="INICIO">
+
+  <area shape="poly"
+  coords="456, 149, 504, 77, 603, 71, 617, 119, 571, 169, 658, 221, 468, 163, 612, 217"
+  href="macaw.html"
+  alt=" happy macaw"
+  title="GUACAMAYO">
+
+  <area shape="rect"
+  coords="519, 913, 696, 772"
+  href="treasure.html"
+  alt="treasure chest"
+  title="TESORO">
+
+  <area shape="default"
+  href="pagenotfound.html"
+  alt="Outside marked areas"
+  title="Parte sin informacion">
+</map>
+<a href="index.html">Ir a Inicio</a>
+</body>
+</html>
