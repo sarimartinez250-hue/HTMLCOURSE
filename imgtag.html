@@ -868,7 +868,7 @@
         <!--LONGDESC-->
         <h3>LONGDESC</h3>
         <p>El atributo longdesc (long description) es el complemento del atributo alt, longdesc es una descripcion mas detallada de la imagen, no es algo que se muestra, no muestra un enlace visible y los navegadores modernos lo ignoran.
-            Este atributo es principlamente para lectores de pantalla, para personas con discapacidad visual que no pueden ver la imagen y necesita saber su contenido exacto y para contextos educativos o tecnicos. Longdesc es un archivo HTML normal, con etiquetas y atributos como si fuera otra pagina web
+            Este atributo es principalmente para lectores de pantalla, para personas con discapacidad visual que no pueden ver la imagen y necesita saber su contenido exacto y para contextos educativos o tecnicos. Longdesc es un archivo HTML normal, con etiquetas y atributos como si fuera otra pagina web
             solo que sin ser visible al usuario, aunque oficialmente no esta obsoleto, ya dejo de ser una practica profesional y ha sido reemplazado por alternativas modernas.
             Actualmente su soporte es inconsistente y no se recomienda para nuevos desarrollos.
         </p>
@@ -1391,7 +1391,639 @@
                 utilidades. A pesar de que algunas de ellas tienen cuatro pares de ojos, la mayoría no gozan de un gran sentido de la vista. Viven 
                 aproximadamente durante un año y se encuentran en prácticamente todas las partes del mundo exceptuando la Antártida.</p>
         </div>
-        <div style="clear: both;"></div>
+
+
+        <!--DECODING-->
+        <h3>DECODING</h3>
+        <p>El atributo <strong>decoding</strong> le indica al navegador cuando y como debe decodificar la o las imágenes, es decir cuando convertir los bytes descargados en píxeles visibles para ser mostrados en pantalla.</p>
+        <p>Empecemos por donde deberíamos, ¿qué es decodificar? Bueno, cuando nosotros descargamos una imagen y la cargamos en el editor de texto, al momento de hacer "running" a la página, el navegador no recibe el contenido de la imagen en si
+            directamente, es decir, el navegador no ve formas ni colores pintados, recibe datos comprimidos en un archivo que puede ser jpg, png, jpeg, webP u otro; estos archivos contienen metadatos, comprensión, información del color y algoritmos matemáticos.
+            Esto es lo que el navegador ve, o sea pixeles con información de la fila y columna y el color declarado en rgb, rgba, hexa, hsl u otra forma, entonces la <strong>decodificación</strong> es, convertir esos datos comprimidos en píxeles visibles y aquí es donde entra decoding.
+        </p>
+        <p>¿Por qué? Porque la decodificación dependiendo el navegador puede ocurrir ya sea en el GPU (Unidad de Procesamiento Gráfico), en el CPU (Unidad Central de Porcesamiento), en el hilo principal o en hilos separados y aquí pueden haber problemas porque decodificar consume tiempo y recursos del CPU y la memoria y puede bloquar el flujo del código
+            si se hace en el momento incorrecto, así como producir un retraso en la actualización lo que conocemos como "jank". So, aquí entra nuestro dichoso atributo de <strong>decoding</strong> y su valores.
+            <ul>
+                <li>
+                    <strong>"sync" (síncrono)</strong>:
+                    Con este valor, el navegador decodifica la imagen sincrónicamente mientras se renderiza o ejecuta el resto del contenido del DOM y se procesa todo junto. En otras palabras, cuando el navegador llega a la parte del código donde la imagen se encuentra puede detener lo demás y realiza la decodificación de la imagen para presentarla junto con todo lo demás,
+                    aunque no siempre se producen bloqueos, pero la imagen es quien tiene prioridad y esto aunque no siempre, no puede ser tan visible o medible en gran cantidad puede detener el scroll en pantalla, parpadeos, quedarse en blanco y lags, es como si el navegador dijera me agarraste desprevenido, no tengo listo tu espacio, entonces en ese momento se pone a prepararlo junto con todo lo demás.
+                </li>
+                <li>
+                    <strong>"async" (asíncrona)</strong>:
+                    Es la más usada, aunque no por todos los navegadores, pero en el caso de Firefox, es su valor por default y es la decodificación de la imagen tras haber renderizado y presentado el resto del contenido del DOM. La decodificación de la imagen se realiza en segundo plano sin afectar el flujo de la página, sin bloquear render ni scroll.
+                    Si la imagen tiene un width y height eso reserva su espacio en pantalla, puede producir un ligero efecto de que la imagen aparece después.
+                </li>
+                <li>
+                    <strong>"auto"</strong>:
+                    Es el valor por defecto al no asignar ninguno de los anteriores valores. No se muestra preferencia por el modo de decodificación, aquí el navegador decide que es lo mejor para el usuario y este se basa en heurísticas considerando el rendimiento.
+                </li>
+            </ul>
+        </p>
+        <p>En conclusión, <strong>decoding</strong> en la mayoría de los casos es una sugerencia al navegador de en que momento realizar la decodificación de la imagen, no es tanto una orden y no deberíamos preocuparnos tanto por él, solo es casos muy específicos como Juegos Canvas, Apps gráficas, usos especiales de JavaScript donde esto si puede generar una gran diferencia visible.
+            Entonces, así, queda a criterio de cada uno. Y pues por eso, las imagenes de este manual quedan con el decoding "auto".
+        </p>
+
+        <!--ELEMENTTIMING-->
+        <h3>ELEMENTTIMING</h3>
+        <p>El atributo <strong>elementtiming</strong> se usa para <strong>medir el tiempo de renderizado de un elemento específico</strong>, normalmente imágenes o elementos grandes que importa para la experiencia del usuario.</p>
+        <p>Este atributo no cambia como se ve la imagen, cuándo ni cómo se descarga, solo sirve para observación y métricas. Es decir, elementtiming es como colocar un cronómetro invisible para medir la posible experiencia visual que el usuario tendría respecto a cierto elemento importante del contenido.</p>
+        <p>Existe para responder preguntas como:
+            <ul>
+                <li>¿Cuánto se tardó esta imagen importante en aparecer?</li>
+                <li>¿Este banner se muestra rápido o lento?</li>
+                <li>¿Este elemento clave está afectando el rendimiento percibido?</li>
+            </ul>
+            Y se usa junto con:
+            <ul>
+                <li><strong>Performance API</strong></li>
+                <li><strong>PerformanceObserver</strong></li>
+                <li><strong>Core Web Vitals</strong></li>
+            </ul>
+            Especialmente para medir:
+            <ul>
+                <li>Renderizado de elementos clave.</li>
+                <li>Y aunque no reemplaza LCP, permite identificar con precisión qué elemento fue responsable del LCP y cuánto tardó en mostrarse.</li>
+            </ul>
+        </p>
+
+        <p>
+            <img src="IMG/notes.jpeg" 
+            style="vertical-align: middle;
+            width: 30px;
+            height: 30px;"
+            alt="Libreta de notas"/>
+            <b>¿Qué es LCP?</b>
+            <strong>LCP (Largest Contentful Paint)</strong> es una métrica del navegador, que forma parte de Core Web Vitals que responde a la pregunta de:
+            <em>¿Cuánto tiempo tarda en mostrarse el contenido principal de la página al usuario?</em>
+            
+            <br><br>
+
+            Mide el tiempo en milisegundos (ms) desde que el inicio de la navegación hasta que el elemento visual <strong>más grande visible en el viewport inicial</strong> es renderizado.
+            Este elemento suele ser una imagen grande, un video, un bloque de texto amplio o un contenedor tipo <em>hero</em>.
+
+            <br><br>
+
+            Entonces... ¿qué hace elementtiming con respecto a LCP? Bueno, el navegador calcula automáticamente el LCP, nosotros no decidimos que elemento es LCP.
+            Sin embargo con el atributo <strong>elementtiming</strong> nos permite medir exactamente <em>cuándo apareció un elemento específico</em>, lo que ayuda a comparar su tiempo con LCP
+            o incluso a confirmar si ese elemento resultó siendo el LCP de la página.
+
+            <br><br>
+
+            En otras palabras el LCCP no depende de cuál elemento pese más, tenga mayor resolución o aparezca primero en el HTML, sino de cuál ocupa mayor área visible dentro del viewport principal.
+
+            <br><br>
+
+            Por ejemplo: 
+            El navegador comienza renderizando el contenido del DOM y se encuentra con un <code>&lt;h1&gt;</code> grande, que se convierte en candidato a LCP.
+            Luego aparece una imagen que ocupa el 50% del ancho del viewport, convirtiéndose en nuevo candidato.
+            Más adelante se renderiza un banner que ocupa el 80% del ancho visible, convirtiéndose en el candidato final.
+            Si no aparece ningún elemento visual más grande, ese banner será el elemento LCP y su tiempo de renderizado será el valor reportado.
+
+            <br><br>
+
+            En conclusión, <strong>elementtiming</strong> ayuda a diagnosticar y analizar LCP, pero no a calcularlo, ya que ese calculo es realizado por el navegador automáticamente.
+
+        <p>La medición se realiza desde una lista que se genera en JavaScript, por ejemplo:
+            <div style="background-color:gainsboro;">
+                <pre>
+                    <code>
+                        JavaScript
+                        <span style="color: blue;">const</span> observer = <span style="color: blue;">new</span> <span style="color: red;">PerformanceObserver</span>((list) =>{
+                        <span style="color: blue;">for</span> (<span style="color: blue;">cont</span> entry of list.<span style="color: red;">getEntries</span>()){
+                            <span style="color:deeppink">console</span>.<span style="color: red;">log</span>(entry.name);
+                            <span style="color:deeppink">console</span>.<span style="color: red;">log</span>(entry.startTime);
+                        }
+                    });
+
+                    observer.<span style="color: red;">observe</span>({<span style="color: deeppink;">type</span>: <span style="color:forestgreen">element</span>, <span style="color: deeppink;">buffered</span>: <span style="color: blue;">true</span> });
+                </code>
+            </pre>
+            </div>
+            Y al correr el codigo se generara una lista con: el nombre del elemento y el tiempo exacto en ms (milisegundos) de cuando la imagen fue presentada en el render.
+        </p>
+        <p>Pero, entonces, cuando y donde se usa? Aquí la respuesta a cada una.
+            <ul>
+                La mayoría de los proyectos NO lo necesitan. Se usa cuando:
+                <li>Se trabaja con optimización de performance.</li>
+                <li>Se tienen métricas reales de usuario (RUM).</li>
+                <li>Se necesita medir LCP con precisión.</li>
+                <li>Se hacen dashboards de rendimiento.</li>
+            </ul>
+
+            Se usa principalmente en los elementos:
+            <ul>
+                <li>
+                    <pre><code>&lt;img&gt;</code></pre></code>
+                </li>
+                <li>
+                    <pre><code>&lt;video&gt;</code></pre>
+                </li>
+                <li>Elementos grandes del layout.</li>
+            </ul>
+            Y sobre todo en:
+            <ul>
+                <li>hero images</li>
+                <li>banners</li>
+                <li>imágenes above-the-fold (arriba de todo).</li>
+            </ul>
+        </p>
+        <p>Entonces como conclusión, el atributo <strong>elementtiming</strong> mide el tiempo desde que el navegador <strong>empieza a renderizar el elemento hasta que es pintado y visible en pantalla</strong>, no desde antes, no después, si no justo cuando se carga para saber si se tardo
+            300ms o 2.5s. Así que su uso es opcional y esta orientado a métricas avanzadas.
+        </p>
+
+        <!--FETCHPRIORITY-->
+        <h3>FETCHPRIORITY</h3>
+        <p>El atributo <strong>fetchpriority</strong> es un hint (pista) o más bien una sugerencia al navegador sobre la prioridad relativa que se debe usar al obtener una imagen.
+            Es como decirle al navegador: "Ey, esta imagen tiene (o no) prioridad respecto a otras al momento de descargarse."
+            No cambia absolutamente ningún aspecto visual, solo influye en el orden/prioridad de descarga.
+            Sus valores son:
+            <ul>
+                <li><strong>"high"</strong>:
+                    Le sugiere al navegador que debería obtener con prioridad esa imagen respecto a las demás del DOM, se usa en imágenes que son visibles inmediatamente, son parte del contenido visual y probablemente sea el LCP del sitio.
+                    
+                    <br>
+
+                    Normalmente suele ir acompañando a imágenes que van al principio, aunque también podrían estar en medio pero no al final, sino, no tendría sentido su uso.
+
+                    <br>
+
+                    Solo debería o realmente debe existir solo una imagen declarada con <code>fetchpriority="high"</code> o en casos muy específicos dos, más de eso resultaría una mala práctica,
+                    generando confusión en el navegador y nosotros perdemos el beneficio.
+                </li>
+                <br><br>
+                <li>
+                    <strong>"low"</strong>:
+                    Sugiere obtener la imagen con una prioridad baja en comparación con otras imágenes.
+
+                    <br>
+
+                    Se usa con imágenes decorativas, de galería, de artículos largos o imágenes que no afectan la percepción inicial.
+                </li>
+                <br><br>
+                <li>
+                    <strong>auto</strong>:
+                    Aquí no se establece una preferencia para la prioridad de descarga, dandole la decisión final al navegador el cual usa heurísticas de:
+                    <ul>
+                        <li>posición</li>
+                        <li>tamaño</li>
+                        <li>visibilidad</li>
+                        <li>tipo de recurso</li>
+                        <li>red</li>
+                        <li>CPU</li>
+                    </ul>
+                    Este es el valor por defecto al no colocar ninguno de los dos valores anteriores o establecer un valor no válido.
+                </li>
+            </ul>
+            En conclusión, <strong>fetchpriority</strong> es una sugerencia al navegador sobre a cual imagen debería darle prioridad al momento de obtenerla, no obliga ni garantiza resultados, solo orienta
+            al navegador y actúa como complemento de sus heurísticas internas.
+    
+            <p>
+                <img src="IMG/notes.jpeg"
+                 style="vertical-align: middle;
+            width: 30px;
+            height: 30px;"
+            alt="Libreta de notas"/>
+            <strong>fetchpriority</strong> es una herramienta de optimización avanzada que debe usarse con criterio, especialmente para mejorar la percepción de carga ideal y métricas como LCP,
+            sin reemplazar otros mecanismos como <code>loading</code>, <code>sizes</code> o <code>srcset</code>.
+            </p>
+        </p>
+
+        <!--HEIGHT-->
+        <h3>HEIGHT</h3>
+        <p>El atributo <strong>height</strong> en la etiqueta <code>&lt;img&gt;</code> es la altura intrínseca de la imagen, en pixeles. Se coloca como un numéro entero sin unidad.</p>
+
+        <p>En otras palabras, <strong>height</strong> sirve para que el navegador conozca la relación de aspecto (entre el ancho y la alutra de la imagen), ayudando así a reservar un espacio en pantalla a la imagen
+            antes de que esta se descargue y pinte para evitar desplazamientos de contenido y el famoso CLS (Cumulative Layout Shift).
+            <br><br>
+            Se escribe como un valor numérico sin unidad, este valor numérico siempre representa píxeles CSS pero no es CSS y no determina el tamaño visual final si CSS sobreescribe estos valores, es decir, el height declarado en HTML no declara que la imagen 
+            al pintarse en el sitio se verá de esa altura si en CSS se ha declarado otra altura, pero lo ideal sería que el valor de height y width declarados en HTML coincidan con el tamaño real del archivo para evitar romper la proporción, generar cálculos incorrectos en el navegador y no afectar a CLS.
+            <br><br>
+        </p>
+    
+        <p style="background-color: darkkhaki;
+        border-radius: 8px;">
+            <img src="IMG/notes.jpeg"
+             style="vertical-align: middle;
+            width: 30px;
+            height: 30px;"
+            alt="Libreta de notas"/>
+            <b>NOTA</b>: Incluir la altura y ancho en una etiqueta de imagen en HTML permite que el navegador calcule la relación de aspecto (aspect ratio) de la imagen antes de cargarla.
+            <br>
+            Esta relación de aspecto se utiliza para reservar el espacio necesario para mostrar la imagen, reduciendo o incluso evitando cambios de diseño al descargar la imagen y mostrarla en pantalla.
+            <br>
+            Reducir los cambios de diseño es fundamental para una buena experiencia del usuario y un buen rendimiento web.
+        </p>
+
+        <h5>WIDTH Y HEIGHT EN HTML</h5>
+        <p>Entonces como complemento, los atributos <strong>width</strong> y <strong>height</strong> declarados en un elemento <code>&lt;img&gt;</code> suelen generar confusión en primer lugar porque como mencionamos antes, podemos pensar que estamos declarando el tamaño visual final de la imagen en pantalla y que estos sustituyen su declaración en CSS, cuando no es así.
+            <br><br>
+            Su función es reservar un espacio en pantalla para la imagen mucho antes de que esta sea pintada en el sitio, para así evitar efectos visuales como que el texto se mueve para que la imagen se muestre en pantalla.
+        </p>
+
+        <div>
+            <h5>Ejemplo:</h5>
+            <pre>
+                <code>
+                    &lt;img
+                    src="https://downloads.net/black-widow.jpeg"
+                    alt="Araña viuda negra"
+                    fetchpriority="high"
+
+                    width="1280"
+                    height="720"
+
+                    sizes="(max-width:767px) 100vw,
+                    80vw"
+
+                    style="
+                    width: 100%;
+                    height: auto"
+
+                    srcset="
+                    https://downloads.net/black-widow-400.jpeg 400w,
+                    https://downloads.net/black-widow-670.jpeg 670w,
+                    https://downloads.net/black-widow-800.jpe 800w,
+                    https://downloads.net/black-widow-1200.jpeg 1200w,
+                    https://downloads.net/black-widow-1400.jpeg 1400w"
+                    &gt;
+                </code>
+            </pre>
+            ¿Qúe hace el navegador paso a paso:
+            <ol>
+                <li>Lee el HTML.</li>
+                <li>Llega la etiqueta <code>&lt;img&gt;</code> y ve:
+                    <pre>
+                        <code>
+                            &lt;img width="1280" height="720"&gt;
+                        </code>
+                    </pre>
+                </li>
+                <li>Calcula la relación de aspecto:
+                    1280 / 720 = 16:9
+                </li>
+                <li>El navegador reserva un rectángulo de 16:9 en pantalla para la imagen, aunque la imagen aún no esté descargada.
+                    <ul>
+                        <li>Aquí no importa todavía el tamaño visual final de la imagen, solo su proporción.</li>
+                        <li>No depende de vw.</li>
+                        <li>Solo reserva proporción.</li>
+                    </ul>
+                </li>
+                <li>Llega a sizes (aquí como vimos antes, se encarga del ancho que ocupará en el layout).
+                    <ul>
+                        <li>Realiza la evaluación según el tipo de dispositivo donde se encuentre.</li>
+                        <li>Calcula DPR y se basa en otras heurísticas para elegir la resolución que mejor se adapte a esas condiciones.</li>
+                    </ul>
+                </li>
+                <li>Se va a <strong>srcset</strong> y elige de las opciones la que mejor se adapte.</li>
+                
+                Ahora viene el tamaño visual final.
+
+                <li>Se va al archivo CSS y ve:
+                    <pre>
+                        <code>
+                            CSS
+                            img{
+                                width: 100%;
+                                height: auto;
+                            }
+                        </code>
+                    </pre>
+                    ¿Qué significan?
+                    <ul style="list-style-type: none;">
+                        <li> width: 100%; → La imagen ocupará el 100% del ancho disponible del viewport.
+                            <br>
+                            Si el contenedor mide 960px, la imagen se renderiza visualemnte con un ancho de 960px, pero esa medida no proviene de los atributos de HTML sino del CSS.
+                        </li>
+                        <li>height: auto; → La altura se adapta automáticamente.
+                            <br>
+                            La proporción reservada sigue manteniendo, o sea 16:9.
+                        </li>
+                    </ul>
+                </li>
+
+                <li>Ahora el navegador continúa renderizando el resto del contenido.</li>
+
+                <li>Cuando la imagen ya esta descargada y lista para ser pintada:
+                    <ul>
+                        <li>Se pinta dentro del espacio ya reservado.</li>
+                        <li>Nada salta.</li>
+                        <li>Nada se mueve.</li>
+                    </ul>
+                </li>
+            </ol>
+            Y así la imagen se adapta al contenedor pero el navegador ya sabía cuanto medía.
+            <br><br>
+            En conclusión, width y height no indican cuánto medirá la imagen visualmente en pantalla, 16:9 no es una medida, es una proporción que describe que diseño tendrá la imagen: cuadrada, rectangular, como una historia de Instagram, un reel, etc.
+        </div>
+        <p style="
+        background-color: plum;
+        border-radius: 10px;"> 
+            <img src="IMG/light.jpg"
+            style="width:25px;
+            height: auto;
+            vertical-align: middle;"
+            alt="foquito"/>
+            Los atributos <strong>width</strong> y <strong>height</strong> en HTML no definen el tamaño final, definen <strong>la proporción del elemento</strong> y permiten reservar espacio en el layout.
+            <br>
+            El atributo <strong>sizes</strong> indica cuánto espacio ocupará la imagen según el viewport.
+            <br>
+            <strong>srcset</strong> permite elegir la mejor resolución según el DPR y condiciones del usuario.
+            <br>
+            <strong>CSS</strong> define el tamaño visual final <strong>manteniendo la proporción.</strong>
+        </p>
+
+        <!--LOADING-->
+        <h3>LOADING</h3>
+        <p>
+            El atributo <strong>loading</strong> en <code>&lt;img&gt;</code> es una "strong hint" (pista fuerte), no una orden implícita pero tampoco una pista débil, para el navegador que le indica cómo debería cargar la imagen. De forma inmediata o diferir la descarga hasta 
+            que la imagen se encuentre a una distancia considerable del viewport. Sus valores son: 
+            <ul>
+                <li>
+                    <strong>"eager"</strong>: Carga la imagen sin diferir su descarga, permitiendo que el navegador la obtenga tan pronto como lo considere oportuno durante el proceso de carga inicial.
+                    <br>
+                    En otras palabras realiza la carga de la imagen de forma inmediata para ser presentada en pantalla, esto podría llevar a un consumo alto de ancho de banda y sobrecarga de recursos que pueden ralentizar la descarga de otro tipo de elementos, por eso no es recomendable tener más de una imagen
+                    declarada con <code>loading="eager"</code>, en casos muy especifícos dos, porque al tener muchas compiten entre sí por el ancho de banda, pueden retrasar el LCP y saturan la cola de descargas.
+                    <br>
+                    Es ideal para:
+                    <ul>
+                        <li>Imágenes encima de todo (above-the-fold).</li>
+                        <li>hero images.</li>
+                        <li>Posible candidato a LCP.</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <strong>"lazy"</strong>:
+                    Difiere o aplaza la carga de la imagen hasta que alcance una distancia calculada del viewport considerada por el navegador.
+                    <br>
+                    El objetivo de <code>loading="lazy"</code> es evitar el consumo de ancho de banda de red (bandwidth) y almacenamiento necesario para procesar la imagen hasta que el navegador tenga una certeza razonable de que sea necesaria y asi mejorar el rendimiento del contenido en la mayoría de los casos.
+                    <br><br>
+                    En otras palabras, el valor <strong>lazy</strong> le dice al navegador que no es una imagen crítica para el contenido y que se podría encontrar abajo del scroll y no es necesario gastar ancho de banda y red en cargarla de manera inmediata si no hasta que él crea que sera necesaria. Es ideal para:
+                    <ul>
+                        <li>Cuando la imagen aparece al hacer scroll.</li>
+                        <li>Galería de imágenes o artículos largos.</li>
+                        <li>No es crítica para la primera impresión.</li>
+                        <li>Es decorativa o secundaria.</li>
+                    </ul>
+                    <br><br>
+                    <img src="IMG/sirena.jpg"
+                    style="vertical-align: middle;
+                    width: 40px;
+                    height: auto;"
+                    alt="Sirena para anunciar una aclaración"/>
+                    Cuando se usa <strong><code>loading="lazy"</code></strong> es crítico reservar espacio con <strong>width</strong> y <strong>height</strong> (o <strong>aspect-ratio</strong>).
+                    <br>
+                    ¿Por qué?
+                    <ul style="list-style-type: none;">
+                        <li>La imagen no se descarga inmediatamente pero el navegador sigue renderizando el resto del contenido y presentandolo, pero con un <strong>width</strong> y <strong>height</strong> el layout si se renderiza y reserva para la imagen cuando sea el momento de cargarla
+                            en cambio, si no hay espacio reservado para esa imagen cuando se cargue puede provocar salto visual o un CLS.
+                        </li>
+                        Sintáxis correcta:
+                        <pre>
+                            <code>
+                                &lt;img src="imagen-no-critica.jpeg"
+                                loading="lazy"
+                                width="1280"
+                                height="720"
+                            </code>
+                        </pre>
+                        La imagen no se carga inmediatamente pero con <strong>width</strong> y <strong>height</strong> el navegador si renderiza el layout y le reserva la proporción.
+                    </ul>
+                </li>
+            </ul>
+            Otro aspecto que vale la pena aclarar es que antiguamente, <code>loading="lazy"</code> funcionaba únicamente con JavaScript habilitado, si el agente del usuario permitía su uso con el script deshabilitado esto daba paso al servidor a realizar un "tracking", en español, un rastreo del scroll
+            aproximado del usuario y el servidor podía rastrear cuántas imágenes y cuándo eran solicitadas.
+            <br>
+            Esto hoy en la actualidad ya no funciona así, en el aspecto de que <code>loading="lazy"</code> es solo aplicabale con JS, ahora <code>loading="lazy"</code> es nativo del navegador, no depende de JavaScript y funciona incluso con JS deshabilitado.
+            <br>
+            El uso de <code>loading="lazy"</code> <strong>no implica que el servidor rastree el desplazamiento del usuario.</strong>
+            <br>
+            El navegador simplemente realiza la petición HTTP cuando decide que la imagen es necesaria y el servidor solo recibe solicitudes normales de recursos, sin información sobre scroll, posición o comportamiento del usuario.
+            <br><br>
+            En resumen, <strong>loading</strong> es una indicación al navegador de cómo debería cargar la imagen: de manera inmediata si es parte del contenido principal, es una hero image o es posible LCP, no tener muchas (más de dos imágenes) declaradas con <code>loading="eager"</code> para evitar consumo excesivo
+            de ancho de banda y de red.
+            <br>
+            De forma diferida, cuando la imagen no es parte crítica del contenido, se encuentra abajo del scroll y es una imagen decorativa o es una galería de imágenes, al usar este valor <code>loading="lazy"</code>, siempre es fundamental reservar un layout con un <strong>width</strong> y <strong>height</strong>
+            para evitar saltos visuales y CLS.
+            <br>
+            <code>loading="lazy"</code> funciona hoy en día aún sin JavaScript habilitado y no produce ningún tracking para el usuario por parte del servidor. 
+        </p>
+
+        <!--USEMAP-->
+        <h3>USEMAP</h3>
+        <p>El atributo <strong>usemap</strong> es parte de una URL parcial (que empieza por <strong>#</strong>) de un mapa de imagen asociado a un elemento.
+            <br><br>
+            Es decir, casi similar al atributo visto antes, ismap, el atributo <strong>usemap</strong> conecta una imagen con un mapa de áreas clicables definididas por los elementos
+            <strong>
+                <a href="">
+                    <code>&lt;map&gt;</code>
+                </a>
+            </strong>
+            y por 
+            <strong>
+                <a href="">
+                    <code>&lt;area&gt;</code>
+                </a>
+            </strong>.
+            Es declarado en la etiqueta img empezando por un # precedido por el nombre del elemento (name) contenido en la etiqueta <code>&lt;map&gt;</code>.
+            <br><br>
+            A diferencia del atributo ismap, donde el elemento 
+            <code>&lt;img&gt;</code> 
+            debe estar dentro de un elemento 
+            <code>&lt;a&gt;</code>
+            para que sea válido; el elemento 
+            <strong>usemap</strong>
+            no puede estar dentro de un elemento 
+            <code>&lt;a&gt;</code>
+            ni 
+            <code>&lt;button&gt;</code>.
+            <br><br>
+            Sintáxis:
+            <pre>
+                <code>
+                    &lt;img src="mapaEEUU.png" 
+                    usemap="#mapaEEUU" 
+                    alt="Mapa de los Estados Unidos de América" /&gt;
+
+                    &lt;map
+                    name="mapaEEUU" &gt;
+                    ...
+                    &lt;/map&gt;
+                </code>
+            </pre>
+            
+        </p>
+
+        <p>
+            Con 
+            <strong>usemap</strong> 
+            concluimos el estudio de los atributos del elemento 
+            <code>&lt;img&gt;</code>.
+            Profundizaremos en otro aspecto fundamental en la web moderna que involucra a este elemento.
+
+            <h3>ACCESIBILIDAD</h3>
+            <p>Anteriormente, casi al principio de este documento vimos uno de los atributos más importantes de la etiqueta
+                <code>&lt;img&gt;</code>,
+                el atributo 
+                <stong>
+                    <code>alt</code>
+                </stong>
+                (alternative text o en español, texto alternativo), el cual describe el contenido de la imagen para los diferentes casos que se puedan presentar (la URL del archivo es inválida, la descarga no se pudo realizar
+                o para lectores de pantalla), en esta ocasión, este apartado es sobre el último de esos casos, para <b>accesibilidad</b>.
+                <br><br>
+                <em>¿Qué es accesibilidad?</em>
+                En términos dados por la W3C (World Wide Web), accesibilidad web significa que sitios web, herramientas y tecnologías están diseñadas y desarrolladas de tal manera que las personas con discapacidades puedan usarlas. 
+                La Accesibilidad Web abarca todas las discapacidades que afectan al acceso a la Web, como:
+                <ul>
+                    <li>Auditivas</li>
+                    <li>Cognitivas</li>
+                    <li>Neurológicas</li>
+                    <li>Físicas</li>
+                    <li>Del habla</li>
+                    <li>Visuales</li>
+                </ul>
+                Pero no solo a ellos, sino también a las personas sin discapacidad de todas las edades, regiones y condiciones.
+                <br><br>
+                En otras palabras, la accesibilidad web se trata de hacer de nuestros sitios un lugar donde personas con y sin discapacidad puedan navegar sin barreras.
+                <br><br>
+                Entonces, 
+                <em>
+                    ¿qué tiene que ver en este aspecto el atributo 
+                    <code>alt</code>
+                    ?
+                </em>
+                Si bien, como lo mencionamos al principio, este nos ayuda a describir el contenido de la imagen, si la imagen no se carga, la descripción contenida en el atributo 
+                <code>alt</code>
+                será la que aparecerá en el lugar de la imagen, pero 
+                <em>¿para una persona que se auxilia de screen readers o lectores de pantalla?</em> 
+                De la misma manera, el texto contenido en el 
+                <code>alt</code>
+                es el que el lector de pantalla le anuncia al usuario y si tal atributo se omite, el lector de pantalla lee el nombre del archivo y si este no esta relacionado con el contenido
+                de la imagen, esto genera una mala experiencia y ruido para el usuario.
+                Y si se coloca vacío 
+                <code>alt=""</code>
+                el lector de pantalla lo ignora porque lo interpreta como "no parte del contenido" y pasa de largo.
+                <br><br>
+                Por lo tanto, su uso no es opcional para una imagen y podemos emplearlo de dos formas dependiendo el contexto:
+                <ol>
+                    <li>
+                        <b>Descriptivo</b>:
+                        Si la imagen es fundamental para el contenido porque este se auxilia de ella para ejemplificar o mostrar algo o la imagen es independiente, escribir un buen 
+                        <code>alt</code>
+                        es fundamental en este caso.
+                    </li>
+                    <li>
+                        <b>Vacío</b>:
+                        Se coloca vacío si la imagen es decorativa, no ejemplifica nada visual ni textualmente, en este caso como mencionamos arriba, es ignorado por el lector de pantalla.
+                    </li>
+                </ol>
+                Para escribir un buen
+                <code>alt</code>
+                nos podemos auxiliar de un criterio, haciendonos la pregunta de:
+                <span 
+                style="display: block;
+                padding: 15px 10px;
+                font-style: italic;">
+                <img src="IMG/brain.jpg"
+                alt=""
+                style="vertical-align: middle;
+                width: 25px;
+                height: 25px;"/>
+                <b>  Si por algún motivo la imagen no se carga o muestra 
+                    ¿QUE TENDRÍA QUE SABER EL USUARIO PARA NO PERDER INFORMACIÓN?</b>
+                </span>
+                <br><br>
+                Además, un 
+                <code>alt</code>
+                no es una descripción detalla y exhaustiva del contenido de la imagen, no se deben colocar detalles innecesarios que hagan que se pierda el sentido real de la imagen,
+                con descripciones que involucren colores, calidad, marcos o medida de la imagen. En el caso de que un 
+                <code>alt</code>
+                no alcance para describir todo el contenido de la imagen y se necesite hacer una versión extendida de él para las personas con discapacidad nos auxiliamos de 
+                <strong>ARIA</strong>
+                , con sus atributos 
+                <code>aria-describedby</code>
+                o
+                <code>aria-details</code>
+                y en el caso de que sea también de revelencia para usuarios visuales mediante un enlace a otra página que contenga la descripción.
+            </p>
+                <p>Otro caso especial es el uso de imágenes para botones y los logos de empresas o sitios.</p>
+                <ul>
+                    <li>
+                        Cuando una imagen corresponde al elemento
+                        <code>button</code>
+                        , el texto alternativo de la imagen debe corresponder a la función que ese símbolo realiza en lugar de colocar una descripción de ella como si fuera una imagen descriptiva.
+                        <div>
+                            <h5>EJEMPLO:</h5>
+                            <pre>
+                                <code>
+                                    &lt;button&gt;
+                                    &lt;img src="lupa.jpeg" 
+                                    alt="Buscar" /&gt;
+                                    &lt;/button&gt;
+                                </code>
+                            </pre>
+                            n lugar de:
+                            <pre>
+                                <code>
+                                    &lt;button&gt;
+                                    &lt;img src="lupa.jpeg"
+                                    alt="Lupa para buscar contenido" /&gt;
+                                    &lt;/button&gt;
+                                </code>
+                            </pre> 
+                        </div>
+                    </li>
+                    <li>
+                        En el caso de los logos, solo se coloca el nombre o las siglas de la empresa o entidad a la que corresponde, omitiendo la palabra "logo" al principio de ella.
+                        <div>
+                            <h5>EJEMPLO:</h5>
+                            <pre>
+                                <code>
+                                    &lt;img src="logo_nationalgeographic.png"
+                                    alt="National Geographic" /&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </li>
+                </ul>
+                <p>En conclusión, el elemento 
+                    <code>alt</code>
+                    no debería ser opcional, o es descriptivo o se coloca vacío, si es descriptivo no se sobrecarga de detalles innecesarios y fuera de contexto pero no deberíamos omitirlo.
+                </p>
+
+            <!--SVG-->
+            <h3>Identificando un elemento SVG como una imagen</h3>
+            <p>Un elemento SVG (Scalable Vector Graphic) es una imagen, pero a diferencia de las imágenes de archivos JPG, JPEG, PNG, ect., está basado en vectores y no en píxeles y es interpretada directamente
+                por el navegador por ser código.
+                <br><br>
+                Aunque visualmente luzca como una imagen, no es tratada como tal por el navegador a menos que este contenida en un elemento
+                <code>&lt;img&gt;</code>
+                , de lo contrario para el navegador es una 
+                <span style="text-decoration: underline;">instrucción gráfica</span>
+                no una imagen en sí. Un elemento SVG puede reaccionar a eventos, animarse, contener texto, cambiar con CSS o JS y un elemento 
+                <code>&lt;img&gt;</code>
+                no, solo se muestra y ya.
+                <br><br>
+                Un SVG esta formado por elementos que pertenecen al lenguaje SVG no a HTML, los cuales describen formas.
+                
+            </p>
+
+
+
+
+
+
+
+
+
+
+            un atributo que en lo personal me sorprendió por su extensividad, no es un atributo el cual debemos tomarnos a la ligera, porque no solo se trata de incluir un src y definir tamaños y ya, dentro de si,
+            encierra mucho más que presentar una imagen, estamos ante responsividad, diseño, prioridad, ancho de banda, de red y sobre todo ante accesibilidad, no solo se trata de colocar imágenes pensando en los usuarios
+            visuales, si queremos que nuestros sitios sean accesibles e inclusivos, debemos ponernos en sus zapatos, en lugar del navegador, del servidor y sobre todo, del usuario, para garantizar en lo que a nosotros respecta, una
+            buena experiencia en la web!
+
+        </p>
+
 
         <iframe 
         name="miiframe3"
