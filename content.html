@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +10,10 @@
     placeholder="user" 
     autocapitalize="off" 
     autocorrect="off"
-    autofocus>
+    autofocus
+    dir="auto">
 
-    <p contenteditable="">Hola</p>
+    <p contenteditable="" lang="fr">Hola</p>
     <input data-price="">
 
     <div dir="auto">
@@ -45,18 +46,42 @@ alt="Cereal de caja Nesquik Chocolate"/>
 </figcaption>
 </figure>
 
-<input type="text" enterkeyhint="search">
-<input type="text" enterkeyhint="send">
-<input type="text" enterkeyhint="next">
+<input type="text" enterkeyhint="search" dir="auto">
+<input type="text" enterkeyhint="send" dir="auto">
+<input type="text" enterkeyhint="next" dir="auto">
 
 <label for="tel">Telefono</label>
 <input type="text" inputmode="tel"> 
 
-<label for="DUI">DUI</label>
-<input type="text"
-inputmode="numeric"
-pattern="[0-9]{8}-[0-9]{1}"
-maxlength="10"
-placeholder="00000000-0">
+<form>
+    <label for="DUI">DUI</label>
+    <input type="number"
+    dir="auto"
+    inputmode=""
+    pattern="[0-9]{8}-[0-9]"
+    maxlength="10"
+    placeholder="00000000-0"
+    required
+    >
+</form>
+
+<button is="skip-button">
+    X
+</button>
+
+<script>
+    console.log("You have been hacked");
+</script>
+
+<a href="javascript:console.log(`You've been hacked!`)" target="hacked">
+    <img src="IMG/arrow.jpg"
+    style="width: 30px;
+    height: auto;"/>
+</a>
+
+<iframe 
+name="hacked"
+src="javascript:console.log(`You've been hacked!`)"></iframe>
+
 </body>
 </html>
