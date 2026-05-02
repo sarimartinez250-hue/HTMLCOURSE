@@ -53,62 +53,73 @@
         LEFT
     </h4>
 
-    <span class="titles">
+    <h5 class="titles">
         Para alinear a la izquierda:
-    </span>
+    </h5>
+    <section class="sections">
+        <header>
+            <span class="subtitles">
+                Con HTML:
+            </span>
+            <b class="center">
+                Monos
+            </b>
+        </header>
+        <div class="flex-container">
+            <!--Usando align que ahora sale en color rojo por ser un atributo obsoleto, pero para visualizar-->
+            <img src="IMG/monkey1.jpeg" 
+            align="left" 
+            style="width: 200px;"/>
+            <!--El texto se coloca debajo de la imagen para indicar que es lo que rodeara a la imagen, si va antes de ella, el navegador no le aplicará
+            la alineación y si va fuera del div tambien sera algo que no tiene que ver con ello y no fluira con la imagen.-->
+            <article>
+                <p>
+                    Los simios o monos son primates de la infraorden de los haplorrinos. En castellano se suele usar la misma palabra para referirse de igual
+                    modo a los monos y a los simios en lenguaje común, incluso para aquellos simios que carecen de cola. Su tamaño es muy variable, tienen los
+                    ojos situados en la parte frontal de la cara y pulgares oponibles en las manos que les permiten trepar con facilidad a los árboles. Gracias a 
+                    la constitución de sus manos también son capaces de usar ciertas herramientas para llevar a cabo algunas actividades de su vida diaria. 
+                </p>
+            </article>    
+            <aside class="info-especies">
+                <p>
+                    Se conocen unas 260 especies diferentes: el babuino es el mano de mayor tamaño y el tití pigmeo el más pequeño. Son animales mamíferos, de 
+                    comportamiento sociable que en ocasiones puede convertirse en violento si se sienten intimidados. 
+                </p>
+            </aside>
+        </div>
+    </section>
 
-    <div>
-        <span class="subtitles">
-            Con HTML:
-        </span>
-        <!--Usando align que ahora sale en color rojo por ser un atributo obsoleto, pero para visualizar-->
-        <img src="IMG/monkey1.jpeg" 
-        align="left" 
-        style="width: 200px;"/>
-
-        <!--El texto se coloca debajo de la imagen para indicar que es lo que rodeara a la imagen, si va antes de ella, el navegador no le aplicará
-        la alineación y si va fuera del div tambien sera algo que no tiene que ver con ello y no fluira con la imagen.-->
-        <b>
-            Monos:
-        </b>
-        <p>
-            Los simios o monos son primates de la infraorden de los haplorrinos. En castellano se suele usar la misma palabra para referirse de igual
-            modo a los monos y a los simios en lenguaje común, incluso para aquellos simios que carecen de cola. Su tamaño es muy variable, tienen los
-            ojos situados en la parte frontal de la cara y pulgares oponibles en las manos que les permiten trepar con facilidad a los árboles. Gracias a 
-            la constitución de sus manos también son capaces de usar ciertas herramientas para llevar a cabo algunas actividades de su vida diaria.  
-        </p>
-        <p>
-            Se conocen unas 260 especies diferentes: el babuino es el mano de mayor tamaño y el tití pigmeo el más pequeño. Son animales mamíferos, de 
-            comportamiento sociable que en ocasiones puede convertirse en violento si se sienten intimidados. 
-        </p>
-    </div>
-    <div style="clear: both;"></div> 
-    <!--Aca usamos un contenedor vacio con clear: both para evitar que el texto de abajo se pegue con la imagen y se desordene pero solo en este caso,
-    en los proximos lo haremos con una clase.-->
-    <div>
-        <span style="font-style: italic;">
-            Con CSS:
-        </span>
-          <!--Con CSS: como lo hacen las webs modernas, estas ya no usan align si no float tanto para left y right, porque lo que float hace es que el texto
-          rodee a la imagen, hace que el elemento se salga del flujo normal del documento.-->
-        <img src="IMG/monkey1.jpeg" 
-        style="float:left" 
-        width="200px"/>
-        <b>
-            Monos:
-        </b>
-        <p>
-            Los simios o monos son primates de la infraorden de los haplorrinos. En castellano se suele usar la misma palabra para referirse de igual
-            modo a los monos y a los simios en lenguaje común, incluso para aquellos simios que carecen de cola. Su tamaño es muy variable, tienen los
-            ojos situados en la parte frontal de la cara y pulgares oponibles en las manos que les permiten trepar con facilidad a los árboles. Gracias a 
-            la constitución de sus manos también son capaces de usar ciertas herramientas para llevar a cabo algunas actividades de su vida diaria.
-        </p>
-        <p>
-            Se conocen unas 260 especies diferentes: el babuino es el mano de mayor tamaño y el tití pigmeo el más pequeño. Son animales mamíferos, de 
-            comportamiento sociable que en ocasiones puede convertirse en violento si se sienten intimidados. 
-        </p>
-    </div>
-    <div style="clear: both;"></div> 
+    <!--Con CSS-->
+    <section class="sections">
+        <header>
+            <span class="subtitles">
+                Con CSS:
+            </span>
+            <b class="center">
+                Monos
+            </b>
+        </header>
+        <div class="flex-container">
+            <!--Con CSS: como lo hacen las webs modernas, estas ya no usan align si no float tanto para left y right, porque lo que float hace es que el texto
+            rodee a la imagen, hace que el elemento se salga del flujo normal del documento.-->
+            <img src="IMG/monkey.jpg"
+            style="float:right; width: 200px;"/>
+            <article>
+                <p>
+                    Los simios o monos son primates de la infraorden de los haplorrinos. En castellano se suele usar la misma palabra para referirse de igual
+                    modo a los monos y a los simios en lenguaje común, incluso para aquellos simios que carecen de cola. Su tamaño es muy variable, tienen los
+                    ojos situados en la parte frontal de la cara y pulgares oponibles en las manos que les permiten trepar con facilidad a los árboles. Gracias a 
+                    la constitución de sus manos también son capaces de usar ciertas herramientas para llevar a cabo algunas actividades de su vida diaria.
+                </p>
+            </article>
+            <aside class="info-especies2">
+                <p>
+                    Se conocen unas 260 especies diferentes: el babuino es el mano de mayor tamaño y el tití pigmeo el más pequeño. Son animales mamíferos, de 
+                    comportamiento sociable que en ocasiones puede convertirse en violento si se sienten intimidados. 
+                </p>
+            </aside>
+        </div>
+    </section>
 
     <!--RIGHT:Pega la imagen al lado derecho del navegador y el texto se mueve o mantiene a la izquierda-->
     <h4>

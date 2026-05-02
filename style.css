@@ -1,0 +1,65 @@
+.img-lion{
+    box-shadow: 10px 10px 5px rgba(200, 100, 0, 0.5);
+    float: right;
+    width: 200px;
+    margin-left: 15px;
+    flex-shrink: 0; /*Evita que la imagen se encoja si hay mucho texto*/
+}
+
+.cont-clear{
+    display: flow-root;
+}
+
+.flex-container{
+    display: flex; /*Activa el modo flexbox*/
+    align-items: start; /*Alinea todo arriba*/
+    gap: 20px; /*crea espacio entre texto e imagen sin usar margin*/
+}
+
+.sutitles{
+    font-style: italic;
+    color: #555; /*Opcional, un gris oscuro*/
+    font-size: 0.9em; /*Opcional, un pelin más pequeña que el texto base*/
+    display: block;
+}
+
+.subtitles:hover{ /*al pasar el cursor sobre los subs, cambia el color del texto*/
+    color:brown;
+    cursor: help;
+}
+
+.titles{
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.center{
+    font-weight: bold;
+    color:#333;
+    font-size: 1.2em;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.info-especies{
+    font-style: italic;
+    background-color: #f7decc;
+    padding: 15px;
+    border-left: 5px solid #fb5807; /*Una barrita de color al lado*/
+    font-size: 0.85em;
+    flex-basis: 200px; /*le da un ancho fijo dentro del flex*/
+}
+
+.info-especies2{
+    font-style: italic;
+    background-color: rgb(226, 241, 247);
+    padding: 16px;
+    border-left: 5px solid rgb(7, 177, 244);
+    font-size: 0.853em;
+    flex-basis: 250px;
+}
+
+.sections{
+    background-color: #f4f3f3;
+}
