@@ -5,90 +5,181 @@
     <title>Img tag</title>
 </head>
 <body>
-    <h1>IMAGE TAG</h1>
-    <h2>Image tag</h2>
-    <p>Representa una imagen en el documento. Es una etiqueta autocontenida, es decir tiene etiqueta de apertura pero no tiene porque
-    tener una etiqueta de cierre, incluye los atributos globales y sus propios, los cuales describiremos:</p>
+    <h1>
+        IMAGE TAG
+    </h1>
+    <h2>
+        Image tag
+    </h2>
+
+    <p>
+        Representa una imagen en el documento. Es una etiqueta autocontenida, es decir tiene etiqueta de apertura pero no tiene porque
+        tener una etiqueta de cierre, incluye los atributos globales y sus propios, los cuales describiremos:
+    </p>
     <!--ALIGNH: -->
-    <h3>ALIGN</h3>
-    <p>El atributo de align que era permitido hasta HTML4 pero en webs modernas ya es obsoleto porque ahora es mas profesional hacerlo con CSS.
+    <h3>
+        ALIGN
+    </h3>
+    <p>
+        El atributo 
+        <b>
+            align
+        </b> 
+        que era permitido hasta HTML4 pero en webs modernas ya es obsoleto porque hoy en día es mas profesional hacerlo con CSS.
         Este atributo era una indicacion de hacia donde se debia alinear la imagen respecto al texto del que estuviera acompañado, contaba con 
-        5 valores: left, right, top, middle y bottom, ahora cada uno tiene su equivalente en CSS.</p>
+        5 valores: 
+        <b>
+            left
+        </b>,
+        <b>
+            right
+        </b>, 
+        <b>
+            top
+        </b>, 
+        <b>
+            middle
+        </b> y 
+        <b>
+            bottom
+        </b>, 
+        ahora cada uno con su equivalencia en CSS.
+    </p>
 
     <!--LEFT: Envia la imagen a la izquierda del navegador y el texto fluye a la derecha-->
-    <h4>LEFT</h4>
-    <h4>Para alinear a la izquierda:</h4>
+    <h4>
+        LEFT
+    </h4>
 
-    <h5>CON HTML</h5>
+    <span style="font-weight: bold;">
+        Para alinear a la izquierda
+    </span>
+
+    <span style="font-style: italic;">
+        CON HTML
+    </span>
+
     <div>
         <!--Usando align que ahora sale en color rojo por ser un atributo obsoleto, pero para visualizar-->
         <img src="IMG/monkey1.jpeg" align="left" width="200px"/>
 
-        <!--El texto se coloca debajo de la imagen para indicar que es lo que rodeara a la imagen, si va antes de ella, el navegador no le aplicara
+        <!--El texto se coloca debajo de la imagen para indicar que es lo que rodeara a la imagen, si va antes de ella, el navegador no le aplicará
         la alineación y si va fuera del div tambien sera algo que no tiene que ver con ello y no fluira con la imagen.-->
-        <h5>Monos:</h5>
-        <p>Los simios o monos son primates de la infraorden de los haplorrinos. En castellano se suele usar la misma palabra para referirse de igual
-             modo a los monos y a los simios en lenguaje común, incluso para aquellos simios que carecen de cola. Su tamaño es muy variable, tienen los
-             ojos situados en la parte frontal de la cara y pulgares oponibles en las manos que les permiten trepar con facilidad a los árboles. Gracias a 
-             la constitución de sus manos también son capaces de usar ciertas herramientas para llevar a cabo algunas actividades de su vida diaria.  
-             Se conocen unas 260 especies diferentes: el babuino es el mano de mayor tamaño y el tití pigmeo el más pequeño. Son animales mamíferos, de 
-             comportamiento sociable que en ocasiones puede convertirse en violento si se sienten intimidados. </p>
+        <b>
+            Monos:
+        </b>
+        <p>
+            Los simios o monos son primates de la infraorden de los haplorrinos. En castellano se suele usar la misma palabra para referirse de igual
+            modo a los monos y a los simios en lenguaje común, incluso para aquellos simios que carecen de cola. Su tamaño es muy variable, tienen los
+            ojos situados en la parte frontal de la cara y pulgares oponibles en las manos que les permiten trepar con facilidad a los árboles. Gracias a 
+            la constitución de sus manos también son capaces de usar ciertas herramientas para llevar a cabo algunas actividades de su vida diaria.  
+        </p>
+        <p>
+            Se conocen unas 260 especies diferentes: el babuino es el mano de mayor tamaño y el tití pigmeo el más pequeño. Son animales mamíferos, de 
+            comportamiento sociable que en ocasiones puede convertirse en violento si se sienten intimidados. 
+        </p>
     </div>
     <div style="clear: both;"></div> 
-    <!--Aca es necesario usar div, div es una etiqueta sin significado semantico, usado unicamente para dividir secciones de contenido y aplicar
+    <!--Aca es necesario usar div, div es una etiqueta sin significado semántico, usado únicamente para dividir secciones de contenido y aplicar
     un estilo diferente, pero en este caso es necesario usarlo porque al usar la variable float esto provoca que el texto se quiera subir a la parte
     superior desordenando todo, en cambio div lo fuerza a no hacerlo mediante la variable clear que sirve para decir: "que nada se coloque a la izquierda
     o derecha de este elemento y bajalo debajo del contenido flotante" y su valor BOTH que hace que el contenido baje debajo de cualquier float.-->
 
-    <h5>CON CSS</h5>
+    <span style="font-style: italic;">
+        CON CSS
+    </span>
+
     <div>
           <!--Con CSS: como lo hacen las webs modernas, estas ya no usan align si no float tanto para left y right, porque lo que float hace es que el texto
           rodee a la imagen, hace que el elemento se salga del flujo normal del documento.-->
-        <img src="IMG/monkey1.jpeg" style="float:left" width="200px"/>
-        <h5>Monos:</h5>
-        <p>Los simios o monos son primates de la infraorden de los haplorrinos. En castellano se suele usar la misma palabra para referirse de igual
-             modo a los monos y a los simios en lenguaje común, incluso para aquellos simios que carecen de cola. Su tamaño es muy variable, tienen los
-             ojos situados en la parte frontal de la cara y pulgares oponibles en las manos que les permiten trepar con facilidad a los árboles. Gracias a 
-             la constitución de sus manos también son capaces de usar ciertas herramientas para llevar a cabo algunas actividades de su vida diaria.  
-             Se conocen unas 260 especies diferentes: el babuino es el mano de mayor tamaño y el tití pigmeo el más pequeño. Son animales mamíferos, de 
-             comportamiento sociable que en ocasiones puede convertirse en violento si se sienten intimidados. </p>
+        <img src="IMG/monkey1.jpeg" 
+        style="float:left" 
+        width="200px"/>
+
+        <b>
+            Monos:
+        </b>
+
+        <p>
+            Los simios o monos son primates de la infraorden de los haplorrinos. En castellano se suele usar la misma palabra para referirse de igual
+            modo a los monos y a los simios en lenguaje común, incluso para aquellos simios que carecen de cola. Su tamaño es muy variable, tienen los
+            ojos situados en la parte frontal de la cara y pulgares oponibles en las manos que les permiten trepar con facilidad a los árboles. Gracias a 
+            la constitución de sus manos también son capaces de usar ciertas herramientas para llevar a cabo algunas actividades de su vida diaria.
+        </p>
+        <p>
+            Se conocen unas 260 especies diferentes: el babuino es el mano de mayor tamaño y el tití pigmeo el más pequeño. Son animales mamíferos, de 
+            comportamiento sociable que en ocasiones puede convertirse en violento si se sienten intimidados. 
+        </p>
     </div>
     <div style="clear: both;"></div> 
 
     <!--RIGHT:Pega la imagen al lado derecho del navegador y el texto se mueve o mantiene a la izquierda-->
-    <h4>RIGHT</h4>
-    <h4>Para alinear a la derecha:</h4>
+    <h4>
+        RIGHT
+    </h4>
+
+    <span style="font-weight: bolder;">
+        Para alinear a la derecha:
+    </span>
    
-    <h5>CON HTML:</h5>
+    <span style="font-style: italic;">
+        CON HTML:
+    </span>
+
     <div>
         <!--Con HTML-->
-        <img src="IMG/monkey2.jpeg" align="right" width="200px"/>
-        <h5>Primates:</h5>
-        <p>Se han descrito unas 150 especies de primates diferentes, una orden de los mamíferos a la que pertenecemos los humanos. Tienen un cráneo de 
+        <img src="IMG/monkey2.jpeg" 
+        align="right" width="200px"/>
+        <b>
+            Primates:
+        </b>
+        <p>
+            Se han descrito unas 150 especies de primates diferentes, una orden de los mamíferos a la que pertenecemos los humanos. Tienen un cráneo de 
             tamaño grande y los ojos situados en la parte frontal, algo que les permite tener una buena visión capaz de calcular de forma exacta las 
             dimensiones de la realidad. Se cree que su origen se encuentra unos 65 millones de años atrás. La mayoría cuentan con el pulgar oponible que 
             les permite usar herramientas y agarrarse de forma adecuada a las ramas para poder trepar a los árboles. Son animales omnívoros y habitan en 
-            algunas zonas de Sudamérica y Centroamérica, y las especies más grandes en África y Madagascar, siempre en las zonas tropicales y subtropicales. </p>
+            algunas zonas de Sudamérica y Centroamérica, y las especies más grandes en África y Madagascar, siempre en las zonas tropicales y subtropicales. 
+        </p>
     </div>
     <div style="clear: both;"></div>
 
     <!--Con CSS-->
-    <h5>CON CSS:</h5>
+    <span style="font-style: italic;">
+        CON CSS:
+    </h5>
     <div>
-        <img src="IMG/monkey2.jpeg" style="float:right" width="200px"/>
-        <h5>Primates:</h5>
-         <p>Se han descrito unas 150 especies de primates diferentes, una orden de los mamíferos a la que pertenecemos los humanos. Tienen un cráneo de 
+        <img src="IMG/monkey2.jpeg" 
+        style="float:right" width="200px"/>
+        <b>
+            Primates:
+        </b>
+         <p>
+            Se han descrito unas 150 especies de primates diferentes, una orden de los mamíferos a la que pertenecemos los humanos. Tienen un cráneo de 
             tamaño grande y los ojos situados en la parte frontal, algo que les permite tener una buena visión capaz de calcular de forma exacta las 
             dimensiones de la realidad. Se cree que su origen se encuentra unos 65 millones de años atrás. La mayoría cuentan con el pulgar oponible que 
             les permite usar herramientas y agarrarse de forma adecuada a las ramas para poder trepar a los árboles. Son animales omnívoros y habitan en 
-            algunas zonas de Sudamérica y Centroamérica, y las especies más grandes en África y Madagascar, siempre en las zonas tropicales y subtropicales. </p>
+            algunas zonas de Sudamérica y Centroamérica, y las especies más grandes en África y Madagascar, siempre en las zonas tropicales y subtropicales. 
+        </p>
     </div>
     <div style="clear: right;"></div>
 
-    <p>Los otros 3 valores: <b>Top, Middle y Bottom</b> suelen confundir a muchos programadores, ya que son mayormente usados para iconos pequeños al tamaño del renglón donde
-        va el texto, manejando tamaños entre 25 px y 40 px como maximo para que no se vea raro, ya que al hacerlo con imagenes de tamaño mayor el texto o parrafo se veria 
-        desordenado o habria grandes espacios, por esto, estos valores son comunemnte usados para iconos, como por ejemplo de descarga, para redes sociales de la pagina web 
-        que diseñemos o aplicacion, emojis en linea, indicadores, flechas, etcera, elementos que sea INLINE, o sea vayan dentro de una linea de texto</p>
+    <p>
+        Los otros 3 valores: 
+        <b>
+            Top
+        </b>, 
+        <b>
+            Middle
+        </b> y 
+        <b>
+            Bottom
+        </b> 
+        suelen confundir a muchos programadores, ya que son mayormente usados para iconos pequeños al tamaño del renglón donde
+        va el texto, manejando tamaños entre 25px y 40px como máximo para que no se vea raro, ya que al hacerlo con imágenes de tamaño mayor el texto o 
+        párrafo se vería desordenado o habría grandes espacios, debido a esto, estos valores son comúnemnte usados para iconos, 
+        como por ejemplo de descarga, para redes sociales de la pagina web que diseñemos o aplicación, emojis en lénea, indicadores, flechas, etcera, 
+        elementos que sean INLINE, o sea vayan dentro de una linea de texto
+    </p>
 
     <!--NOTA!!!-->
     <!--Con CSS. Aqui ya no se usa float, si no un nuevo valor llamado VERTICAL-ALIGN, que solo funciona con elemento inline o inline-block, la etiqueta img
@@ -98,117 +189,202 @@
 
 
     <!--TOP: Alinea la parte superior de la imagen con la parte superior de la linea de texto mas alta de su contexto, el texto parece que queda "mas abajo" porque la imagen se pega arriba-->
-   <h4>TOP</h4>
-    <h4>Para alinear la imagen al top del texto</h4>
+    <h4>
+        TOP
+    </h4>
+
+    <span style="font-weight: bolder;">
+        Para alinear la imagen al top del texto
+    </span>
     
     <!--Con HTML-->
-    <h5>CON HTML</h5>
+    <span style="font-style: italic;">
+        CON HTML
+    </span>
      <div>
-        <h5>Serpientes</h5>
-        <img src="IMG/snake.jpeg" style="float: left;" width="175px"/>
-        <p>Las serpientes son un tipo de reptiles que se caracterizan principalmente por la carencia de patas. Su anatomía, caracterizada por un cuerpo alargado, 
+        <b>
+            Serpientes
+        </b>
+        <img src="IMG/snake.jpeg" 
+        style="float: left;" width="175px"/>
+        <p>
+            Las serpientes son un tipo de reptiles que se caracterizan principalmente por la carencia de patas. Su anatomía, caracterizada por un cuerpo alargado, 
             está preparada para permitir un desplazamiento sin necesidad de extremidades: pueden moverse cómodamente tanto por tierra como por agua.
-            Tienen la piel recubierta de escamas, un esqueleto que les proporciona mucha flexibilidad y una lengua bífida. Algunas especies matan a sus presas por constricción 
-            por ejemplo las boas, pero otras lo hacen mediante el veneno que inoculan con los dientes cuando muerden a sus víctimas. Todos los miembros de esta especie 
-            son animales carnívoros.
-            <br>
+        </p>
+        <p>
+            Tienen la piel recubierta de escamas, un esqueleto que les proporciona mucha flexibilidad y una lengua bífida. Algunas especies matan a sus presas por 
+            constricción por ejemplo las boas, pero otras lo hacen mediante el veneno que inoculan con los dientes cuando muerden a sus víctimas. Todos los miembros de 
+            esta especie son animales carnívoros.
+        </p>
+        <p>
             Para leer mas sobre serpientes: 
-            <a href="https://www.nationalgeographic.com.es/animales/serpientes" target="_blank" rel="noopener noreferrer">
-                <img src="IMG/arrow.jpg" align="top" width="10px"/></a>
-                Y compartenos en tus redes sociales.
+            <a href="https://www.nationalgeographic.com.es/animales/serpientes" 
+            target="_blank" 
+            rel="noopener noreferrer">
+                <img src="IMG/arrow.jpg" 
+                align="top" width="10px"/>
+            </a>
+            Y compartenos en tus redes sociales.
         </p>
      </div>
      <div style="clear:both;"></div>
 
      <!--Con CSS-->
-     <h5>CON CSS:</h5>
+     <span style="font-style: italic;">
+        CON CSS:
+     </span>
      <div>
-        <h5>Serpientes:</h5>
-        <img src="IMG/snake.jpeg" width="175px" style="float: right;"/>
-        <p>Las serpientes son un tipo de reptiles que se caracterizan principalmente por la carencia de patas. Su anatomía, caracterizada por un cuerpo alargado, 
-            está preparada para permitir un desplazamiento sin necesidad de extremidades: pueden moverse cómodamente tanto por tierra como por agua. 
+        <b>
+            Serpientes:
+        </b>
+        <img src="IMG/snake.jpeg" 
+        width="175px" 
+        style="float: right;"/>
+        <p>
+            Las serpientes son un tipo de reptiles que se caracterizan principalmente por la carencia de patas. Su anatomía, caracterizada por un cuerpo alargado, 
+            está preparada para permitir un desplazamiento sin necesidad de extremidades: pueden moverse cómodamente tanto por tierra como por agua.
+        </p>
+        <p>
             Tienen la piel recubierta de escamas, un esqueleto que les proporciona mucha flexibilidad y una lengua bífida. Algunas especies matan a sus presas por constricción 
             por ejemplo las boas, pero otras lo hacen mediante el veneno que inoculan con los dientes cuando muerden a sus víctimas. Todos los miembros de esta especie 
             son animales carnívoros.
-            <br>
-            Si quieres leer mas articulos sobre serpientes:
-        <a href="https://www.nationalgeographic.com.es/animales/serpientes" target="_blank" rel="noopener noreferrer">
-            <img src="IMG/arrow.jpg" width="10px" style="vertical-align: top;"/>
-        </a>
-        Y compartenos en tus redes sociales.
+        </p>
+        <p>
+            Para leer mas sobre serpientes: 
+            <a href="https://www.nationalgeographic.com.es/animales/serpientes" 
+            target="_blank" 
+            rel="noopener noreferrer">
+                <img src="IMG/arrow.jpg" 
+                style="vertical-align: top;"
+                width="10px"/>
+            </a>
+            Y compartenos en tus redes sociales.
         </p>
      </div>
      <div style="clear: both;"></div>
 
      <!--MIDDLE:La funcion de middle es hacer que la imagen se alinee con la linea base del texto. Es lo mas natural. O sea, hace que el texto y la imagen queden bien centrados 
      verticalmente entre si, es lo mas equilibrado y siempre para imagenes o elementos inline. -->
-     <h4>MIDDLE</h4>
-     <h5>Para alinear la mitad de la imagen con la linea base del texto</h5>
+     <h4>
+        MIDDLE
+    </h4>
+     <span style="font-weight: bold;">
+        Para alinear la mitad de la imagen con la linea base del texto
+     </span>
 
      <!--Con HTML-->
-     <h5>CON HTML</h5>
+     <span style="font-style: italic;">
+        CON HTML
+     </span>
      <div>
-        <h5>Ranas:</h5>
-        <img src="IMG/frog.jpeg" width="175px" align="right"/>
-        <p>Son un tipo de anfibios caracterizados principalmente por su gran capacidad de salto gracias a la morfología de sus extremidades posteriores, potentes y muy 
-            desarrolladas. Los ejemplares más pequeños miden aproximadamente 8 centímetros, mientras que los más grandes pueden alcanzar los 30 centímetros. 
-            Se han descrito unas 6.600 especies, la mayoría de las cuales reparte su vida entre el medio acuático y el terrestre. Se reproducen mediante huevos y se alimentan 
-            de pequeños invertebrados. Su hábitat se distribuye sobretodo en los bosques de las regiones tropicales, pero se pueden encontrar algunas hasta en las regiones 
-            subárticas. Las ranas se distinguen de los sapos básicamente por su piel, que en el caso de los sapos presenta algunas verrugas. 
-            <br><br>
+        <b>
+            Ranas:
+        </b>
+        <img src="IMG/frog.jpeg" 
+        width="175px" align="right"/>
+        <p>
+            Son un tipo de anfibios caracterizados principalmente por su gran capacidad de salto gracias a la morfología de sus extremidades posteriores, potentes y muy 
+            desarrolladas. Los ejemplares más pequeños miden aproximadamente 8 centímetros, mientras que los más grandes pueden alcanzar los 30 centímetros.
+        </p>
+        <p>
+            Se han descrito unas 6.600 especies, la mayoría de las cuales reparte su vida entre el medio acuático y el terrestre. Se reproducen mediante huevos y 
+            se alimentan de pequeños invertebrados. Su hábitat se distribuye sobretodo en los bosques de las regiones tropicales, pero se pueden encontrar 
+            algunas hasta en las regiones subárticas.
+        </p>
+        <p>
+            Las ranas se distinguen de los sapos básicamente por su piel, que en el caso de los sapos presenta algunas verrugas. 
+        </p>
+
+        <p>
             Sigue nuestras redes sociales: 
             <ul>
                 <li>
                     Facebook 
-                    <a href="https://www.facebook.com/natgeo/?locale=es_LA" target="_self" rel="noopener noreferrer">
-                        <img src="IMG/fb.jpg" width="25px" align="middle"/>
+                    <a href="https://www.facebook.com/natgeo/?locale=es_LA" 
+                    target="_self" 
+                    rel="noopener noreferrer">
+                        <img src="IMG/fb.jpg" 
+                        align="middle"
+                        width="25px" />
+                    </a>
+                </li>
+                
+                <li>
+                    Instagram
+                    <a href="https://www.instagram.com/natgeo?igsh=MWNiNmxlejJoM283" 
+                    target="_self" 
+                    rel="noopener noreferrer">
+                        <img src="IMG/ig.jpg" 
+                        align="middle
+                        width="25px" "/>
+                    </a>
+                </li>
+            </ul>
+        </p>
+    
+    </div>
+    <div style="clear: both;"></div>
+
+     <!--Con CSS siempre usando VERTICAL-ALIGN-->
+     <span style="font-style: italic;">
+        CON CSS:
+    </span>
+        
+     <div>
+        <b>
+            Ranas:
+        </b>
+        <img src="IMG/frog.jpeg" 
+        style="float: left;" 
+        width="175px"/>
+         <p>
+            Son un tipo de anfibios caracterizados principalmente por su gran capacidad de salto gracias a la morfología de sus extremidades posteriores, potentes y muy 
+            desarrolladas. Los ejemplares más pequeños miden aproximadamente 8 centímetros, mientras que los más grandes pueden alcanzar los 30 centímetros.
+        </p>
+        <p>
+            Se han descrito unas 6.600 especies, la mayoría de las cuales reparte su vida entre el medio acuático y el terrestre. Se reproducen mediante huevos y se alimentan 
+            de pequeños invertebrados. Su hábitat se distribuye sobretodo en los bosques de las regiones tropicales, pero se pueden encontrar algunas hasta en las regiones 
+            subárticas. 
+        </p>
+        <p>
+            Las ranas se distinguen de los sapos básicamente por su piel, que en el caso de los sapos presenta algunas verrugas. 
+        </p>
+            
+        <p>
+            Siguenos en nuestras redes sociales para no perderte nuestros articulos semanales:
+            <ul>
+                <li>
+                    Facebook
+                    <a href="https://www.facebook.com/natgeo/?locale=es_LA" 
+                    taget="_blank" 
+                    rel="noopener noreferrer">
+                       <img src="IMG/fb.jpg" 
+                       style="vertical-align: middle;"
+                       width="20px" />
                     </a>
                 </li>
 
                 <li>
-                Instagram
-                <a href="https://www.instagram.com/natgeo?igsh=MWNiNmxlejJoM283" target="_self" rel="noopener noreferrer">
-                <img src="IMG/ig.jpg" width="25px" align="middle"/>
-                </a>
+                    Instagram
+                    <a href="https://www.instagram.com/natgeo?igsh=MWNiNmxlejJoM283" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                       <img src="IMG/ig.jpg" width="20px" style="vertical-align: middle;"/>
+                    </a>
+                </li>
+
+                <li>
+                    WhatsApp
+                    <a href="https://wa.me/50370122091?text=Hola!%20Gracias%20por%20comunicarte%20conmigo.%20¿Qué%20servicio%20de%20programación%20te%20interesa?" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                        <img src="IMG/whatsapp.jpg" 
+                        style="vertical-align: middle;" 
+                        width="20px" 
+                        alt="Logo de whatsapp"/>
+                    </a>
                 </li>
             </ul>
-        </p>
-     </div>
-     <div style="clear: both;"></div>
-
-     <!--Con CSS siempre usando VERTICAL-ALIGN-->
-     <h5>CON CSS:</h5>
-     <div>
-        <h5>Ranas:</h5>
-        <img src="IMG/frog.jpeg" style="float: left;" width="175px"/>
-         <p>Son un tipo de anfibios caracterizados principalmente por su gran capacidad de salto gracias a la morfología de sus extremidades posteriores, potentes y muy 
-            desarrolladas. Los ejemplares más pequeños miden aproximadamente 8 centímetros, mientras que los más grandes pueden alcanzar los 30 centímetros.
-            Se han descrito unas 6.600 especies, la mayoría de las cuales reparte su vida entre el medio acuático y el terrestre. Se reproducen mediante huevos y se alimentan 
-            de pequeños invertebrados. Su hábitat se distribuye sobretodo en los bosques de las regiones tropicales, pero se pueden encontrar algunas hasta en las regiones subárticas. 
-            Las ranas se distinguen de los sapos básicamente por su piel, que en el caso de los sapos presenta algunas verrugas. 
-        <br>
-        Siguenos en nuestras redes sociales para no perderte nuestros articulos semanales:
-        <ul>
-            <li>
-                Facebook
-                <a href="https://www.facebook.com/natgeo/?locale=es_LA" taget="_blank" rel="noopener noreferrer">
-                    <img src="IMG/fb.jpg" width="20px" style="vertical-align: middle;"/>
-                </a>
-            </li>
-
-            <li>
-                Instagram
-                <a href="https://www.instagram.com/natgeo?igsh=MWNiNmxlejJoM283" target="_blank" rel="noopener noreferrer">
-                    <img src="IMG/ig.jpg" width="20px" style="vertical-align: middle;"/>
-                </a>
-            </li>
-            <li>
-                WhatsApp
-                <a href="https://wa.me/50370122091?text=Hola!%20Gracias%20por%20comunicarte%20conmigo.%20¿Qué%20servicio%20de%20programación%20te%20interesa?" target="_blank" rel="noopener noreferrer">
-                    <img src="IMG/whatsapp.jpg" style="vertical-align: middle;" width="20px" alt="Logo de whatsapp"/>
-                </a>
-            </li>
-        </ul>
         </p>
      </div>
      <div style="clear: both;"></div>
@@ -216,198 +392,475 @@
      <!--BOTTOM: Este es el valor por defecto, en el cual su funcion es alinear la parte inferior de la imagen con la linea base del texto.
      Es decir la parte inferior de la imagen se pega a la linea base donde va el texto, como si fuera un renglon de cuaderno y pareciera que el texto
      sube o baja dependiendo porque es la imagen y su tamaño quienes controlan a la linea del texto.-->
-     <h4>BOTTOM</h4>
-     <h5>Para alinear la parte inferior de la imagen con la linea base del texto</h5>
+     <h4>
+        BOTTOM
+    </h4>
+     <span style="font-weight: bold;">
+        Para alinear la parte inferior de la imagen con la linea base del texto
+     </span>
 
-     <h5>CON HTML</h5>
+     <span style="font-style: italic;">
+        CON HTML
+     </span>
      <div>
-        <h5>Mariposas</h5>
-        <img src="IMG/butterfly.jpg" width="150px" height="200px" style="float: right;"/>
-        <p>Los lepidópteros, mas conocidos comúnmente como mariposas, son unos insectos pertenecientes al orden de los homometábolos, un grupo de insectos superiores, los cuales, 
-            a lo largo de su vida sufren una serie de transformaciones complejas conocida como metamorfosis, y en la que se suceden las fases de embrión, larva, pupa e imago.Las 
-            mariposas son un tipo de insecto muy popular por los llamativos colores que tiñen sus alas y por su vuelo vacilante cuando se acerca el buen tiempo. Se han descrito unas 
-            24.000 especies diferentes. Como todos los insectos cuentan con seis patas, dos alas y un cuerpo dividido en tres partes: cabeza, tórax y abdomen.Su boca tiene forma de 
-            tubo pues es la herramienta con la que succionan los nutrientes de las plantas para alimentarse a través de una larga lengua enrollada sobre si misma que recibe el nombre 
-            de espiritrompa.  El único lugar en el mundo donde no se encuentran mariposas es en la Antártida.
-            Conoce mas historias sobre mariposas: 
-        <a href="https://www.nationalgeographic.com.es/animales/mariposas" target="_blank" rel="noopener noreferrer" title="Butterflys">
-            <img src="IMG/arow.jpg" width="10px" align="bottom"/>
-        </a>
+        <b>
+            Mariposas:
+        </b>
+        <img src="IMG/butterfly.jpg" 
+        width="150px" height="200px" 
+        style="float: right;"/>
+        <p>
+            Los lepidópteros, más conocidos comúnmente como mariposas, son unos insectos pertenecientes al orden de los homometábolos, un grupo de insectos 
+            superiores, los cuales, a lo largo de su vida sufren una serie de transformaciones complejas conocida como metamorfosis, y en la que se suceden 
+            las fases de embrión, larva, pupa e imago.
         </p>
-     </div>
-     <div style="clear: both;"></div>
+        <p>
+            Las mariposas son un tipo de insecto muy popular por los llamativos colores que tiñen sus alas y por su vuelo vacilante cuando se acerca el buen tiempo.
+        </p>
+        <p>
+            >Se han descrito unas 24.000 especies diferentes. 
+        </p>
+        <p>
+            Como todos los insectos cuentan con seis patas, dos alas y un cuerpo dividido en tres partes: cabeza, tórax y abdomen.Su boca tiene forma de 
+            tubo pues es la herramienta con la que succionan los nutrientes de las plantas para alimentarse a través de una larga lengua enrollada sobre si misma 
+            que recibe el nombre de espiritrompa.
+        </p>
+        <p>
+            >El único lugar en el mundo donde no se encuentran mariposas es en la Antártida.
+        </p>
+        <p>
+            Conoce mas historias sobre mariposas: 
+            <a href="https://www.nationalgeographic.com.es/animales/mariposas" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            title="Butterflys">
+                <img src="IMG/arow.jpg" 
+                align="bottom"
+                width="10px" />
+            </a>
+        </p>
+    </div>
+    <div style="clear: both;"></div>
 
      <!--CON CSS: Con CSS igual que los dos valores anteriores, usamos vertical-align, ya que no queremos forzar algun flujo, solo ordenar.-->
-     <h5>CON CSS</h5>
+     <span style="font-style: italic;">
+        CON CSS
+     </span>
      <div>
-        <h5>Mariposas</h5>
-        <img src="IMG/butterfly.jpg" width="150px" height="200px" style="float:left;">
-        <p>Los lepidópteros, mas conocidos comúnmente como mariposas, son unos insectos pertenecientes al orden de los homometábolos, un grupo de insectos superiores, los cuales, 
-            a lo largo de su vida sufren una serie de transformaciones complejas conocida como metamorfosis, y en la que se suceden las fases de embrión, larva, pupa e imago.Las 
-            mariposas son un tipo de insecto muy popular por los llamativos colores que tiñen sus alas y por su vuelo vacilante cuando se acerca el buen tiempo. Se han descrito unas 
-            24.000 especies diferentes. Como todos los insectos cuentan con seis patas, dos alas y un cuerpo dividido en tres partes: cabeza, tórax y abdomen.Su boca tiene forma de 
+        <b>
+            Mariposas:
+        </b>
+        <img src="IMG/butterfly.jpg"
+        width="150px" 
+        height="200px" 
+        style="float:left;">
+        <p>
+            Los lepidópteros, mas conocidos comúnmente como mariposas, son unos insectos pertenecientes al orden de los homometábolos, un grupo de insectos superiores, 
+            los cuales, a lo largo de su vida sufren una serie de transformaciones complejas conocida como metamorfosis, y en la que se suceden las fases de 
+            embrión, larva, pupa e imago.
+        </p>
+        <p>
+            Las mariposas son un tipo de insecto muy popular por los llamativos colores que tiñen sus alas y por su vuelo vacilante cuando se acerca el buen tiempo. 
+        </p>
+        <p>
+            Se han descrito unas 24.000 especies diferentes. Como todos los insectos cuentan con seis patas, dos alas y un cuerpo dividido en tres partes: cabeza, tórax y abdomen.Su boca tiene forma de 
             tubo pues es la herramienta con la que succionan los nutrientes de las plantas para alimentarse a través de una larga lengua enrollada sobre si misma que recibe el nombre 
-            de espiritrompa.  El único lugar en el mundo donde no se encuentran mariposas es en la Antártida.
-            <br>
+            de espiritrompa.
+        </p> 
+        <p>
+            El único lugar en el mundo donde no se encuentran mariposas es en la Antártida.
+        </p>
+        <p>
             Lee mas historias sobre mariposas: 
-            <a href="https://www.nationalgeographic.com.es/animales/mariposas" target="_blank" rel="noopener noreferrer">
-                <img src="IMG/arow.jpg" width="10px" style="vertical-align: bottom;"/>
+            <a href="https://www.nationalgeographic.com.es/animales/mariposas" 
+            target="_blank" 
+            rel="noopener noreferrer">
+                <img src="IMG/arow.jpg" 
+                style="vertical-align: bottom;"
+                width="10px" />
                 <!--Como dijimos al principio BOTTOM es el valor por defecto, aunque no coloquemos el style="vertical-align: bottom;"
                 y ningun otro valor, el navegador lo asignara por defecto y lo veremos alineado con la parte superior de la linea base del texto.-->
             </a>
         </p>
-     </div>
-     <div style="clear: both;"></div>
+    </div>
+    <div style="clear: both;"></div>
 
-     <p>
+    <p>
         Si tienes dudas sobre el atributo align y sus equivalentes en CSS, puedes contactarme por medio de correo:
-     <a href="mailto:sarimartinez250@gmail.com" rel="noopener noreferrer">
-        <img src="IMG/gmail.jpg" width="25px" style="vertical-align: bottom;" title="sarimartinez250@gmail.com"/>
-     </a>
-     </p>
+        <a href="mailto:sarimartinez250@gmail.com" 
+        rel="noopener noreferrer">
+            <img src="IMG/gmail.jpg" 
+            style="vertical-align: bottom;" 
+            width="25px" 
+            title="sarimartinez250@gmail.com"/>
+        </a>
+    </p>
 
      <!--ALT-->
-     <h3>ALTERNATIVE TEXT (Texto Alternativo)</h3>
-     <p>Es el texto que acompaña a la imagen describiendo su contenido para que en caso de que la URL de la imagen sea incorrecta, la imagen no se haya descargado aun o tiene un 
-        formato no soportado el usuario vea esa descripcion y pueda hacerse una imagen mental sin necesidad de ver la imagen, tambien sirve para accesibilidad, para hacer nuestras 
-        paginas inclusivas en caso de personas ciegas que usen screenreader y para SEO (accesibilidad de Google) ya que alt, Google no sabe que hay ahi, es un atributo obligatorio despues 
-        de src, pero alt se coloca vacio o podemos no colocarlo cuando la imagen es meramente decorativa y su contenido no brinda mayr utilidad al codigo.
-        Las descripciones deben ser muy especificas de acuerdo a la imagen, sin extendernos en descripcion cosas sencillas pero que describan a la perfeccion.</p>
+     <h3>
+        ALTERNATIVE TEXT (Texto Alternativo)
+    </h3>
+    <p>
+        Es el texto que acompaña a la imagen describiendo su contenido para que en caso de que la URL de la imagen sea incorrecta, la imagen no se haya 
+        descargado aún o tiene un formato no soportado el usuario vea esa descripción y pueda hacerse una imagen mental sin necesidad de ver la imagen.
+    </p> 
+    <p>
+        También sirve para accesibilidad, para hacer nuestras páginas inclusivas en caso de que personas ciegas que usen screenreader y para SEO (accesibilidad de 
+        Google) ya que Google no sabe que hay ahi, es un atributo obligatorio después 
+        de src.
+    </p> 
+    <p>
+        Hay ocasiones donde alt se coloca vacio o se puede omitir cuando la imagen es meramente decorativa y su contenido no brinda mayorr utilidad al codigo.
+    </p>
+    <p>
+        Las descripciones deben ser muy especificas de acuerdo a la imagen, sin extendernos en descripcion cosas sencillas pero que describan a la perfeccion.
+    </p>
 
-        <h5>SIN COLOCAR NOMBRE DE LA IMAGEN</h5>
+        <span style="font-style: italic;">
+            SIN COLOCAR NOMBRE DE LA IMAGEN
+        </span>
         <div>
-            <h5>Leones</h5>
-            <img src="IMG" width="200px" height="200px" alt="León rugiendo en la pradera" style="float: right;"/>
+            <b>
+                Leones
+            </b>
+            <img src="IMG" 
+            alt="León rugiendo en la pradera"
+            width="200px" 
+            height="200px"  
+            style="float: right;"/>
             <!--Aca solo hemos colocado la ruta de la imagen pero no el nombre de la imagen, por lo tanto cuando el usuario vera la descripcion que hemos colocado en el atributo de alt-->
-            <p>Los leones son los únicos felinos que viven en manada. Las unidades familiares pueden incluir hasta tres machos, una docena de hembras y sus crías. Todas las leonas de una manada 
-                están emparentadas y usualmente los pequeñas hembras en su seno se quedan con el grupo a medida que envejecen. Los varones jóvenes, sin embargo, tarde o temprano abandonan el grupo 
-                o son expulsados y establecen su propia manada.Una abundante y frondosa melena rodea su cara y se extiende por el cuello del rey de la selva –solo los machos la poseen: este es su rasgo 
-                más característico y único en la familia de los félidos.  Habitan en las sabanas africanas y en una zona reducida del noreste de la India, pero son una especie muy vulnerable pues antiguamente 
-                habitaban en otras partes del mundo de las que han ido desapareciendo. Las leonas son las encargadas de salir a cazar mientras que los machos deben defender el territorio de la manada y a sus hembras. 
-                Suelen comer grandes mamíferos como ñus, cebras, búfalos o facóceros entre otros, y pueden llegar a vivir aproximadamente unos 15 años. Estos animales han sido venerados a lo largo de la historia por su 
-                valor y su fuerza. Una vez pudieron encontrarse en la mayor parte de África y algunas partes de Asia y Europa. Hoy en día sólo se encuentran en ciertos lugares al sur del desierto del Sáhara, a excepción de 
-                una población muy pequeña de leones asiáticos que sobrevive en el bosque Gir de la India.</p>
+            <p>
+                Los leones son los únicos felinos que viven en manada. Las unidades familiares pueden incluir hasta tres machos, una docena de hembras y sus crías. 
+                Todas las leonas de una manada están emparentadas y usualmente los pequeñas hembras en su seno se quedan con el grupo a medida que envejecen. 
+                Los varones jóvenes, sin embargo, tarde o temprano abandonan el grupo o son expulsados y establecen su propia manada.
+            </p>
+            <p>
+                Una abundante y frondosa melena rodea su cara y se extiende por el cuello del rey de la selva, solo los machos la poseen: este es su rasgo 
+                más característico y único en la familia de los félidos.  Habitan en las sabanas africanas y en una zona reducida del noreste de la India, 
+                pero son una especie muy vulnerable pues antiguamente habitaban en otras partes del mundo de las que han ido desapareciendo. 
+            </p>
+            <p>
+                Las leonas son las encargadas de salir a cazar mientras que los machos deben defender el territorio de la manada y a sus hembras. 
+                Suelen comer grandes mamíferos como ñus, cebras, búfalos o facóceros entre otros, y pueden llegar a vivir aproximadamente unos 15 años.
+            </p>
+            <p>
+                Estos animales han sido venerados a lo largo de la historia por su valor y su fuerza. Una vez pudieron encontrarse en la mayor parte de
+                 África y algunas partes de Asia y Europa. Hoy en día sólo se encuentran en ciertos lugares al sur del desierto del Sáhara, a excepción de 
+                una población muy pequeña de leones asiáticos que sobrevive en el bosque Gir de la India.
+            </p>
 
         </div>
         <div style="clear: both;"></div>
 
-        <h5>COLOCANDO NOMBRE DE LA IMAGEN</h5>
+        <span style="font-style: italic;">
+            COLOCANDO NOMBRE DE LA IMAGEN
+        </span>
+
         <div>
-            <h5>Leones</h5>
-            <img src="IMG/lion.jpg" style="box-shadow: 10px 10px 5px rgba(200, 100, 0, 0.5);" width="200px" height="200px" alt="León rugiendo en la pradera" style="float: left;"/>
+            <b>
+                Leones
+            </b>
+            <img 
+            src="IMG/lion.jpg" 
+            alt="León rugiendo en la pradera"
+            style="box-shadow: 10px 10px 5px rgba(200, 100, 0, 0.5);" 
+            width="200px" 
+            height="200px" 
+            style="float: left;"/>
             <!--Aca solo hemos colocado la ruta de la imagen pero no el nombre de la imagen, por lo tanto cuando el usuario vera la descripcion que hemos colocado en el atributo de alt-->
-            <p>Los leones son los únicos felinos que viven en manada. Las unidades familiares pueden incluir hasta tres machos, una docena de hembras y sus crías. Todas las leonas de una manada 
-                están emparentadas y usualmente los pequeñas hembras en su seno se quedan con el grupo a medida que envejecen. Los varones jóvenes, sin embargo, tarde o temprano abandonan el grupo 
-                o son expulsados y establecen su propia manada.Una abundante y frondosa melena rodea su cara y se extiende por el cuello del rey de la selva –solo los machos la poseen: este es su rasgo 
-                más característico y único en la familia de los félidos.  Habitan en las sabanas africanas y en una zona reducida del noreste de la India, pero son una especie muy vulnerable pues antiguamente 
-                habitaban en otras partes del mundo de las que han ido desapareciendo. Las leonas son las encargadas de salir a cazar mientras que los machos deben defender el territorio de la manada y a sus hembras. 
+            <p>
+                Los leones son los únicos felinos que viven en manada. Las unidades familiares pueden incluir hasta tres machos, una docena de hembras y sus crías. 
+                Todas las leonas de una manada están emparentadas y usualmente los pequeñas hembras en su seno se quedan con el grupo a medida que envejecen. 
+                Los varones jóvenes, sin embargo, tarde o temprano abandonan el grupo o son expulsados y establecen su propia manada.
+            </p>
+            <p>
+                Una abundante y frondosa melena rodea su cara y se extiende por el cuello del rey de la selva, solo los machos la poseen: este es su rasgo 
+                más característico y único en la familia de los félidos.  Habitan en las sabanas africanas y en una zona reducida del noreste de la India, 
+                pero son una especie muy vulnerable pues antiguamente habitaban en otras partes del mundo de las que han ido desapareciendo. 
+            </p>
+            <p>
+                Las leonas son las encargadas de salir a cazar mientras que los machos deben defender el territorio de la manada y a sus hembras. 
                 Suelen comer grandes mamíferos como ñus, cebras, búfalos o facóceros entre otros, y pueden llegar a vivir aproximadamente unos 15 años. Estos animales han sido venerados a lo largo de la historia por su 
-                valor y su fuerza. Una vez pudieron encontrarse en la mayor parte de África y algunas partes de Asia y Europa. Hoy en día sólo se encuentran en ciertos lugares al sur del desierto del Sáhara, a excepción de 
-                una población muy pequeña de leones asiáticos que sobrevive en el bosque Gir de la India.</p>
+                valor y su fuerza. Una vez pudieron encontrarse en la mayor parte de África y algunas partes de Asia y Europa. 
+            </p>
+            <p>
+                Hoy en día sólo se encuentran en ciertos lugares al sur del desierto del Sáhara, a excepción de una población muy pequeña de leones asiáticos que sobrevive
+                en el bosque Gir de la India.
+            </p>
 
         </div>
         <div style="clear: both;"></div>
 
         <!--BORDER-->
-        <h3>BORDER</h3>
-        <p>Al igual que align es un atributo obsoleto en HTML moderno. Su funcion era colocar bordes a las imagenes, pero en HTML antiguo solo permitia bordes en color negro y sin alguna forma en particular.
-            En HTML moderno, se puede realizar de dos maneras: Estilo directo (CSS inline), dentro del mismo HTML dando sus valores y como segunda forma en una clase externa en CSS que es lo mas profesional, donde si se
-            permite cualquier color, estilo y otros detalles como sombras y esquinas redondas, no da errores y es super profesional. Esta formado por 3 partes: grosor, estilo y color. Colocados en ese orden ya sea inline o
-            externamente.</p>
+        <h3>
+            BORDER
+        </h3>
+        <p>
+            Al igual que align es un atributo obsoleto en HTML moderno. Su funcion era colocar bordes a las imagenes, pero en HTML antiguo solo permitia bordes en color negro 
+            y sin alguna forma en particular.
+        </p>
+        <p>
+            En HTML moderno, se puede realizar de dos maneras: Estilo directo (CSS inline), dentro del mismo HTML dando sus valores y como segunda forma en una clase 
+            externa en CSS que es lo mas profesional, donde si se permite cualquier color, estilo y otros detalles como sombras y esquinas redondas, no da errores. 
+        </p>
+            Esta formado por 3 partes: 
+            <b>
+                grosor
+            </b>, 
+            <b>
+                estilo
+            </b> y 
+            <b>
+                color
+            </b>. 
+            Colocados en ese orden ya sea inline o externamente.
+        </p>
+        <!--CON HTML: Aqui veremos que al ser un atributo obsoleto aparece en letras rojas en nuestro editor de texto-->
+        <span style="font-style: italic;">
+            CON HTML
+        </span>
+        <div>
+            <b>
+                Guepardos
+            </b> 
+            <img src="IMG/cheeta.jpg" 
+            border="5px"
+            width="150px" alt="Guepardo corriendo velozmente" />
+            <p>
+                También conocido como 
+                <em>
+                    chita
+                </em> 
+                del inglés 
+                <span lang="en">
+                    cheetah
+                </span>, 
+                el guepardo es un felino considerado el animal terrestre más rápido del mundo, llegando a desplazarse a más de 100km/h en carreras largas, una velocidad 
+                que puede alcanzar en tan solo 3 segundos.
+            </p> 
+            <p>
+                Es uno de los cazadores más eficientes gracias a un excelente sentido de la vista y su gran agilidad mediante la cual pueden hacer rápidos y repentinos 
+                giros en la persecución de su presa.
+            </p>
+            <p>
+                Se alimenta de ñus, cebras, antílopes y sus favoritas, las gacelas.Este felino es un gran depredador diurno que se vale del movimiento furtivo y sigiloso 
+                que le caracteriza y de un distintivo patrón de manchas en su piel que le permite camuflarse fácilmente entre las hierbas altas y secas donde 
+                aguarda agazapado el momento en el que lanzarse sobre su víctima. 
+            </p>
+            <p>
+                Se pueden distinguir fácilmente de los leopardos por las líneas negras que salen de sus ojos como lágrimas y descienden hacia a bajo enmarcando el hocico. 
+            </p>
+            <p>
+                Las hembras suelen dar a luz a camadas de tres cachorros y generalmente viven con ellos durante periodos que transcurren entre el año medio y los dos años. 
+                Los cachorros jóvenes pasan su primer año aprendiendo de su madre y practicando técnicas de caza a través de juegos. Los machos suelen ser solitarios o vivir 
+                en grupos pequeños, a menudo con sus compañeros de camada.
+            </p>
+            <p>
+                La mayor parte de los guepardos que quedan en la actualidad viven en el este y sudoeste de África, donde habitan los 12.000 ejemplares que se calcula 
+                que quedan. Viven aproximadamente 12 años, algunos pueden llegar a pesar 60 kilos y miden entre 1,10 y 1,40 metros, mientras que la cola tiene una 
+                longitud de casi 80 centímetros y constituye una herramienta clave para su equilibrio y agilidad.
+            </p>
+        </div>
+        <div style="clear: both;"></div>
 
-            <!--CON HTML: Aqui veremos que al ser un atributo obsoleto aparece en letras rojas en nuestro editor de texto-->
-            <h5>CON HTML</h5>
-            <div>
-                <h5>Guepardos</h5> 
-                <img src="IMG/cheeta.jpg" width="150px" alt="Guepardo corriendo velozmente" border="5px"/>
-                <p>También conocido como chita del inglés cheetah, el guepardo es un felino considerado el animal terrestre más rápido del mundo, llegando a desplazarse a más de 100km/h en carreras largas, una velocidad 
-                    que puede alcanzar en tan solo 3 segundos. Es uno de los cazadores más eficientes gracias a un excelente sentido de la vista y su gran agilidad mediante la cual pueden hacer rápidos y repentinos giros 
-                    en la persecución de su presa. Se alimenta de ñus, cebras, antílopes y sus favoritas, las gacelas.Este felino es un gran depredador diurno que se vale del movimiento furtivo y sigiloso que le caracteriza 
-                    y de una distintivo patrón de manchas en su piel que le permite camuflarse fácilmente entre las hierbas altas y secas donde aguarda agazapado el momento en el que lanzarse sobre su víctima. Se pueden 
-                    distinguir fácilmente de los leopardos por las líneas negras que salen de sus ojos –como lágrimas– y descienden hacia a bajo enmarcando el hocico. 
-                    Las hembras suelen dar a luz a camadas de tres cachorros y generalmente viven con ellos durante periodos que transcurren entre el año medio y los dos años. Los cachorros jóvenes pasan su primer año 
-                    aprendiendo de su madre y practicando técnicas de caza a través de juegos- Los machos suelen ser solitarios o vivir en grupos pequeños, a menudo con sus compañeros de camada.
-                    La mayor parte de los guepardos que quedan en la actualidad viven en el este y sudoeste de África, donde habitan los 12.000 ejemplares que se calcula que quedan. Viven aproximadamente 12 años, algunos 
-                    pueden llegar a pesar 60 kilos y miden entre 1,10 y 1,40 metros, mientras que la cola tiene una longitud de casi 80 centímetros y constituye una herramienta clave para su equilibrio y agilidad.</p>
-            </div>
-            <div style="clear: both;"></div>
-
-            <!--CON CSS: En este caso lo realizaremos de manera inline, sin CSS externo, dando sus valores aca mismo-->
-            <h5>CON CSS</h5>
-            <p>Con CSS tenemos total libertad en cuanto a colores del borde, estilo, sombras, cosa que en HTML antiguo no se podia, conocermos unos cuantos valores de estilos y bordes.</p>
-
-            <h5>SOLID:</h5>
-            <p>El estilo "solid" de border indica que a la imagen la rodeara un borde solido sin mayor efecto del color especificado.</p>
-            <div>
-                <img src="IMG/cheeta.jpg" style="border: 5px solid lightgreen" width="200" alt="Guepardo corriendo a gran velocidad"/>
-            </div>
-
-            <h5>DASHED</h5>
-            <p>Un borde formado por guiones del tamaño y color especificado por el programador.</p>
-
-            <div>
-                <img src="IMG/cheeta.jpg" style="border: 2px dashed brown" width="225" alt="Guepardo corriendo a gran velocidad"/>
-            </div>
-
-            <h5>DOTTED</h5>
-            <p>Para un borde punteado.</p>
-
-            <div>
-                <img src="IMG/cheeta.jpg" style="border: 3px dotted orange" width="225px" alt="Guepardo corriendo a gran velocidad"/>
-            </div>
-
-            <h5>DOUBLE</h5>
-            <p>Un borde de doble linea.</p>
-
-            <div>
-                <img src="IMG/cheeta.jpg" style="border: 4px double blueviolet" width="225px" alt="Guepardo corriendo a gran velocidad"/>
-            </div>
-
-            <h5>GROOVE/RIDGE</h5>
-            <p>Estos valores dan un efecto 3D dependiendo del color</p>
-
-            <div>
-                <h5>Con GROOVE:</h5>
-                <img src="IMG/cheeta.jpg" style="border: 5px groove gray" width="225px" alt="Guepardo corriendo a gran velocidad"/>
-
-                <h5>CON RIDGE</h5>
-                <img src="IMG/cheeta.jpg" style="border: 6px ridge black" width="225px" alt="Guepardo corriendo a gran velocidad"/>
-            </div>
-
-            <h5>INSET/OUTSET</h5>
-            <p>Inset para dar un efecto de border "salidos" y outset da un efecto de bordes "hundidos"</p>
-
-            <div>
-                <h5>INSET</h5>
-                <img src="IMG/cheeta.jpg" style="border: 6px inset darkred" width="225px" alt="Guepardo corriendo a gran velocidad"/>
-
-                <h5>OUTSET</h5>
-                <img src="IMG/cheeta.jpg" style="border: 7px outset darkgreen" width="225px" alt="Guepardo corriendo a gran velocidad"/>
-            </div>
-
-            <h5>BORDES REDONDEADOS</h5>
-            <p></p>
-
-            <div>
-                <p>Para que las imagenes se vean profesionales, con border-radius: _;</p>
-                <!--Usando px u otra medida, lo que hace es redondear las esquinas de la imagen-->
-                <img src="IMG/cheeta.jpg" style="border-radius: 15px;" width="225px" alt="Guepardo corriendo a gran velocidad"/>
-
-                <p>Para un circulo perfecto, el mismo atributo: style="border-radius: _;" pero en lugar de px usamos % para el tamaño del radio</p>
-                <!--Usando porcentaje la imagen pasa de ser un cuadrado o rectangulo a ser un circulo perfecto con el tamaño del radio especificado con el porcentaje-->
-                <img src="IMG/cheeta.jpg" style="border-radius: 60%" width="225px" height="250px" alt="Guepardo corriendo a gran velocidad"/>
-            </div>
-
-            <h5>SOMBRAS (box-shadow)</h5>
-            <p>Para darle un efecto de sombra a nuestra imagen tenemos que darle diferente cantidad de valores, normalmente son 4 valores, pero usando la cantidad de valores que usemos, los primeros dos valores son
-                OBLIGATORIOS, y los demas son opcionales pero profesionalmente se usan 4: style="box-shadow: offset-x offset-y blur color(_,_,_,_)"
-                Donde:
-                <ul style="list-style-type:circle;">
-                    <li>offset-x: significa desplazamiento horizontal, indica si la sombra se mueve a la izquierda (-) o a la derecha (+) del elemento</li>
-                    <li>offset-y: desplazamiento vertical, que indica si la sombra alrededor del elemento se mueve hacia arriba (-) o hacia abajo (+)</li>
-                    <li>blur:para la difuminacion de la sombra, este mas alto sea el valor, mas desvanecido se ve el color de la sombra, si se pone un valor de 0px, la sombra se ve solida.</li>
-                    <li>color de la sombra: aca se pueden usar RGB, RGBA Y HEX:
+        <!--CON CSS: En este caso lo realizaremos de manera inline, sin CSS externo, dando sus valores aca mismo-->
+        <span style="font-style: italic;">
+            CON CSS
+        </span>
+        <p>
+            Con CSS tenemos total libertad en cuanto a colores del borde, estilo, sombras, cosa que en HTML antiguo no se podia, conoceremos unos cuantos 
+            valores de estilos y bordes.
+        </p>
+        <ul>
+            <li>
+                <b>
+                    SOLID:
+                </b>
+                <p>
+                    El estilo "solid" de border indica que a la imagen la rodeara un borde solido sin mayor efecto del color especificado.
+                </p>
+                <img src="IMG/cheeta.jpg" 
+                alt="Guepardo corriendo a gran velocidad"
+                style="border: 5px solid lightgreen" 
+                width="200" />
+            </li>
+            <li>
+                <b>
+                    DASHED:
+                </b>
+                <p>
+                    Un borde formado por guiones del tamaño y color especificado por el programador.
+                </p>
+                <img src="IMG/cheeta.jpg" 
+                alt="Guepardo corriendo a gran velocidad"
+                style="border: 2px dashed brown" 
+                width="225" />
+            </li>
+            <li>
+                <b>
+                    DOTTED
+                </b>
+                <p>
+                    Para un borde punteado.
+                </p>
+                <img src="IMG/cheeta.jpg" 
+                alt="Guepardo corriendo a gran velocidad"
+                style="border: 3px dotted orange" 
+                width="225px" />
+            </li>
+            <li>
+                <b>
+                    DOUBLE
+                </b>
+                <p>
+                    Un borde de doble linea.
+                </p>
+            </li>
+            <li>
+                <b>
+                    GROOVE/RIDGE
+                </b>
+                <p>
+                    Estos valores dan un efecto 3D dependiendo del color:
+                </p>
+                <ul>
+                    <li>
+                        <b>
+                            Con GROOVE:
+                        </b>
+                        <img src="IMG/cheeta.jpg" 
+                        alt="Guepardo corriendo a gran velocidad"
+                        style="border: 5px groove gray" 
+                        width="225px" />
+                    </li>
+                    <li>
+                        <b>
+                            CON RIDGE:
+                        </b>
+                        <img src="IMG/cheeta.jpg" 
+                        alt="Guepardo corriendo a gran velocidad"
+                        style="border: 6px ridge black" 
+                        width="225px" />
+                    </li>
                 </ul>
+            </li>
+            <li>
+                <b>
+                    INSET/OUTSET
+                </b>
+                <p>
+                    <b>
+                        Inset
+                    </b>
+                    para dar un efecto de bordes "salidos" y
+                    <b>
+                        Outset
+                    </b>
+                    para un efecto de bordes "hundidos".
+                </p>
+                <ul>
+                    <li>
+                        <b>
+                            INSET:
+                        </b>
+                        <img src="IMG/cheeta.jpg" 
+                        alt="Guepardo corriendo a gran velocidad"
+                        style="border: 6px inset darkred" 
+                        width="225px" />
+                    </li>
+                    <li>
+                        <b>
+                            OUTSET:
+                        </b>
+                        <img src="IMG/cheeta.jpg" 
+                        alt="Guepardo corriendo a gran velocidad"
+                        style="border: 7px outset darkgreen" 
+                        width="225px" />
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>
+                    BORDES REDONDEADOS
+                </b>
+                <ul>
+                    <li>
+                        <p>
+                        Para que las imagenes se vean profesionales, con border-radius: _;
+                        <!--Usando px u otra medida, lo que hace es redondear las esquinas de la imagen-->
+                        </p>
+                        <img src="IMG/cheeta.jpg" 
+                        alt="Guepardo corriendo a gran velocidad"
+                        style="border-radius: 15px;" 
+                        width="225px" />
+                    </li>
+                    <li>
+                        <p>
+                            Para un circulo perfecto, el mismo atributo: style="border-radius: _;" pero en lugar de px usamos % para el tamaño del radio.
+                        </p>
+                        <!--Usando porcentaje la imagen pasa de ser un cuadrado o rectangulo a ser un circulo perfecto con el tamaño del radio especificado con el porcentaje-->
+                        <img src="IMG/cheeta.jpg" 
+                        alt="Guepardo corriendo a gran velocidad"
+                        style="border-radius: 60%" width="225px" 
+                        height="250px" />
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>
+                    SOMBRAS (box-shadow)
+                </b>
+                <p>Para darle un efecto de sombra a nuestra imagen tenemos que darle diferente cantidad de valores, normalmente son 4 valores, pero usando la cantidad de valores que usemos, los 
+                    primeros dos valores son OBLIGATORIOS, y los demas son opcionales pero profesionalmente se usan 4: 
+                    <code>
+                        style="box-shadow: offset-x offset-y blur color(_,_,_,_)"
+                    </code>
+                </p>
+                <p>
+                    Donde:
+                    <ul style="list-style-type:circle;">
+                        <li>
+                            <b>
+                                offset-x
+                            </b>
+                            :
+                            <p>
+                                significa desplazamiento horizontal, indica si la sombra se mueve a la izquierda (-) o a la derecha (+) del elemento.
+                            </p>
+                            
+                        </li>
+                        <li>
+                            <b>
+                                offset-y
+                            </b>
+                            :
+                            <p>
+                                desplazamiento vertical, que indica si la sombra alrededor del elemento se mueve hacia arriba (-) o hacia abajo (+).
+                            </p>
+                            
+                        </li>
+                        <li>
+                            <b>
+                                blur
+                            </b>
+                            :
+                            <p>
+                                para la difuminacion de la sombra, entre más alto sea el valor, más desvanecido se ve el color de la sombra. Con un valor de 0px, la sombra se ve solida.
+                            </p>
+                        </li>
+                        <li>
+                            <b>
+                                color de la sombra
+                            </b>
+                            : 
+                            <p>
+                                aca se pueden usar RGB, RGBA Y HEX:
+                            </p>
+                        </li>
+                    </ul>
+            </li>
+            
+                
                 <ul style="list-style-type: disc">
                     <li><b>RGB:</b>rgb trabaja con 3 valores que significan: r = red; g = green y b = blue donde cada uno de estos 3 valores van desde 0 a 255.
                         Donde 0 indica la ausencia de ese color y 255 la maxima intensidad de ese color. En otras palabras es como combinar pinturas pero con luz.</li>
