@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Img tag</title>
+    <!--Conectando el archivo externo con el html-->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>
@@ -25,8 +27,8 @@
         <b>
             align
         </b> 
-        que era permitido hasta HTML4 pero en webs modernas ya es obsoleto porque hoy en día es mas profesional hacerlo con CSS.
-        Este atributo era una indicacion de hacia donde se debia alinear la imagen respecto al texto del que estuviera acompañado, contaba con 
+        que era permitido hasta HTML4 pero en webs modernas es un atributo obsoleto, es un atributo que funcionaba como una 
+        indicacion de hacia donde se debia alinear la imagen respecto al texto del que estuviera acompañado, contaba con 
         5 valores: 
         <b>
             left
@@ -51,17 +53,18 @@
         LEFT
     </h4>
 
-    <span style="font-weight: bold;">
-        Para alinear a la izquierda
-    </span>
-
-    <span style="font-style: italic;">
-        CON HTML
+    <span class="titles">
+        Para alinear a la izquierda:
     </span>
 
     <div>
+        <span class="subtitles">
+            Con HTML:
+        </span>
         <!--Usando align que ahora sale en color rojo por ser un atributo obsoleto, pero para visualizar-->
-        <img src="IMG/monkey1.jpeg" align="left" width="200px"/>
+        <img src="IMG/monkey1.jpeg" 
+        align="left" 
+        style="width: 200px;"/>
 
         <!--El texto se coloca debajo de la imagen para indicar que es lo que rodeara a la imagen, si va antes de ella, el navegador no le aplicará
         la alineación y si va fuera del div tambien sera algo que no tiene que ver con ello y no fluira con la imagen.-->
@@ -80,26 +83,20 @@
         </p>
     </div>
     <div style="clear: both;"></div> 
-    <!--Aca es necesario usar div, div es una etiqueta sin significado semántico, usado únicamente para dividir secciones de contenido y aplicar
-    un estilo diferente, pero en este caso es necesario usarlo porque al usar la variable float esto provoca que el texto se quiera subir a la parte
-    superior desordenando todo, en cambio div lo fuerza a no hacerlo mediante la variable clear que sirve para decir: "que nada se coloque a la izquierda
-    o derecha de este elemento y bajalo debajo del contenido flotante" y su valor BOTH que hace que el contenido baje debajo de cualquier float.-->
-
-    <span style="font-style: italic;">
-        CON CSS
-    </span>
-
+    <!--Aca usamos un contenedor vacio con clear: both para evitar que el texto de abajo se pegue con la imagen y se desordene pero solo en este caso,
+    en los proximos lo haremos con una clase.-->
     <div>
+        <span style="font-style: italic;">
+            Con CSS:
+        </span>
           <!--Con CSS: como lo hacen las webs modernas, estas ya no usan align si no float tanto para left y right, porque lo que float hace es que el texto
           rodee a la imagen, hace que el elemento se salga del flujo normal del documento.-->
         <img src="IMG/monkey1.jpeg" 
         style="float:left" 
         width="200px"/>
-
         <b>
             Monos:
         </b>
-
         <p>
             Los simios o monos son primates de la infraorden de los haplorrinos. En castellano se suele usar la misma palabra para referirse de igual
             modo a los monos y a los simios en lenguaje común, incluso para aquellos simios que carecen de cola. Su tamaño es muy variable, tienen los
@@ -117,17 +114,13 @@
     <h4>
         RIGHT
     </h4>
-
     <span style="font-weight: bolder;">
         Para alinear a la derecha:
     </span>
-   
-    <span style="font-style: italic;">
-        CON HTML:
-    </span>
-
     <div>
-        <!--Con HTML-->
+        <span style="font-style: italic;">
+            Con HTML:
+        </span>
         <img src="IMG/monkey2.jpeg" 
         align="right" width="200px"/>
         <b>
@@ -144,16 +137,17 @@
     <div style="clear: both;"></div>
 
     <!--Con CSS-->
-    <span style="font-style: italic;">
-        CON CSS:
-    </span>
+    
     <div>
+        <span style="font-style: italic;">
+            CON CSS:
+        </span>
         <img src="IMG/monkey2.jpeg" 
         style="float:right" width="200px"/>
         <b>
             Primates:
         </b>
-         <p>
+        <p>
             Se han descrito unas 150 especies de primates diferentes, una orden de los mamíferos a la que pertenecemos los humanos. Tienen un cráneo de 
             tamaño grande y los ojos situados en la parte frontal, algo que les permite tener una buena visión capaz de calcular de forma exacta las 
             dimensiones de la realidad. Se cree que su origen se encuentra unos 65 millones de años atrás. La mayoría cuentan con el pulgar oponible que 
@@ -196,12 +190,11 @@
     <span style="font-weight: bolder;">
         Para alinear la imagen al top del texto
     </span>
-    
     <!--Con HTML-->
-    <span style="font-style: italic;">
-        CON HTML
-    </span>
      <div>
+        <span style="font-style: italic;">
+            Con HTML:
+        </span>
         <b>
             Serpientes
         </b>
@@ -223,17 +216,17 @@
             rel="noopener noreferrer">
                 <img src="IMG/arrow.jpg" 
                 align="top" width="10px"/>
+                <!--Notaremos en el navegador que la imagen esta alineada con la parte superior de la linea de texto-->
             </a>
-            Y compartenos en tus redes sociales.
         </p>
      </div>
      <div style="clear:both;"></div>
 
      <!--Con CSS-->
-     <span style="font-style: italic;">
-        CON CSS:
-     </span>
      <div>
+        <span style="font-style: italic;">
+            Con CSS:
+        </span>
         <b>
             Serpientes:
         </b>
@@ -258,7 +251,6 @@
                 style="vertical-align: top;"
                 width="10px"/>
             </a>
-            Y compartenos en tus redes sociales.
         </p>
      </div>
      <div style="clear: both;"></div>
@@ -273,10 +265,10 @@
      </span>
 
      <!--Con HTML-->
-     <span style="font-style: italic;">
-        CON HTML
-     </span>
      <div>
+        <span style="font-style: italic;">
+            CON HTML
+        </span>
         <b>
             Ranas:
         </b>
@@ -315,22 +307,20 @@
                     target="_self" 
                     rel="noopener noreferrer">
                         <img src="IMG/ig.jpg" 
-                        align="middle
-                        width="25px" "/>
+                        align="middle"
+                        width="25px"/>
                     </a>
                 </li>
             </ul>
         </p>
-    
+        <!--Veremos las imagenes alineadas en el centro de la linea de texto -->
     </div>
     <div style="clear: both;"></div>
 
-     <!--Con CSS siempre usando VERTICAL-ALIGN-->
-     <span style="font-style: italic;">
-        CON CSS:
-    </span>
-        
      <div>
+        <span style="font-style: italic;">
+            CON CSS:
+        </span>
         <b>
             Ranas:
         </b>
@@ -399,10 +389,10 @@
         Para alinear la parte inferior de la imagen con la linea base del texto
      </span>
 
-     <span style="font-style: italic;">
-        CON HTML
-     </span>
      <div>
+        <span style="font-style: italic;">
+            CON HTML
+        </span>
         <b>
             Mariposas:
         </b>
@@ -434,7 +424,7 @@
             target="_blank" 
             rel="noopener noreferrer" 
             title="Butterflys">
-                <img src="IMG/arow.jpg" 
+                <img src="IMG/butter.jpg" 
                 align="bottom"
                 width="10px" />
             </a>
@@ -475,7 +465,7 @@
             <a href="https://www.nationalgeographic.com.es/animales/mariposas" 
             target="_blank" 
             rel="noopener noreferrer">
-                <img src="IMG/arow.jpg" 
+                <img src="IMG/butter.jpg" 
                 style="vertical-align: bottom;"
                 width="10px" />
                 <!--Como dijimos al principio BOTTOM es el valor por defecto, aunque no coloquemos el style="vertical-align: bottom;"
@@ -490,7 +480,7 @@
         <a href="mailto:sarimartinez250@gmail.com" 
         rel="noopener noreferrer">
             <img src="IMG/gmail.jpg" 
-            style="vertical-align: bottom;" 
+            style="vertical-align: middle;" 
             width="25px" 
             title="sarimartinez250@gmail.com"/>
         </a>
@@ -516,86 +506,80 @@
         Las descripciones deben ser muy especificas de acuerdo a la imagen, sin extendernos en descripcion cosas sencillas pero que describan a la perfeccion.
     </p>
 
+    <div>
         <span style="font-style: italic;">
-            SIN COLOCAR NOMBRE DE LA IMAGEN
+            Colocando una URL incorrecta:
         </span>
-        <div>
-            <b>
-                Leones
-            </b>
-            <img src="IMG" 
-            alt="León rugiendo en la pradera"
-            width="200px" 
-            height="200px"  
-            style="float: right;"/>
-            <!--Aca solo hemos colocado la ruta de la imagen pero no el nombre de la imagen, por lo tanto cuando el usuario vera la descripcion que hemos colocado en el atributo de alt-->
-            <p>
-                Los leones son los únicos felinos que viven en manada. Las unidades familiares pueden incluir hasta tres machos, una docena de hembras y sus crías. 
-                Todas las leonas de una manada están emparentadas y usualmente los pequeñas hembras en su seno se quedan con el grupo a medida que envejecen. 
-                Los varones jóvenes, sin embargo, tarde o temprano abandonan el grupo o son expulsados y establecen su propia manada.
-            </p>
-            <p>
-                Una abundante y frondosa melena rodea su cara y se extiende por el cuello del rey de la selva, solo los machos la poseen: este es su rasgo 
-                más característico y único en la familia de los félidos.  Habitan en las sabanas africanas y en una zona reducida del noreste de la India, 
-                pero son una especie muy vulnerable pues antiguamente habitaban en otras partes del mundo de las que han ido desapareciendo. 
-            </p>
-            <p>
-                Las leonas son las encargadas de salir a cazar mientras que los machos deben defender el territorio de la manada y a sus hembras. 
-                Suelen comer grandes mamíferos como ñus, cebras, búfalos o facóceros entre otros, y pueden llegar a vivir aproximadamente unos 15 años.
-            </p>
-            <p>
-                Estos animales han sido venerados a lo largo de la historia por su valor y su fuerza. Una vez pudieron encontrarse en la mayor parte de
-                 África y algunas partes de Asia y Europa. Hoy en día sólo se encuentran en ciertos lugares al sur del desierto del Sáhara, a excepción de 
-                una población muy pequeña de leones asiáticos que sobrevive en el bosque Gir de la India.
-            </p>
-
-        </div>
-        <div style="clear: both;"></div>
-
-        <span style="font-style: italic;">
-            COLOCANDO NOMBRE DE LA IMAGEN
-        </span>
-
-        <div>
-            <b>
-                Leones
-            </b>
-            <img 
-            src="IMG/lion.jpg" 
-            alt="León rugiendo en la pradera"
-            style="box-shadow: 10px 10px 5px rgba(200, 100, 0, 0.5);" 
-            width="200px" 
-            height="200px" 
-            style="float: left;"/>
-            <!--Aca solo hemos colocado la ruta de la imagen pero no el nombre de la imagen, por lo tanto cuando el usuario vera la descripcion que hemos colocado en el atributo de alt-->
-            <p>
-                Los leones son los únicos felinos que viven en manada. Las unidades familiares pueden incluir hasta tres machos, una docena de hembras y sus crías. 
-                Todas las leonas de una manada están emparentadas y usualmente los pequeñas hembras en su seno se quedan con el grupo a medida que envejecen. 
-                Los varones jóvenes, sin embargo, tarde o temprano abandonan el grupo o son expulsados y establecen su propia manada.
-            </p>
-            <p>
-                Una abundante y frondosa melena rodea su cara y se extiende por el cuello del rey de la selva, solo los machos la poseen: este es su rasgo 
-                más característico y único en la familia de los félidos.  Habitan en las sabanas africanas y en una zona reducida del noreste de la India, 
-                pero son una especie muy vulnerable pues antiguamente habitaban en otras partes del mundo de las que han ido desapareciendo. 
-            </p>
-            <p>
-                Las leonas son las encargadas de salir a cazar mientras que los machos deben defender el territorio de la manada y a sus hembras. 
-                Suelen comer grandes mamíferos como ñus, cebras, búfalos o facóceros entre otros, y pueden llegar a vivir aproximadamente unos 15 años. Estos animales han sido venerados a lo largo de la historia por su 
-                valor y su fuerza. Una vez pudieron encontrarse en la mayor parte de África y algunas partes de Asia y Europa. 
-            </p>
-            <p>
-                Hoy en día sólo se encuentran en ciertos lugares al sur del desierto del Sáhara, a excepción de una población muy pequeña de leones asiáticos que sobrevive
-                en el bosque Gir de la India.
-            </p>
-
-        </div>
-        <div style="clear: both;"></div>
-
-        <!--BORDER-->
-        <h3>
-            BORDER
-        </h3>
+        <b>
+            Leones:
+        </b>
+        <img src="IMG"
+        alt="León rugiendo en la pradera"
+        width="200px" 
+        height="200px"  
+        style="float: right;"/>
+        <!--Aca solo hemos colocado la ruta de la imagen pero no el nombre de la imagen, por lo tanto cuando el usuario vera la descripcion que hemos colocado en el atributo de alt-->
         <p>
+            Los leones son los únicos felinos que viven en manada. Las unidades familiares pueden incluir hasta tres machos, una docena de hembras y sus crías. 
+            Todas las leonas de una manada están emparentadas y usualmente los pequeñas hembras en su seno se quedan con el grupo a medida que envejecen. 
+            Los varones jóvenes, sin embargo, tarde o temprano abandonan el grupo o son expulsados y establecen su propia manada.
+        </p>
+        <p>
+            Una abundante y frondosa melena rodea su cara y se extiende por el cuello del rey de la selva, solo los machos la poseen: este es su rasgo 
+            más característico y único en la familia de los félidos.  Habitan en las sabanas africanas y en una zona reducida del noreste de la India, 
+            pero son una especie muy vulnerable pues antiguamente habitaban en otras partes del mundo de las que han ido desapareciendo. 
+        </p>
+        <p>
+            Las leonas son las encargadas de salir a cazar mientras que los machos deben defender el territorio de la manada y a sus hembras.
+            Suelen comer grandes mamíferos como ñus, cebras, búfalos o facóceros entre otros, y pueden llegar a vivir aproximadamente unos 15 años.
+        </p>
+        <p>
+            Estos animales han sido venerados a lo largo de la historia por su valor y su fuerza. Una vez pudieron encontrarse en la mayor parte de
+            África y algunas partes de Asia y Europa. Hoy en día sólo se encuentran en ciertos lugares al sur del desierto del Sáhara, a excepción de 
+            una población muy pequeña de leones asiáticos que sobrevive en el bosque Gir de la India.
+        </p>
+    </div>
+    <div style="clear: both;"></div>
+    <div>
+        <span style="font-style: italic;">
+            Colocando URL correcta:
+        </span>
+        <b>
+            Leones:
+        </b>
+        <img 
+        src="IMG/lion.jpg" 
+        alt="León rugiendo en la pradera"
+        style="box-shadow: 10px 10px 5px rgba(200, 100, 0, 0.5); float: right;" 
+        width="200p" 
+        height="200p" />
+        <!--Aca solo hemos colocado la ruta de la imagen pero no el nombre de la imagen, por lo tanto cuando el usuario vera la descripcion que hemos colocado en el atributo de alt-->
+        <p>
+            Los leones son los únicos felinos que viven en manada. Las unidades familiares pueden incluir hasta tres machos, una docena de hembras y sus crías. 
+            Todas las leonas de una manada están emparentadas y usualmente los pequeñas hembras en su seno se quedan con el grupo a medida que envejecen. 
+            Los varones jóvenes, sin embargo, tarde o temprano abandonan el grupo o son expulsados y establecen su propia manada.
+        </p>
+        <p>
+            Una abundante y frondosa melena rodea su cara y se extiende por el cuello del rey de la selva, solo los machos la poseen: este es su rasgo 
+            más característico y único en la familia de los félidos.  Habitan en las sabanas africanas y en una zona reducida del noreste de la India, 
+            pero son una especie muy vulnerable pues antiguamente habitaban en otras partes del mundo de las que han ido desapareciendo. 
+        </p>
+        <p>
+            Las leonas son las encargadas de salir a cazar mientras que los machos deben defender el territorio de la manada y a sus hembras. 
+            Suelen comer grandes mamíferos como ñus, cebras, búfalos o facóceros entre otros, y pueden llegar a vivir aproximadamente unos 15 años. Estos animales han sido venerados a lo largo de la historia por su 
+            valor y su fuerza. Una vez pudieron encontrarse en la mayor parte de África y algunas partes de Asia y Europa. 
+        </p>
+        <p>
+            Hoy en día sólo se encuentran en ciertos lugares al sur del desierto del Sáhara, a excepción de una población muy pequeña de leones asiáticos que sobrevive
+            en el bosque Gir de la India.
+        </p>
+    </div>
+    <div style="clear: both;"></div>
+    <!--BORDER-->
+    <h3>
+        BORDER
+    </h3>
+    <p>
             Al igual que align es un atributo obsoleto en HTML moderno. Su funcion era colocar bordes a las imagenes, pero en HTML antiguo solo permitia bordes en color negro 
             y sin alguna forma en particular.
         </p>
